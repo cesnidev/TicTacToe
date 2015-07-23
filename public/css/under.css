@@ -1,0 +1,146 @@
+html 
+{ 
+      background: url(../img/under_construction/bg.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+ }
+
+
+@media (min-width: 1401px) and (max-width: 1600px)
+{
+    .logo_uc{
+        width:400px;
+    }
+    .title_uc{
+        font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+        color:#f20707;
+        font-size:50px;
+    }
+    .msg_uc{
+        font-family:'Comic Sans MS', cursive, sans-serif;
+        color:#fff;
+        font-size:28px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px)
+{
+    .logo_uc{
+        width:400px;
+    }
+    .title_uc{
+        font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+        color:#f20707;
+        font-size:50px;
+    }
+    .msg_uc{
+        font-family:'Comic Sans MS', cursive, sans-serif;
+        color:#fff;
+        font-size:28px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px)
+{
+     .logo_uc{
+        width:400px;
+    }
+    .title_uc{
+        font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+        color:#f20707;
+        font-size:50px;
+    }
+    .msg_uc{
+        font-family:'Comic Sans MS', cursive, sans-serif;
+        color:#fff;
+        font-size:28px;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1024px)
+{
+    .logo_uc{
+        width:400px;
+    }
+    .title_uc{
+        font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+        color:#f20707;
+        font-size:50px;
+    }
+    .msg_uc{
+        font-family:'Comic Sans MS', cursive, sans-serif;
+        color:#fff;
+        font-size:28px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 800px)
+{
+    .logo_uc{
+        width:300px;
+    }
+    .title_uc{
+        font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+        color:#f20707;
+        font-size:45px;
+    }
+    .msg_uc{
+        font-family:'Comic Sans MS', cursive, sans-serif;
+        color:#fff;
+        font-size:28px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 640px)
+{
+    .logo_uc{
+        width:200px;
+    }
+    .title_uc{
+        font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+        color:#f20707;
+        font-size:40px;
+    }
+    .msg_uc{
+        font-family:'Comic Sans MS', cursive, sans-serif;
+        color:#fff;
+        font-size:28px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 480px)
+{
+    .logo_uc{
+        width:250px;
+    }
+    .title_uc{
+        font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+        color:#f20707;
+        font-size:40px;
+    }
+    .msg_uc{
+        font-family:'Comic Sans MS', cursive, sans-serif;
+        color:#fff;
+        font-size:28px;
+    }
+}
+
+@media (min-width: 240px) and (max-width: 320px)
+{
+    .logo_uc{
+        width:200px;
+    }
+    .title_uc{
+        font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+        color:#f20707;
+        font-size:36px;
+    }
+    .msg_uc{
+        font-family:'Comic Sans MS', cursive, sans-serif;
+        color:#fff;
+        font-size:24px;
+    }
+
+}

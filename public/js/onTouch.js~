@@ -1,0 +1,8 @@
+
+jQuery(document).ready(function() {
+$('#tca_social_mobile').click(new function() {
+        console.log('catched');
+    });
+});
+
+

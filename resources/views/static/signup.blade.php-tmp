@@ -64,7 +64,7 @@
 			<fieldset>
 
 			<form id="basicuser" data-abide="ajax">
-				{{ csrf_field()}}
+				{!! Form::token() !!}
 				<h2 class="fs-title">Sign Up / Basic Information</h2>
 
 				<div class="row" style="height:200px; border:1px solid #404040;border-radius:8px;">
@@ -77,18 +77,18 @@
 					<div class="large-6 columns">
 						<div class="row">
 
-											 <div class="large-4 columns">
-											   <input type="text" id="tca_border_text" placeholder="First Name" name="first_name" required pattern="[a-zA-Z]+"/>
-											   <small class="error">first name is required and must be a real name.</small>
-											 </div>
-											 <div class="large-4 columns">
-											   <input type="text" id="tca_border_text" placeholder="Middle Initial" name="midinit_name" required pattern="[a-zA-Z]+"/>
-											   <small class="error">Middle Initial is required.</small>
-											</div>
-											<div class="large-4 columns">
-											   <input type="text" id="tca_border_text" placeholder="Last Name" name="last_name" required pattern="[a-zA-Z]+"/>
-											   <small class="error">last name is required.</small>
-											</div>
+						 <div class="large-6 columns">
+						   <input type="text" id="tca_border_text" placeholder="First Name" name="first_name" required pattern="[a-zA-Z]+"/>
+						   <small class="error">first name is required and must be a real name.</small>
+						 </div>
+						 <!--<div class="large-4 columns">
+						   <input type="text" id="tca_border_text" placeholder="Middle Initial" name="midinit_name" required pattern="[a-zA-Z]+"/>
+						   <small class="error">Middle Initial is required.</small>
+						</div>-->
+						<div class="large-6 columns">
+						   <input type="text" id="tca_border_text" placeholder="Last Name" name="last_name" required pattern="[a-zA-Z]+"/>
+						   <small class="error">last name is required.</small>
+						</div>
 
 						</div>
 
@@ -111,7 +111,7 @@
 								</div>
 								<div class="large-6 columns">
 									<div class="row">
-										<div class="large-6 columns">
+										<!--<div class="large-6 columns">
 			    							<label>
 			    								<select name="state" required>
 			    								    <option selected="selected">--</option>
@@ -132,8 +132,8 @@
 			    								</select>
 												<small class="error">Month is required.</small>
 			    							</label>
-										 </div>
-										<div class="large-3 columns">
+										 </div>-->
+										<!--<div class="large-3 columns">
 											<label >
 			    								<select name="state" required>
 			    								    <option selected="selected">--</option>
@@ -148,9 +148,9 @@
 			    								</select>
 												<small class="error">Year is required.</small>
 			    							</label>
-										</div>
-										<div class="large-3 columns">
-											<input type="text" class="span2" required pattern="(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)" data-date-format="mm/dd/yy" id="datepicker">
+										</div>-->
+										<div class="large-12 columns">
+											<input type="text" class="span2" required pattern="(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)" data-date-format="mm/dd/yy" id="datepicker" name="date">
 											   <small class="error">valid date is required.</small>
 										</div>
 

@@ -13,7 +13,7 @@
 /*
 Route::get('/', 'WelcomeController@index');
 */
-Route::get('home', 'LoginController@index');
+Route::get('enter', 'LoginController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -23,10 +23,6 @@ Route::controllers([
 Route::get('/', ['as'=>'home',function () {
     return view('static.index');
 }]);
-
-/*Route::get('login', function () {
-    return view('static.login');
-});*/
 
 Route::get('login', function () {
     return view('auth.login');
@@ -56,7 +52,6 @@ Route::get('signup', function () {
 
 Route::get('uc', function () {
     return view('static.uc');
-	
 });
 Route::post('loguear','Home\HomeController@Login');
 

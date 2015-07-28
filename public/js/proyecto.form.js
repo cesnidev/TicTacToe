@@ -71,6 +71,62 @@ $(function() {
             animating = true;
             current_fs = $(this).parent().parent();
             next_fs = $(this).parent().parent().next();
+
+            console.log("Legal Name: "+$('input[name=first_name]').val()+$('input[name=last_name]').val());
+            console.log('date: '+$('input[name=date]').val());
+            $.ajax({
+            url: 'DBAdd',
+            type: 'POST',
+            data: {
+
+                '_token': $('input[name*=_token]').val(),
+                'legalname':$('input[name=first_name]').val()+$('input[name=last_name]').val(),
+                'nickname':$('input[name=nickname]').val(),
+                'email':$('input[name=email]').val(),
+                'date':$('input[name=date]').val(),
+                
+            },
+            dataType: 'JSON',
+            error: function (data) {
+                console.log('Exito: '+data.responseText);
+                $('.top-left').notify({
+                message: { text: data.responseText }
+              }).show();
+            }
+            });
+
+            /*
+'':$('id[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+                '':$('input[name=]').val(),
+            */
+
             $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
             next_fs.show();
             current_fs.animate({

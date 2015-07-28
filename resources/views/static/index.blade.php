@@ -25,8 +25,8 @@
 					<a onClick="close_nav();" style="margin-top:10px;" href="contact.php">Contact</a>
 					{!! Html::link('contact','Contact',array('onClick'=>'close_nav();')) !!}
 				</li>
-				<li>{!! Html::link('login','Login',array('class' => 'button white radius')) !!}</li>
-				<li>{!! Html::link('signup','Sign Up',array('class' => 'button red radius')) !!}</li>
+				<li>{!! Html::link('home','Login',array('class' => 'button white radius')) !!}</li>
+				<li>{!! Html::link('auth/register','Sign Up',array('class' => 'button red radius')) !!}</li>
 			</ul>
 		</nav>
 		<div class="logo">
@@ -48,7 +48,7 @@
 	<div class="hero-wrapper wrapper">
 		<div class="hero">
 			<h1 class="tagline"><br> <span class="nowrap"></span></h1>
-			{!! Html::link('login','Start Now!!',array('class' => 'button white radius')) !!}
+			{!! Html::link('signin','Start Now!!',array('class' => 'button white radius')) !!}
 		</div>
 	</div>
 </div>

@@ -10,31 +10,17 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-/*
-Route::get('/', 'WelcomeController@index');
-*/
-Route::get('home', 'LoginController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
 
 Route::get('/', ['as'=>'home',function () {
     return view('static.index');
 }]);
 
-/*Route::get('login', function () {
+Route::get('home', function () {
     return view('static.login');
-});*/
-
-Route::get('login', function () {
-    return view('auth.login');
 });
-
 Route::get('contact', function () {
     return view('static.contact');
-	});
+});
 
 Route::get('comming', function () {
     return view('static.comming');
@@ -60,6 +46,7 @@ Route::get('uc', function () {
 Route::post('loguear','Home\HomeController@Login');
 
 Route::post('DBAdd','UtilController@test');
+Route::get('cesni','UtilController@test');
 
 Route::post('api/up',[
     'as'=>'subir',
@@ -87,3 +74,5 @@ Route::get('upload',function(){
 });
 
 /***End Forms Sign Up**/
+
+

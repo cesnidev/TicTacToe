@@ -14,6 +14,13 @@
 Route::get('/', ['as'=>'home',function () {
     return view('static.index');
 }]);
+Route::get('home', 'HomeController@index');
+
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
+
 
 Route::get('home', function () {
     return view('static.login');

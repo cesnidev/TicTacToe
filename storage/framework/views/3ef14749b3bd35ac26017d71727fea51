@@ -27,7 +27,7 @@
 
 				</li>
 				<li><?php echo Html::link('home','Login',array('class' => 'button white radius')); ?></li>
-				<li><?php echo Html::link('auth/register','Sign Up',array('class' => 'button red radius')); ?></li>
+				<li><?php echo Html::link('signup','Sign Up',array('class' => 'button red radius')); ?></li>
 			</ul>
 		</nav>
 		<div class="logo">

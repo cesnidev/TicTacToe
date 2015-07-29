@@ -20,8 +20,8 @@
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <?php echo $__env->make('assets.notify_header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-        <link rel="shortcut icon" href="<?php echo e(asset('img/favicon.ico')); ?>">
+        @include('assets.notify_header')
+        <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
 
 
 		<link rel="stylesheet" href="css/foundation-datepicker.min.css">
@@ -33,13 +33,12 @@
 <div class='notifications bottom-right'></div>
 <div class='notifications top-left'></div>
 <div class='notifications bottom-left'></div>
-	
+
         <!-- Header -->
         <div class="container">
             <div class="header row" style="border-bottom: 3px solid #dc222b;" >
                 <div class="large-4 columns">
-                    <?php echo Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:30%;margin-top:10px;')))); ?>
-
+                    {!! Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:30%;margin-top:10px;')))) !!}
                 </div>
                 <div class="tel-skype large-8 columns">
                     <p><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679 </p>
@@ -47,7 +46,7 @@
             </div>
         </div>
 <section>
-        	
+
 <div id="eventicaforms">
 
 			<ul id="progressbar">
@@ -65,8 +64,7 @@
 			<fieldset>
 
 			<form id="basicuser" data-abide="ajax">
-				<?php echo Form::token(); ?>
-
+				{!! Form::token() !!}
 				<h2 class="fs-title">Sign Up / Basic Information</h2>
 
 				<div class="row" style="height:200px; border:1px solid #404040;border-radius:8px;">
@@ -78,7 +76,7 @@
 					</div>
 					<div class="large-6 columns">
 						<div class="row">
-											 
+
 						 <div class="large-6 columns">
 						   <input type="text" id="tca_border_text" placeholder="First Name" name="first_name" required pattern="[a-zA-Z]+"/>
 						   <small class="error">first name is required and must be a real name.</small>
@@ -91,9 +89,9 @@
 						   <input type="text" id="tca_border_text" placeholder="Last Name" name="last_name" required pattern="[a-zA-Z]+"/>
 						   <small class="error">last name is required.</small>
 						</div>
-											
+
 						</div>
-										
+
 					</div> <div class="large-4 columns"></div>
 				</div>
 
@@ -117,7 +115,7 @@
 											<input type="text" class="span2" required pattern="(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)" data-date-format="mm/dd/yy" id="datepicker" name="date">
 											   <small class="error">valid date is required.</small>
 										</div>
-									
+
 									</div>
 								</div>
 								<div class="large-4 columns"></div>
@@ -173,7 +171,7 @@
 								<div class="large-2 columns">
 									<label class="inline"><font size="-1">Address Line 1:</font></label>
 								</div>
-								<div class="large-6 columns"> 
+								<div class="large-6 columns">
 									<input type="text" id="tca_border_text" name="address1" placeholder="Number, street" required pattern="[a-zA-Z]+"/>
 									<small class="error">address is required.</small>
 								</div>
@@ -203,63 +201,63 @@
                                     	<option value="AZ">AZ</option>
                                     	<option value="AR">AR</option>
                                     	<option value="CA">CA</option>
-                                    	
+
                                     	<option value="CO">CO</option>
                                     	<option value="CT">CT</option>
                                     	<option value="DE">DE</option>
                                     	<option value="DC">DC</option>
                                     	<option value="FL">FL</option>
-                                    	
+
                                     	<option value="GA">GA</option>
                                     	<option value="HI">HI</option>
                                     	<option value="ID">ID</option>
                                     	<option value="IL">IL</option>
                                     	<option value="IN">IN</option>
-                                    	
+
                                     	<option value="IA">IA</option>
                                     	<option value="KS">KS</option>
                                     	<option value="KY">KY</option>
                                     	<option value="LA">LA</option>
                                     	<option value="ME">ME</option>
-                                    	
+
                                     	<option value="MD">MD</option>
                                     	<option value="MA">MA</option>
                                     	<option value="MI">MI</option>
                                     	<option value="MN">MN</option>
                                     	<option value="MS">MS</option>
-                                    	
+
                                     	<option value="MO">MO</option>
                                     	<option value="MT">MT</option>
                                     	<option value="NE">NE</option>
                                     	<option value="NV">NV</option>
                                     	<option value="NH">NH</option>
-                                    	
+
                                     	<option value="NJ">NJ</option>
                                     	<option value="NM">NM</option>
                                     	<option value="NY">NY</option>
                                     	<option value="NC">NC</option>
                                     	<option value="ND">ND</option>
-                                    	
+
                                     	<option value="OH">OH</option>
                                     	<option value="OK">OK</option>
                                     	<option value="OR">OR</option>
                                     	<option value="PA">PA</option>
                                     	<option value="RI">RI</option>
-                                    	
+
                                     	<option value="SC">SC</option>
                                     	<option value="SD">SD</option>
                                     	<option value="TN">TN</option>
                                     	<option value="TX">TX</option>
                                     	<option value="UT">UT</option>
-                                    	
+
                                     	<option value="VT">VT</option>
                                     	<option value="VA">VA</option>
                                     	<option value="WA">WA</option>
                                     	<option value="WV">WV</option>
                                     	<option value="WI">WI</option>
-                                    	
+
                                     	<option value="WY">WY</option>
-    								  
+
     								</select>
 									<small class="error">State is required.</small>
     							</label>
@@ -268,7 +266,7 @@
 												  <input type="text" placeholder="Zip" id="tca_border_text" name="zip" required pattern="number"/>
 											<small class="error">Zip Code is required.</small>
 										</div>
-									
+
 									</div>
 								</div>
 								<div class="large-4 columns"></div>
@@ -280,7 +278,7 @@
 								</div>
 								<div class="large-3 columns">
 									<input type="text" placeholder="(000)-000 0000" id="tca_border_text" name="phone" required pattern="number">
-									
+
 									<small class="error">Phone Number is required and must be numbers .</small>
 								</div>
 								<div class="large-7 columns"></div>
@@ -292,7 +290,7 @@
 				<div class="row">
 								<div class="large-2 large-offset-2 columns">
 									<input id="same_as_home_mailing" type="checkbox" />
-									
+
 								</div>
 								<div class="large-8 columns left" style="text-align:left;">
 									<label for="same_as_home_mailing">Same as Home Address</label>
@@ -334,63 +332,63 @@
                                     	<option value="AZ">AZ</option>
                                     	<option value="AR">AR</option>
                                     	<option value="CA">CA</option>
-                                    	
+
                                     	<option value="CO">CO</option>
                                     	<option value="CT">CT</option>
                                     	<option value="DE">DE</option>
                                     	<option value="DC">DC</option>
                                     	<option value="FL">FL</option>
-                                    	
+
                                     	<option value="GA">GA</option>
                                     	<option value="HI">HI</option>
                                     	<option value="ID">ID</option>
                                     	<option value="IL">IL</option>
                                     	<option value="IN">IN</option>
-                                    	
+
                                     	<option value="IA">IA</option>
                                     	<option value="KS">KS</option>
                                     	<option value="KY">KY</option>
                                     	<option value="LA">LA</option>
                                     	<option value="ME">ME</option>
-                                    	
+
                                     	<option value="MD">MD</option>
                                     	<option value="MA">MA</option>
                                     	<option value="MI">MI</option>
                                     	<option value="MN">MN</option>
                                     	<option value="MS">MS</option>
-                                    	
+
                                     	<option value="MO">MO</option>
                                     	<option value="MT">MT</option>
                                     	<option value="NE">NE</option>
                                     	<option value="NV">NV</option>
                                     	<option value="NH">NH</option>
-                                    	
+
                                     	<option value="NJ">NJ</option>
                                     	<option value="NM">NM</option>
                                     	<option value="NY">NY</option>
                                     	<option value="NC">NC</option>
                                     	<option value="ND">ND</option>
-                                    	
+
                                     	<option value="OH">OH</option>
                                     	<option value="OK">OK</option>
                                     	<option value="OR">OR</option>
                                     	<option value="PA">PA</option>
                                     	<option value="RI">RI</option>
-                                    	
+
                                     	<option value="SC">SC</option>
                                     	<option value="SD">SD</option>
                                     	<option value="TN">TN</option>
                                     	<option value="TX">TX</option>
                                     	<option value="UT">UT</option>
-                                    	
+
                                     	<option value="VT">VT</option>
                                     	<option value="VA">VA</option>
                                     	<option value="WA">WA</option>
                                     	<option value="WV">WV</option>
                                     	<option value="WI">WI</option>
-                                    	
+
                                     	<option value="WY">WY</option>
-    								  
+
     								</select>
 									<small class="error">State is required.</small>
     							</label>
@@ -399,7 +397,7 @@
 												  <input type="text" placeholder="Zip" id="tca_border_text" name="shipzip" required pattern="number"/>
 											<small class="error">Zip Code is required.</small>
 										</div>
-									
+
 									</div>
 								</div>
 								<div class="large-4 columns"></div>
@@ -413,7 +411,7 @@
 					</div>
 					<div class="large-6 columns">
 						<div class="row">
-											 
+
 											 <div class="large-6 columns">
 											   <input type="text" id="tca_border_text" placeholder="First Name" name="emrgncyfirst_name" required pattern="[a-zA-Z]+"/>
 											   <small class="error">first name is required and must be a real name.</small>
@@ -423,13 +421,13 @@
 											   <small class="error">last name is required.</small>
 											</div>
 						</div>
-										
+
 					</div> <div class="large-4 columns"></div>
 				</div>
 				<div class="row">
 								<div class="large-6 large-offset-2 columns">
 									<div class="row">
-										
+
 										<div class="large-6 columns">
 											<label>
 			    								<select name="emrgncyrelation">
@@ -439,15 +437,15 @@
 			                                    	<option value="AZ">AZ</option>
 			                                    	<option value="AR">AR</option>
 			                                    	<option value="CA">CA</option>
-			                                    	
+
 			                                    	<option value="CO">CO</option>
 			                                    	<option value="CT">CT</option>
 			                                    	<option value="DE">DE</option>
-			    								  
+
 			    								</select>
 			    							</label>
 										</div><div class="large-6 columns"></div>
-									
+
 									</div>
 								</div>
 								<div class="large-4 columns"></div>
@@ -486,63 +484,63 @@
                                     	<option value="AZ">AZ</option>
                                     	<option value="AR">AR</option>
                                     	<option value="CA">CA</option>
-                                    	
+
                                     	<option value="CO">CO</option>
                                     	<option value="CT">CT</option>
                                     	<option value="DE">DE</option>
                                     	<option value="DC">DC</option>
                                     	<option value="FL">FL</option>
-                                    	
+
                                     	<option value="GA">GA</option>
                                     	<option value="HI">HI</option>
                                     	<option value="ID">ID</option>
                                     	<option value="IL">IL</option>
                                     	<option value="IN">IN</option>
-                                    	
+
                                     	<option value="IA">IA</option>
                                     	<option value="KS">KS</option>
                                     	<option value="KY">KY</option>
                                     	<option value="LA">LA</option>
                                     	<option value="ME">ME</option>
-                                    	
+
                                     	<option value="MD">MD</option>
                                     	<option value="MA">MA</option>
                                     	<option value="MI">MI</option>
                                     	<option value="MN">MN</option>
                                     	<option value="MS">MS</option>
-                                    	
+
                                     	<option value="MO">MO</option>
                                     	<option value="MT">MT</option>
                                     	<option value="NE">NE</option>
                                     	<option value="NV">NV</option>
                                     	<option value="NH">NH</option>
-                                    	
+
                                     	<option value="NJ">NJ</option>
                                     	<option value="NM">NM</option>
                                     	<option value="NY">NY</option>
                                     	<option value="NC">NC</option>
                                     	<option value="ND">ND</option>
-                                    	
+
                                     	<option value="OH">OH</option>
                                     	<option value="OK">OK</option>
                                     	<option value="OR">OR</option>
                                     	<option value="PA">PA</option>
                                     	<option value="RI">RI</option>
-                                    	
+
                                     	<option value="SC">SC</option>
                                     	<option value="SD">SD</option>
                                     	<option value="TN">TN</option>
                                     	<option value="TX">TX</option>
                                     	<option value="UT">UT</option>
-                                    	
+
                                     	<option value="VT">VT</option>
                                     	<option value="VA">VA</option>
                                     	<option value="WA">WA</option>
                                     	<option value="WV">WV</option>
                                     	<option value="WI">WI</option>
-                                    	
+
                                     	<option value="WY">WY</option>
-    								  
+
     								</select>
 									<small class="error">State is required.</small>
     							</label>
@@ -551,7 +549,7 @@
 												  <input type="text" placeholder="Zip" id="tca_border_text" name="emrgncyzip" required pattern="number"/>
 											<small class="error">Zip Code is required.</small>
 										</div>
-									
+
 									</div>
 								</div>
 								<div class="large-4 columns"></div>
@@ -562,7 +560,7 @@
 								</div>
 								<div class="large-3 columns">
 									<input type="text" placeholder="(000)-000 0000" id="tca_border_text" name="emrgncyphone" required pattern="number">
-									
+
 									<small class="error">Phone Number is required and must be numbers .</small>
 								</div>
 								<div class="large-7 columns"></div>
@@ -573,7 +571,7 @@
 								</div>
 								<div class="large-6 columns">
 									<textarea rows="6" type="text"  id="tca_border_text" name="emrgncyinfo"></textarea>
-									
+
 								</div>
 								<div class="large-4 columns"></div>
 				</div>
@@ -585,7 +583,7 @@
 			<fieldset>
 			<form id="profile" data-abide="ajax">
 				<h2 class="fs-title">Gender</h2>
-				
+
 				<div class="row">
 								<div class="large-2 columns">
 										<div class="right">Male</div>
@@ -617,8 +615,8 @@
     								    <option selected="selected">--</option>
                                     	<option value="AL">AL</option>
                                     	<option value="AK">AK</option>
-                                    	 
-    								  
+
+
     								</select>
 									<small class="error">State is required.</small>
     							</label>
@@ -653,8 +651,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -670,8 +668,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -687,8 +685,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -711,8 +709,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -728,8 +726,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -745,8 +743,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -772,8 +770,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -789,8 +787,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -806,8 +804,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -818,7 +816,7 @@
 								</div>
 								<div class="large-3 columns"></div>
 				</div>
-				
+
 				<br><hr>
 				<h2 class="fs-title">Female Specific</h2>
 
@@ -834,8 +832,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -851,8 +849,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -868,8 +866,8 @@
 				    								    <option selected="selected">--</option>
 				                                    	<option value="AL">AL</option>
 				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+
+
 				    								</select>
 													<small class="error">State is required.</small>
 				    							</label>
@@ -896,10 +894,10 @@
     								    <option selected="selected">--</option>
                                     	<option value="AL">AL</option>
                                     	<option value="AK">AK</option>
-                                    	
-                                    	
+
+
                                     	<option value="WY">WY</option>
-    								  
+
     								</select>
 									<small class="error">State is required.</small>
     							</label>
@@ -920,10 +918,10 @@
     								    <option selected="selected">*optional</option>
                                     	<option value="AL">AL</option>
                                     	<option value="AK">AK</option>
-                                    	
-                                    	
+
+
                                     	<option value="WY">WY</option>
-    								  
+
     								</select>
 									<small class="error">State is required.</small>
     							</label>
@@ -1002,11 +1000,11 @@
 				<br><hr>
 				<h2 class="fs-title">Photos</h2>
 				<div>
-					<div action="<?php echo e(route('subir')); ?>" class="dropzone">
-						<input type="hidden" id="token" name="_token" value="<?php echo csrf_token(); ?>">
+					<div action="{{ route('subir')}}" class="dropzone">
+						<input type="hidden" id="token" name="_token" value="<?php echo csrf_token();?>">
 					</div>
 				</div>
-				
+
 
 				<input type="button" name="next" class="nextprofile action-button" value="Next" />
 			</form>
@@ -1141,10 +1139,10 @@
     								    <option selected="selected">--</option>
                                     	<option value="AL">AL</option>
                                     	<option value="AK">AK</option>
-                                    	
-                                    	
+
+
                                     	<option value="WY">WY</option>
-    								  
+
     								</select>
 									<small class="error">State is required.</small>
     							</label>
@@ -1165,10 +1163,10 @@
     								    <option selected="selected">--</option>
                                     	<option value="AL">AL</option>
                                     	<option value="AK">AK</option>
-                                    	
-                                    	
+
+
                                     	<option value="WY">WY</option>
-    								  
+
     								</select>
 									<small class="error">State is required.</small>
     							</label>
@@ -1189,10 +1187,10 @@
     								    <option selected="selected">--</option>
                                     	<option value="AL">AL</option>
                                     	<option value="AK">AK</option>
-                                    	
-                                    	
+
+
                                     	<option value="WY">WY</option>
-    								  
+
     								</select>
 									<small class="error">State is required.</small>
     							</label>
@@ -1308,8 +1306,8 @@
     								    <option selected="selected">--</option>
                                     	<option value="AL">AL</option>
                                     	<option value="AK">AK</option>
-                                    	 
-    								  
+
+
     								</select>
 									<small class="error">State is required.</small>
     							</label>
@@ -1331,7 +1329,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Event Modeling</label>
@@ -1340,7 +1338,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Flash Mob/Guerilla</label>
@@ -1349,7 +1347,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Tradeshow</label>
@@ -1358,7 +1356,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Sampling</label>
@@ -1367,7 +1365,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Indoor</label>
@@ -1376,7 +1374,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Driving</label>
@@ -1385,7 +1383,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Host/Hostess</label>
@@ -1394,7 +1392,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Promotions on Social Media Sites</label>
@@ -1403,7 +1401,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Tech Product Specialist</label>
@@ -1414,7 +1412,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Street Team</label>
@@ -1423,7 +1421,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">In-Store Demostration</label>
@@ -1432,7 +1430,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">National Tours</label>
@@ -1441,7 +1439,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Liquor</label>
@@ -1450,7 +1448,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Outdoor</label>
@@ -1459,7 +1457,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Costume</label>
@@ -1468,7 +1466,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Set Up/Break-down</label>
@@ -1477,7 +1475,7 @@
 								<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Retail Sales</label>
@@ -1493,7 +1491,7 @@
 							<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Brand Ambassador</label>
@@ -1502,7 +1500,7 @@
 							<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Team Lead</label>
@@ -1511,7 +1509,7 @@
 							<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Emcee</label>
@@ -1522,7 +1520,7 @@
 							<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Model</label>
@@ -1531,14 +1529,14 @@
 							<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Driver</label>
 									</div>
 							</div>
 						</div>
-						
+
 					</div>
 				</div><br>
 
@@ -1560,7 +1558,7 @@
 											  <label for="licensev"></label>
 											</div>
 										</div>
-									
+
 						</div>
 						<div class="row center">
 							<div class="row">
@@ -1569,7 +1567,7 @@
 							<div class="row">
 								<button id="upload_drivlic" class="button radius" style="background-color:gray;" disabled>Upload image</button>
 							</div>
-									
+
 						</div>
 						<div class="row">
 										<div class="large-9 columns">
@@ -1581,7 +1579,7 @@
 											  <label for="ownmb"></label>
 											</div>
 										</div>
-									
+
 						</div>
 						<div class="row">
 										<div class="large-9 columns">
@@ -1593,7 +1591,7 @@
 											  <label for="apitm"></label>
 											</div>
 										</div>
-									
+
 						</div>
 					</div>
 					<div class="large-6 columns"></div>
@@ -1610,7 +1608,7 @@
 						<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">One-off/One-day</label>
@@ -1619,7 +1617,7 @@
 						<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Consecutive/Multiple Days</label>
@@ -1628,19 +1626,19 @@
 						<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Consecutive/Multiple Months</label>
 									</div>
 						</div>
-						
+
 					</div>
 					<div class="large-4 columns">
 						<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Short Shift(4 hours or less)</label>
@@ -1649,7 +1647,7 @@
 						<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Long Shift(8 hours or more)</label>
@@ -1658,7 +1656,7 @@
 						<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Morning Shift</label>
@@ -1667,7 +1665,7 @@
 						<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Afternoon Shift</label>
@@ -1678,7 +1676,7 @@
 						<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Last-minute Shifts(24 Hours or less)</label>
@@ -1687,7 +1685,7 @@
 						<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Holiday Shifts</label>
@@ -1696,7 +1694,7 @@
 						<div class="row">
 									<div class="large-2 columns">
 										<input id="checkbox1" type="checkbox" />
-										
+
 									</div>
 									<div class="large-10 columns left" >
 										<label for="checkbox1">Backup Shifts</label>
@@ -1710,7 +1708,7 @@
 			</fieldset>
 			<fieldset>
 			<form id="legal" data-abide="ajax">
-				
+
 				<h2 class="fs-title">Legal</h2><hr>
 
 				<div class="row">
@@ -1778,39 +1776,35 @@
 									</div>
 								</div>
 								<div class="large-4 columns">
-									
+
 								</div>
 								<div class="large-4 columns"></div>
 							</div>
-							
+
 							<div class="row">
 								<input id="checkbox1" type="checkbox"><label for="checkbox1">Agree Terms of Service and Privacy Policies</label>
 							</div>
-							
+
 							<br><br>
 					<input type="submit" name="submit" class="nextlegal action-button" value="Submit" />
-				
+
 			</form>
 			</fieldset>
 		</div>
  </section>
 
-		<?php echo $__env->make('assets.notify_footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		@include('assets.notify_footer')
 		<script src="js/fileup/dropzone.js"></script>
-		<?php echo Html::script("js/proyecto.form.js"); ?>
-
-		<?php echo Html::script("js/jquery.backstretch.min.js"); ?>
-
-		<?php echo Html::script('js/jquery.easing.1.3.js'); ?>
-
-		<?php echo Html::script("js/foundation.min.js"); ?>
-
+		{!! Html::script("js/proyecto.form.js")!!}
+		{!! Html::script("js/jquery.backstretch.min.js")!!}
+		{!! Html::script('js/jquery.easing.1.3.js')!!}
+		{!! Html::script("js/foundation.min.js")!!}
 		<script src="js/foundation-datepicker.min.js"></script>
-		
+
 	    <script>
 	      $(document).foundation();
 	    </script>
-	    
+
 
     </body>
 

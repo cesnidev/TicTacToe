@@ -26,7 +26,7 @@
 					{!! Html::link('contact','Contact',array('onClick'=>'close_nav();')) !!}
 				</li>
 				<li>{!! Html::link('home','Login',array('class' => 'button white radius')) !!}</li>
-				<li>{!! Html::link('auth/register','Sign Up',array('class' => 'button red radius')) !!}</li>
+				<li>{!! Html::link('signup','Sign Up',array('class' => 'button red radius')) !!}</li>
 			</ul>
 		</nav>
 		<div class="logo">

@@ -153,37 +153,50 @@
 									  </div>
 								</div>
 								<div class="large-4 columns"></div>
+				</div>
+				<div class="row">
+								<div class="large-2 columns">
+									<label class="inline"><font size="-1">Referred By:</font></label>
+								</div>
+								<div class="large-6 columns">
+									<input type="text" id="tca_border_text" name="referred" required pattern="[a-zA-Z]+"/>
+									<small class="error">referred is required.</small>
+								</div>
+								<div class="large-4 columns"></div>
 				</div><br>
 
 				<h2 class="fs-title">Contact Information</h2>
 
 				<div class="row">
 								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Address:</font></label>
+									<label class="inline"><font size="-1">Address Line 1:</font></label>
 								</div>
-								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" name="last_name" required pattern="[a-zA-Z]+"/>
+								<div class="large-6 columns"> 
+									<input type="text" id="tca_border_text" name="address1" placeholder="Number, street" required pattern="[a-zA-Z]+"/>
+									<small class="error">address is required.</small>
 								</div>
 								<div class="large-4 columns"></div>
 				</div>
 				<div class="row">
-								<div class="large-3 large-offset-2 columns">
-									<input type="text" id="tca_border_text" placeholder="Apt#, Suite, etc." name="last_name" required pattern="[a-zA-Z]+"/>
+								<div class="large-2 columns">
+									<label class="inline"><font size="-1">Address Line 2:</font></label>
 								</div>
-								<div class="large-7 columns"></div>
+								<div class="large-6 columns">
+									<input type="text" id="tca_border_text" name="address2" placeholder="Apt#,Suite, etc.. " pattern="[a-zA-Z]+"/>
+								</div>
+								<div class="large-4 columns"></div>
 				</div>
 				<div class="row">
 								<div class="large-6 large-offset-2 columns">
 									<div class="row">
 										<div class="large-6 columns">
-			    							<input type="text" placeholder="City" id="tca_border_text" name="last_name" required pattern="[a-zA-Z]+"/>
+			    							<input type="text" placeholder="City" id="tca_border_text" name="city" required pattern="[a-zA-Z]+"/>
 											   <small class="error">City is required.</small>
 										 </div>
 										<div class="large-3 columns">
 											<label>
     								<select name="state" required>
-    								    <option selected="selected">State</option>
-                                    	<option value="AL">AL</option>
+                                    	<option selected="selected" value="AL">AL</option>
                                     	<option value="AK">AK</option>
                                     	<option value="AZ">AZ</option>
                                     	<option value="AR">AR</option>
@@ -250,7 +263,7 @@
     							</label>
 										</div>
 										<div class="large-3 columns">
-												  <input type="text" placeholder="Zip" id="tca_border_text" name="zip_code" required pattern="number"/>
+												  <input type="text" placeholder="Zip" id="tca_border_text" name="zip" required pattern="number"/>
 											<small class="error">Zip Code is required.</small>
 										</div>
 									
@@ -264,12 +277,13 @@
 									<label class="inline"><font size="-1">Phone:</font></label>
 								</div>
 								<div class="large-3 columns">
-									<input type="text" placeholder="(000)-000 0000" id="tca_border_text" name="phone1" required pattern="number">
+									<input type="text" placeholder="(000)-000 0000" id="tca_border_text" name="phone" required pattern="number">
 									
 									<small class="error">Phone Number is required and must be numbers .</small>
 								</div>
 								<div class="large-7 columns"></div>
 				</div>
+
 
 				<h2 class="fs-title">Mailing Address</h2>
 
@@ -284,30 +298,34 @@
 				</div>
 				<div class="row">
 								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Address:</font></label>
+									<label class="inline"><font size="-1">Address Line 1:</font></label>
 								</div>
 								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" placeholder="Number , Street " name="mail_adress_street" required pattern="[a-zA-Z]+"/>
+									<input type="text" id="tca_border_text" placeholder="Number , Street " name="shipadress1" required pattern="[a-zA-Z]+"/>
+									<small class="error">address is required.</small>
 								</div>
 								<div class="large-4 columns"></div>
 				</div>
 				<div class="row">
-								<div class="large-3 large-offset-2 columns">
-									<input type="text" id="tca_border_text" placeholder="Apt#, Suite, etc." name="mail_adress_apt" required pattern="[a-zA-Z]+"/>
+								<div class="large-2 columns">
+									<label class="inline"><font size="-1">Address Line 2:</font></label>
 								</div>
-								<div class="large-7 columns"></div>
+								<div class="large-6 columns">
+									<input type="text" id="tca_border_text" placeholder="Apt#,Suite, etc. " name="shipadress2" pattern="[a-zA-Z]+"/>
+								</div>
+								<div class="large-4 columns"></div>
 				</div>
 
 				<div class="row">
 								<div class="large-6 large-offset-2 columns">
 									<div class="row">
 										<div class="large-6 columns">
-			    							<input type="text" placeholder="City" id="tca_border_text" name="mail_adress_city" required pattern="[a-zA-Z]+"/>
+			    							<input type="text" placeholder="City" id="tca_border_text" name="shipcity" required pattern="[a-zA-Z]+"/>
 											   <small class="error">City is required.</small>
 										 </div>
 										<div class="large-3 columns">
 											<label>
-    								<select name="mail_adress_state" required>
+    								<select name="shipstate" required>
     								    <option selected="selected">State</option>
                                     	<option value="AL">AL</option>
                                     	<option value="AK">AK</option>
@@ -376,7 +394,7 @@
     							</label>
 										</div>
 										<div class="large-3 columns">
-												  <input type="text" placeholder="Zip" id="tca_border_text" name="mail_adress_zip" required pattern="number"/>
+												  <input type="text" placeholder="Zip" id="tca_border_text" name="shipzip" required pattern="number"/>
 											<small class="error">Zip Code is required.</small>
 										</div>
 									
@@ -395,11 +413,11 @@
 						<div class="row">
 											 
 											 <div class="large-6 columns">
-											   <input type="text" id="tca_border_text" placeholder="First Name" name="first_name" required pattern="[a-zA-Z]+"/>
+											   <input type="text" id="tca_border_text" placeholder="First Name" name="emrgncyfirst_name" required pattern="[a-zA-Z]+"/>
 											   <small class="error">first name is required and must be a real name.</small>
 											 </div>
 											 <div class="large-6 columns">
-											   <input type="text" id="tca_border_text" placeholder="Last Name" name="last_name" required pattern="[a-zA-Z]+"/>
+											   <input type="text" id="tca_border_text" placeholder="Last Name" name="emrgncylast_name" required pattern="[a-zA-Z]+"/>
 											   <small class="error">last name is required.</small>
 											</div>
 						</div>
@@ -412,9 +430,9 @@
 										
 										<div class="large-6 columns">
 											<label>
-			    								<select name="state" required>
-			    								    <option selected="selected">Relation</option>
-			                                    	<option value="AL">AL</option>
+			    								<select name="emrgncyrelation">
+			    								    <option >Relation</option>
+			                                    	<option value="AL" selected="selected">AL</option>
 			                                    	<option value="AK">AK</option>
 			                                    	<option value="AZ">AZ</option>
 			                                    	<option value="AR">AR</option>
@@ -425,7 +443,6 @@
 			                                    	<option value="DE">DE</option>
 			    								  
 			    								</select>
-												<small class="error">State is required.</small>
 			    							</label>
 										</div><div class="large-6 columns"></div>
 									
@@ -435,33 +452,34 @@
 				</div>
 				<div class="row">
 								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Address:</font></label>
+									<label class="inline"><font size="-1">Address Line 1:</font></label>
 								</div>
 								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" placeholder="Number , Street " name="last_name" required pattern="[a-zA-Z]+"/>
+									<input type="text" id="tca_border_text" placeholder="Number , Street " name="emrgncyadress1" required pattern="[a-zA-Z]+"/>
 								</div>
 								<div class="large-4 columns"></div>
 				</div>
-
 				<div class="row">
-								<div class="large-4 large-offset-2 columns">
-									<input type="text" id="tca_border_text" placeholder="Apt#, Suite, etc." name="last_name" required pattern="[a-zA-Z]+"/>
+								<div class="large-2 columns">
+									<label class="inline"><font size="-1">Address Line 2:</font></label>
 								</div>
-								<div class="large-6 columns"></div>
+								<div class="large-6 columns">
+									<input type="text" id="tca_border_text" placeholder="Apt#, Suite, etc." name="emrgncyadress2" pattern="[a-zA-Z]+"/>
+								</div>
+								<div class="large-4 columns"></div>
 				</div>
 
 				<div class="row">
 								<div class="large-6 large-offset-2 columns">
 									<div class="row">
 										<div class="large-6 columns">
-			    							<input type="text" placeholder="City" id="tca_border_text" name="last_name" required pattern="[a-zA-Z]+"/>
+			    							<input type="text" placeholder="City" id="tca_border_text" name="emrgncycity" required pattern="[a-zA-Z]+"/>
 											   <small class="error">City is required.</small>
 										 </div>
 										<div class="large-3 columns">
 											<label>
-    								<select name="state" required>
-    								    <option selected="selected">State</option>
-                                    	<option value="AL">AL</option>
+    								<select name="emrgncystate" required>
+                                    	<option value="AL" selected="selected">AL</option>
                                     	<option value="AK">AK</option>
                                     	<option value="AZ">AZ</option>
                                     	<option value="AR">AR</option>
@@ -528,7 +546,7 @@
     							</label>
 										</div>
 										<div class="large-3 columns">
-												  <input type="text" placeholder="Zip" id="tca_border_text" name="zip_code" required pattern="number"/>
+												  <input type="text" placeholder="Zip" id="tca_border_text" name="emrgncyzip" required pattern="number"/>
 											<small class="error">Zip Code is required.</small>
 										</div>
 									
@@ -541,11 +559,21 @@
 									<label class="inline"><font size="-1">Phone:</font></label>
 								</div>
 								<div class="large-3 columns">
-									<input type="text" placeholder="(000)-000 0000" id="tca_border_text" name="phone1" required pattern="number">
+									<input type="text" placeholder="(000)-000 0000" id="tca_border_text" name="emrgncyphone" required pattern="number">
 									
 									<small class="error">Phone Number is required and must be numbers .</small>
 								</div>
 								<div class="large-7 columns"></div>
+				</div>
+				<div class="row">
+								<div class="large-2 columns">
+									<label class="inline"><font size="-1">Please provide any information we should know in case of an emergency:</font></label>
+								</div>
+								<div class="large-6 columns">
+									<textarea rows="6" type="text"  id="tca_border_text" name="emrgncyinfo"></textarea>
+									
+								</div>
+								<div class="large-4 columns"></div>
 				</div>
 
 

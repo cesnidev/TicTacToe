@@ -8,22 +8,22 @@ use Redirect;
 use Request;
 use Session;
 use Response;
+use Crypt;
 use App\BasicInfo;
 class UtilController extends Controller
 {
 
-public function test(){
+public function basicinfo(){
   if(Request::ajax()) {
       $binfo = Input::all();
     }
     $Info = new BasicInfo;
-    $Info->email='alguno';
-    $Info->password='alguno';
-    /*$User->nickname=$binfo['nickname'];
-    $User->dob=$binfo['date'];
-    $User->email=$binfo['email'];*/
+    $Info->legalname=$binfo['legalname'];    
+    $Info->nickname=$binfo['nickname'];
+    $Info->dob=$binfo['date'];
+    $Info->email=$binfo['email'];
+    $Info->password=Crypt::encrypt($binfo['password']);
     $Info->save();
-
-  return "Agregado a la DB :D ".$binfo['_token'];
+  return "Agregado a la DB :D ";
 }
 }

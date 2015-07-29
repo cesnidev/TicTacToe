@@ -21,10 +21,10 @@ Route::controllers([
     'password' => 'Auth\PasswordController',
 ]);
 
-
+/*
 Route::get('home', function () {
     return view('static.login');
-});
+});*/
 Route::get('contact', function () {
     return view('static.contact');
 });
@@ -52,8 +52,7 @@ Route::get('uc', function () {
 });
 Route::post('loguear','Home\HomeController@Login');
 
-Route::post('DBAdd','UtilController@test');
-Route::get('cesni','UtilController@test');
+Route::post('BIAdd','UtilController@basicinfo');
 
 Route::post('api/up',[
     'as'=>'subir',

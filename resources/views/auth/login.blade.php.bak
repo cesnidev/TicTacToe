@@ -1,60 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-<title>Login</title>
+@extends('app')
 
-<script src="js/jquery.js"></script>
-<script src="js/uff/jquery-ultimate-fancy-form.min.js"></script>
-<script src="js/foundation.min.js"></script>
-<script src="js/foundation/foundation.js"></script>
-<script src="js/foundation/foundation.dropdown.js"></script>
-
-{!! Html::style('css/uff/animate.css') !!}
-{!! Html::style('css/uff/jquery-ultimate-fancy-form.css') !!}
-{!! Html::style('css/uff/hint.css') !!}
-{!! Html::style('css/normalize.css') !!}
-{!! Html::style('css/foundation.min.css') !!}
-{!! Html::style('css/foundation.css') !!}
-{!! Html::style('css/uff/custom.css') !!}
-
-
-<link href="css/uff/animate.css" rel="stylesheet" type="text/css">
-<link href="css/uff/jquery-ultimate-fancy-form.css" rel="stylesheet" type="text/css">
-<link href="css/uff/hint.css" rel="stylesheet" type="text/css">
-<link href="css/normalize.css" rel="stylesheet" type="text/css">
-<link href="css/foundation.min.css" rel="stylesheet" type="text/css">
-<link href="css/foundation.css" rel="stylesheet" type="text/css">
-<link href="css/uff/custom.css" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="img/favicon.ico">
-
-</head>
-<body>
-	<div class="large-4 large-offset-4 columns" style="vertical-align:middle; " class="form">
-
-	<div class="row show-for-large-only" align="center" style="margin-top:8rem;">
-	</div>
-	<div class="row hide-for-small" align="center">
-		{!! html_entity_decode(Html::link('/',
-			Html::image('img/Logo3.png'),array(
-		'id'=>'logo_login',
-		'style'=>'width:350px;'
-		))) !!}
-	</div>
-	<div class="row show-for-small-only" align="center" style="margin-top:100px;">
-
-		{!! html_entity_decode(Html::link('/',
-			Html::image('img/Logo3.png'),array(
-		'id'=>'logo_login',
-		))) !!}
-
-	</div>
-		
-		<div class="row">	
+@section('content')
 		
 		@if (count($errors) > 0)
 						<div class="alert alert-danger">
@@ -117,8 +63,4 @@
 					<div class="clear"></div>
 				
 				{!! Form::close() !!}
-				<div style="color:#fff;text-align:center;">&copy; 2015 Eventica. All Rights Reserverd.</div>
-		</div>
-	</div>
-</body>
-</html>
+@endsection

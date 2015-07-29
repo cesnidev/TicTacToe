@@ -72,20 +72,26 @@ $(function() {
             current_fs = $(this).parent().parent();
             next_fs = $(this).parent().parent().next();
 
-            console.log("Legal Name: "+$('input[name=first_name]').val()+$('input[name=last_name]').val());
-            console.log('date: '+$('input[name=date]').val());
-            $.ajax({
-            url: 'DBAdd',
-            type: 'POST',
-            data: {
+            //console.log("Legal Name: "+$('input[name=first_name]').val()+$('input[name=last_name]').val());
+            //console.log('datex: '+$('input[name=date]').val());
+            // console.log('password: '+$('input[id=password]').val());
+            
+            var datos = {
 
                 '_token': $('input[name*=_token]').val(),
-                'legalname':$('input[name=first_name]').val()+$('input[name=last_name]').val(),
+                'legalname':$('input[name=first_name]').val()+' '+$('input[name=last_name]').val(),
                 'nickname':$('input[name=nickname]').val(),
-                'email':$('input[name=email]').val(),
                 'date':$('input[name=date]').val(),
+                'email':$('input[name=email]').val(),
+                'password':$('input[id=password]').val(),
                 
-            },
+                
+            };
+            
+            $.ajax({
+            url: 'BIAdd',
+            type: 'POST',
+            data: datos,
             dataType: 'JSON',
             error: function (data) {
                 console.log('Exito: '+data.responseText);

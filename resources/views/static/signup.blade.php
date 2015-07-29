@@ -111,44 +111,6 @@
 								</div>
 								<div class="large-6 columns">
 									<div class="row">
-										<!--<div class="large-6 columns">
-			    							<label>
-			    								<select name="state" required>
-			    								    <option selected="selected">--</option>
-
-			                                    	<option value="January">January</option>
-													<option value="February">February</option>
-													<option value="March">March</option>
-													<option value="April">April</option>
-													<option value="May">May</option>
-													<option value="June">June</option>
-													<option value="July">July</option>
-													<option value="August">August</option>
-													<option value="September">September</option>
-													<option value="October">October</option>
-													<option value="November">November</option>
-													<option value="December">December</option>
-			    								  
-			    								</select>
-												<small class="error">Month is required.</small>
-			    							</label>
-										 </div>-->
-										<!--<div class="large-3 columns">
-											<label >
-			    								<select name="state" required>
-			    								    <option selected="selected">--</option>
-
-			                                    	<option value=2007 >2007</option>
-												    <option value=2008 >2008</option>
-												    <option value=2019 >2009</option>
-												    <option value=2010 >2010</option>
-												    <option value=2011 >2011</option>
-												    <option value=2012 >2012</option>
-			    								  
-			    								</select>
-												<small class="error">Year is required.</small>
-			    							</label>
-										</div>-->
 										<div class="large-12 columns">
 											<input type="text" class="span2" required pattern="(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)" data-date-format="mm/dd/yy" id="datepicker" name="date">
 											   <small class="error">valid date is required.</small>

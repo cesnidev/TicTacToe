@@ -97,11 +97,11 @@ $(function() {
                 'zip':$('input[name=zip]').val(),
                 'phone':$('input[name=phone]').val(),
 
-                'shipadress1':$('input[name=shipadress1]').val(),
+                /*'shipadress1':$('input[name=shipadress1]').val(),
                 'shipadress2':$('input[name=shipadress2]').val(),
                 'shipcity':$('input[name=shipcity]').val(),
                 'shipstate':$('select[name=shipstate]').val(),
-                'shipzip':$('input[name=shipzip]').val(),
+                'shipzip':$('input[name=shipzip]').val(),*/
 
                 'emrgncyfullname':$('input[name=emrgncyfirst_name]').val()+' '+$('input[name=emrgncylast_name]').val(),
                 'emrgncyrelation':$('select[name=emrgncyrelation]').val(),

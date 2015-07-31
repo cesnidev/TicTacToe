@@ -11,16 +11,21 @@
 		<meta name="author" content="">
 		
 		<!-- CSS -->
-		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-		<link rel="stylesheet" href="css/proyecto.css">
-		<link rel="stylesheet" href="css/foundation-icons.css" />
-		<script src="js/modernizr.custom.34978.js"></script>
+		<?php echo Html::style('http://fonts.googleapis.com/css?family=PT+Sans:400,700'); ?>
+
+		<?php echo Html::style('css/proyecto.css'); ?>
+
+		<?php echo Html::style('css/foundation-icons.css'); ?>
+
+
+		<?php echo Html::script('js/modernizr.custom.34978.js'); ?>
+
 		
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="shortcut icon" href="<?php echo asset('img/favicon.ico'); ?>">
 	</head>
 	
 	<body style="border-top: 3px solid #fff;">
@@ -28,7 +33,8 @@
 		<div class="container">
 			<div class="header row" style="border-bottom: 3px solid #f8f8f8;" >
 				<div class="large-4 columns">
-					<a href="index.php"><img src="img/logo4.png" style="width:90%;margin-top:10px;"></a>
+					<?php echo html_entity_decode(Html::link('/',Html::image('img/logo4.png'),array('style'=>'width:90%;margin-top:10px;'))); ?>
+
 				</div>
 				<div class="tel-skype large-8 columns">
 					<p align="right"><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679 </p>
@@ -165,24 +171,32 @@
 						<nav class="menu">
 							<ul>
 								<li style="color:white;">|</li>
-								<li><a style="color:white;" href="contact.php">Contact</a></li>
-								<li><a style="color:white;" href="comming.php">Sign Up</a></li>
+								<li><?php echo Html::link('contact','Contact',array('style'=>'color:white;')); ?></li>
+								<li><?php echo Html::link('signup','Sign Up',array('style'=>'color:white;')); ?></li>
 								<li style="color:white;">|</li>
 							</ul>
 						</nav>
 					</div>
 					<div class="large-3 columns" style="color:white;margin-top:25px;"  align="center">
-						<a style="color:#fff;" href="terms.php">Terms</a>|<a style="color:#fff;" href="privacy.php">Privacy</a>
+						<?php echo Html::link('terms','Terms',array('style'=>'color:white;')); ?>
+
+				|
+				 		<?php echo HTML::Link('privacy','Privacy',array('style'=>'color:white;')); ?>
+
 					</div>
 				</div>
 			</section>
 		</footer>
-		<!-- Javascript -->
-		<script src="js/proyecto.js"></script>
-		<script src="js/jquery.js"></script>
-	<script src="js/jquery.backstretch.min.js"></script>
-	<script src="js/jquery.countdown.js"></script>
-	<script src="js/col_footer.js"></script>
+		<?php echo Html::script("js/proyecto.js"); ?>
+
+		<?php echo Html::script("js/jquery.js"); ?>
+
+		<?php echo Html::script("js/jquery.backstretch.min.js"); ?>
+
+		<?php echo Html::script("js/jquery.countdown.js"); ?>
+
+		<?php echo Html::script("js/col_footer.js"); ?>
+
 	
 	
 	</body>

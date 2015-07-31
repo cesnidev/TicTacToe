@@ -53,11 +53,10 @@ Route::get('uc', function () {
 Route::post('loguear','Home\HomeController@Login');
 
 Route::post('BIAdd','UtilController@basicinfo');
-Route::get('cesni','UtilController@test');
 
 Route::post('api/up',[
     'as'=>'subir',
-    'uses'=>'UtilController@test'
+    'uses'=>'UtilController@uploadfile'
 ]);
 
 /**Start Forms Sign Up**/

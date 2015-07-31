@@ -234,18 +234,18 @@
 				<nav class="menu">
 					<ul>
 						<li style="color:white;">|</li>
-						<li>{!! Html::link('#services','Services',array('style'=>'color:whte;'))!!}</li>
-						<li>{!! Html::link('#events','Events',array('style'=>'color:whte;'))!!}</li>
-						<li>{!! Html::link('contact','Contact',array('style'=>'color:whte;'))!!}</li>
-						<li>{!! Html::link('signup','Sign Up',array('style'=>'color:whte;'))!!}</li>
+						<li>{!! Html::link('#services','Services',array('style'=>'color:white;'))!!}</li>
+						<li>{!! Html::link('#events','Events',array('style'=>'color:white;'))!!}</li>
+						<li>{!! Html::link('contact','Contact',array('style'=>'color:white;'))!!}</li>
+						<li>{!! Html::link('signup','Sign Up',array('style'=>'color:white;'))!!}</li>
 						<li style="color:white;">|</li>
 					</ul>
 				</nav>
 			</div>
 			<div class="large-3 columns" style="color:white;margin-top:25px;text-align:center;"  align="right">
-				{!! Html::link('terms','Terms') !!}
+				{!! Html::link('terms','Terms',array('style'=>'color:white;')) !!}
 				|
-				 {!! HTML::Link('privacy','Privacy') !!}
+				 {!! HTML::Link('privacy','Privacy',array('style'=>'color:white;')) !!}
 			</div>
 		</div>
 	</section>

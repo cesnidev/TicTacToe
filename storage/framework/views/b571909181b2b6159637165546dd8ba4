@@ -15,12 +15,14 @@
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
-        {!! Html::style('css/under.css') !!}
+        <link rel="shortcut icon" href="<?php echo e(asset('img/favicon.ico')); ?>">
+        <?php echo Html::style('css/under.css'); ?>
+
     </head>
     <body>
         <div align="center">
-            {!! html_entity_decode(Html::link('/',Html::image('img/logo_uc.png','logo_eventica',array('class'=>'logo_uc')))) !!}
+            <?php echo html_entity_decode(Html::link('/',Html::image('img/logo_uc.png','logo_eventica',array('class'=>'logo_uc')))); ?>
+
             <h1 class="title_uc">THIS SECTION IS UNDER CONSTRUCTION</h1>
             <h3 class="msg_uc">We are Currently working on an awesome image gallery.</h3>
         </div>

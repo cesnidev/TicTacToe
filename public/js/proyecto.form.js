@@ -64,7 +64,7 @@ $(function() {
 
         $(".nextbasic").click(function() {
             
-            //if(pass){
+            if(pass){
                 pass=false;
             if (animating) return false;
 
@@ -122,7 +122,8 @@ $(function() {
             error: function (data) {
                 console.log(data.responseText);
                 $('.top-left').notify({
-                message: { text: data.responseText }
+                message: { text: data.responseText },
+                type:'blackgloss'
               }).show();
             }
             });
@@ -154,7 +155,7 @@ $(function() {
                 },
                 easing: 'easeInOutBack'
             });
-       // }
+        }
         });
         
         $('#tabcertified').click(function(){
@@ -197,9 +198,6 @@ $(function() {
         });
 
         $(".nextprofile").click(function() {
-
-            console.log('image name: '+file.name);
-            //$checkbox = $('#tabcertified').value();
 
             //if(pass){
                 pass=false;

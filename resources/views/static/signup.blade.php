@@ -9,23 +9,20 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <!-- CSS -->
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-		<link rel="stylesheet" href="css/foundation.css">
-		<link rel="stylesheet" href="css/proyecto.form.css">
-        <link rel="stylesheet" href="css/test/coming-soon-style.css">
-		<link rel="stylesheet" href="css/foundation-icons.css" />
-		<script src="js/modernizr.custom.34978.js"></script>
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         @include('assets.notify_header')
         <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
-
-
-		<link rel="stylesheet" href="css/foundation-datepicker.min.css">
-		<link rel="stylesheet" href="css/fileup/dropzone.css">
+		{!! Html::style('css/foundation-datepicker.min.css') !!}
+		{!! Html::style('css/fileup/dropzone.css') !!}
+		{!! Html::style('http://fonts.googleapis.com/css?family=PT+Sans:400,700') !!}
+		{!! Html::style('css/foundation.css') !!}
+		{!! Html::style('css/proyecto.form.css') !!}
+		{!! Html::style('css/test/coming-soon-style.css') !!}
+		{!! Html::style('css/foundation-icons.css') !!}
+		{!! Html::script('js/modernizr.custom.34978.js') !!}
     </head>
 
     <body style="border-top: 3px solid #fff;">
@@ -999,12 +996,10 @@
 
 				<br><hr>
 				<h2 class="fs-title">Photos</h2>
-				<div>
-					<div action="{{ route('subir')}}" class="dropzone">
+				
+					<div action="{{ route('subir')}}" class="dropzone showx" >
 						<input type="hidden" id="token" name="_token" value="<?php echo csrf_token(); ?>">
 					</div>
-				</div>
-				
 
 				<input type="button" name="next" class="nextprofile action-button" value="Next" />
 			</form>
@@ -1794,7 +1789,7 @@
  </section>
 
 		@include('assets.notify_footer')
-		<script src="js/fileup/dropzone.js"></script>
+		{!! Html::script("js/fileup/dropzone.js")!!}
 		{!! Html::script("js/proyecto.form.js")!!}
 		{!! Html::script("js/jquery.backstretch.min.js")!!}
 		{!! Html::script('js/jquery.easing.1.3.js')!!}

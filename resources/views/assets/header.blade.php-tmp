@@ -24,7 +24,7 @@
 	{!! Html::style('css/circles/style.css')!!}
 	{!! Html::style('css/circles/normalize.css')!!}
 	<!--Circles-->
-	
+
   <link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
   </head>
   <body class="home index ">

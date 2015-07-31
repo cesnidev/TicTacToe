@@ -20861,6 +20861,50 @@ footer a:hover {
 	
 	
 }
+
+@media (min-width: 1401px) and (max-width: 1600px)
+{
+.call_us{
+    color:red;
+    font-family: "proxima-nova", sans-serif;
+    font-size:24px;
+    font-weight:bold;
+    display:none;
+
+}
+#tca_social{
+    width: 90px;
+    margin-right: -7px;
+    margin-top: 30px;
+    float:right;
+}
+
+.events_e{
+ height:600px;  
+ width:100%; 
+
+}
+.events_e img{
+        height:100%;
+        width:100%;
+}
+.events_e div{
+        width:100%;
+
+}
+
+.events_e div a{
+        postion:absolute;
+        margin-left: 40%;
+        margin-right: auto;
+        left: 0;
+        top: -300px;
+
+}
+
+
+}
+
 @media (min-width: 1201px) and (max-width: 1400px)
 {
 .call_us{

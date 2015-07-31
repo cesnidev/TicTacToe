@@ -9,23 +9,28 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <!-- CSS -->
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
-		<link rel="stylesheet" href="css/foundation.css">
-		<link rel="stylesheet" href="css/proyecto.form.css">
-        <link rel="stylesheet" href="css/test/coming-soon-style.css">
-		<link rel="stylesheet" href="css/foundation-icons.css" />
-		<script src="js/modernizr.custom.34978.js"></script>
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <?php echo $__env->make('assets.notify_header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <link rel="shortcut icon" href="<?php echo e(asset('img/favicon.ico')); ?>">
+		<?php echo Html::style('css/foundation-datepicker.min.css'); ?>
 
+		<?php echo Html::style('css/fileup/dropzone.css'); ?>
 
-		<link rel="stylesheet" href="css/foundation-datepicker.min.css">
-		<link rel="stylesheet" href="css/fileup/dropzone.css">
+		<?php echo Html::style('http://fonts.googleapis.com/css?family=PT+Sans:400,700'); ?>
+
+		<?php echo Html::style('css/foundation.css'); ?>
+
+		<?php echo Html::style('css/proyecto.form.css'); ?>
+
+		<?php echo Html::style('css/test/coming-soon-style.css'); ?>
+
+		<?php echo Html::style('css/foundation-icons.css'); ?>
+
+		<?php echo Html::script('js/modernizr.custom.34978.js'); ?>
+
     </head>
 
     <body style="border-top: 3px solid #fff;">
@@ -1001,12 +1006,10 @@
 
 				<br><hr>
 				<h2 class="fs-title">Photos</h2>
-				<div>
-					<div action="<?php echo e(route('subir')); ?>" class="dropzone">
+				
+					<div action="<?php echo e(route('subir')); ?>" class="dropzone showx" >
 						<input type="hidden" id="token" name="_token" value="<?php echo csrf_token(); ?>">
 					</div>
-				</div>
-				
 
 				<input type="button" name="next" class="nextprofile action-button" value="Next" />
 			</form>
@@ -1796,7 +1799,8 @@
  </section>
 
 		<?php echo $__env->make('assets.notify_footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-		<script src="js/fileup/dropzone.js"></script>
+		<?php echo Html::script("js/fileup/dropzone.js"); ?>
+
 		<?php echo Html::script("js/proyecto.form.js"); ?>
 
 		<?php echo Html::script("js/jquery.backstretch.min.js"); ?>

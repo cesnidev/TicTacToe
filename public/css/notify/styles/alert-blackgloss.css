@@ -62,7 +62,7 @@ keyframes notification {
 	-ms-animation: notification .75s linear;
 	-o-animation: notification .75s linear;
 	animation: notification .75s linear;
-	background: rgba(0,0,0,1);
+	background: rgba(220,34,43,1);
 	-webkit-box-shadow: 0 2px 5px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.2), inset 0 0 0 1px rgba(255,255,255,.1);
 	-moz-box-shadow: 0 2px 5px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.2), inset 0 0 0 1px rgba(255,255,255,.1);
 	-ms-box-shadow: 0 2px 5px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.2), inset 0 0 0 1px rgba(255,255,255,.1);
@@ -88,7 +88,8 @@ keyframes notification {
 .alert-blackgloss .close {
   position: relative;
   top: -3px;
-  right: -25px;
+  right: 1px;
 	color: #fff;
-	content: 'x';
+	content: 'X';
+
 }

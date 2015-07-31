@@ -51,41 +51,8 @@ public function basicinfo(){
     
   return "successfully added ".$binfo['nickname']." :D ";
 }
-
-public function test(){
-  if(Request::ajax()) {
-      $binfo = Input::all();
-    }
-    $Info = new BasicInfo;
-
-    $Info->legalname='legalname';
-    $Info->nickname='nickname';
-    $Info->dob='dob';
-    $Info->email='email';
-    $Info->password=Crypt::encrypt('password');
-    $Info->referred='referred';
-    $Info->address1='address1';
-    $Info->address2='address2';
-    $Info->city='city';
-    $Info->state='state';
-    $Info->zip='zip';
-    $Info->phone='phone';
-    $Info->shipadress1='shipadress1';
-    $Info->shipadress2='shipadress2';
-    $Info->shipcity='shipcity';
-    $Info->shipstate='shipstate';
-    $Info->shipzip='shipzip';
-    $Info->emrgncyfullname='emrgncyfullname';
-    $Info->emrgncyrelation='emrgncyrelation';
-    $Info->emrgncyadress1='emrgncyadress1';
-    $Info->emrgncyadress2='emrgncyadress2';
-    $Info->emrgncycity='emrgncycity';
-    $Info->emrgncystate='emrgncystate';
-    $Info->emrgncyzip='emrgncyzip';
-    $Info->emrgncyphone='emrgncyphone';
-    $Info->emrgncyinfo='emrgncyinfo';
-
-    $Info->save();
-  return "Agregado a la DB :D from GET ";
+public function uploadfile()
+{
+  return "Loaded!!";
 }
 }

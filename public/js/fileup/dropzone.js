@@ -152,7 +152,11 @@
       dictRemoveFileConfirmation: null,
       dictMaxFilesExceeded: "You can not upload any more files.",
       accept: function(file, done) {
-        console.log('subido exitosamente ');
+        //alert('subido exitosamente '+file.name+' '+done);
+        $('.top-left').notify({
+                message: { text: 'subido exitosamente '+file.name },
+                type:'blackgloss'
+              }).show();
         return done();
       },
       init: function() {

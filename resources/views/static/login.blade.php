@@ -21,7 +21,7 @@
 <script src="js/foundation/foundation.js"></script>
 <script src="js/foundation/foundation.dropdown.js"></script>
 <link href="css/uff/custom.css" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="shortcut icon" href="asset('img/favicon.ico')">
 </head>
 <body>
 	<div class="large-4 large-offset-4 columns" style="vertical-align:middle; " class="form">

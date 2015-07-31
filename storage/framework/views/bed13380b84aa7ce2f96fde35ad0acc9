@@ -11,17 +11,21 @@
 		<meta name="author" content="">
 		
 		<!-- CSS -->
-		{!! Html::style('http://fonts.googleapis.com/css?family=PT+Sans:400,700') !!}
-		{!! Html::style('css/proyecto.css') !!}
-		{!! Html::style('css/foundation-icons.css') !!}
+		<?php echo Html::style('http://fonts.googleapis.com/css?family=PT+Sans:400,700'); ?>
 
-		{!! Html::script('js/modernizr.custom.34978.js') !!}
+		<?php echo Html::style('css/proyecto.css'); ?>
+
+		<?php echo Html::style('css/foundation-icons.css'); ?>
+
+
+		<?php echo Html::script('js/modernizr.custom.34978.js'); ?>
+
 		
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
+		<link rel="shortcut icon" href="<?php echo asset('img/favicon.ico'); ?>">
 	</head>
 	
 	<body style="border-top: 3px solid #fff;">
@@ -30,7 +34,8 @@
 		<div class="container">
 			<div class="header row" style="border-bottom: 3px solid #f8f8f8;" >
 				<div class="large-4 columns">
-					{!! html_entity_decode(Html::link('/',Html::image('img/logo4.png'),array('style'=>'width:90%;margin-top:10px;'))) !!}
+					<?php echo html_entity_decode(Html::link('/',Html::image('img/logo4.png'),array('style'=>'width:90%;margin-top:10px;'))); ?>
+
 				</div>
 				<div class="tel-skype large-8 columns">
 					<p align="right"><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679 </p>
@@ -48,7 +53,7 @@
 							<h1>Eventica Terms of Service</h1>
 							<p>Last Revised: July 1st, 2015 </p>
 
-							<p align="justify">These Terms of Service (this <b>"Agreement"</b>) is an agreement between you (<b>"you"</b>) and Eventica, Inc.and governs your use of the website located at {!! Html::link('#','www.EventicaTeam.com') !!} and the Services (as defined below) (the Site and Services collectively the <b>"Eventica Platform"</b>). Eventica may amend this Agreement at any time and effective upon publication on the Site. Your continued use of the Eventica Platform after the effective date of a revised version of this Agreement constitutes your acceptance of its terms.</p>
+							<p align="justify">These Terms of Service (this <b>"Agreement"</b>) is an agreement between you (<b>"you"</b>) and Eventica, Inc.and governs your use of the website located at <?php echo Html::link('#','www.EventicaTeam.com'); ?> and the Services (as defined below) (the Site and Services collectively the <b>"Eventica Platform"</b>). Eventica may amend this Agreement at any time and effective upon publication on the Site. Your continued use of the Eventica Platform after the effective date of a revised version of this Agreement constitutes your acceptance of its terms.</p>
 
 							<p align="justify">Certain features of the Eventica Platform may be subject to additional terms which will be posted on the Eventica Platform in connection with such features. All such additional terms are incorporated by reference into this Agreement. In the event of a conflict between the additional terms and any provision in this Agreement, the additional terms will prevail, but only with respect to the Service to which the additional terms apply.</p>
 
@@ -299,25 +304,32 @@
 						<nav class="menu">
 							<ul>
 								<li style="color:white;">|</li>
-								<li>{!! Html::link('contact','Contact',array('style'=>'color:white;'))!!}</li>
-								<li>{!! Html::link('signup','Sign Up',array('style'=>'color:white;'))!!}</li>
+								<li><?php echo Html::link('contact','Contact',array('style'=>'color:white;')); ?></li>
+								<li><?php echo Html::link('signup','Sign Up',array('style'=>'color:white;')); ?></li>
 								<li style="color:white;">|</li>
 							</ul>
 						</nav>
 					</div>
 					<div class="large-3 columns" style="color:white;margin-top:25px;"  align="center">
-						{!! Html::link('terms','Terms',array('style'=>'color:white;')) !!}
+						<?php echo Html::link('terms','Terms',array('style'=>'color:white;')); ?>
+
 				|
-				 		{!! HTML::Link('privacy','Privacy',array('style'=>'color:white;')) !!}
+				 		<?php echo HTML::Link('privacy','Privacy',array('style'=>'color:white;')); ?>
+
 					</div>
 				</div>
 			</section>
 		</footer>
-		{!! Html::script("js/proyecto.js") !!}
-		{!! Html::script("js/jquery.js") !!}
-		{!! Html::script("js/jquery.backstretch.min.js") !!}
-		{!! Html::script("js/jquery.countdown.js") !!}
-		{!! Html::script("js/col_footer.js") !!}
+		<?php echo Html::script("js/proyecto.js"); ?>
+
+		<?php echo Html::script("js/jquery.js"); ?>
+
+		<?php echo Html::script("js/jquery.backstretch.min.js"); ?>
+
+		<?php echo Html::script("js/jquery.countdown.js"); ?>
+
+		<?php echo Html::script("js/col_footer.js"); ?>
+
 	
 	
 	</body>

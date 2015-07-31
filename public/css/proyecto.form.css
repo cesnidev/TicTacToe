@@ -45,6 +45,10 @@
 	position: absolute;
 	width: 96%;
 }
+#eventicaforms fieldset form
+{
+	visibility:visible;
+}
 #eventicaforms fieldset:not(:first-of-type)
 {
 	display: none;

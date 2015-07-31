@@ -21,7 +21,7 @@
 </p>
 
 <!-- Change /upload-target to your upload address -->
-<form action="{{ url('api/up')}}" class="dropzone">
+<form action="<?php echo e(url('api/up')); ?>" class="dropzone">
 	
 	<input type="hidden" id="token" name="_token" value="<?php echo csrf_token(); ?>">
 </form>

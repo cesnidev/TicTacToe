@@ -13,42 +13,76 @@ class UtilController extends Controller {
 
 	public function basicinfo() {
 		if (Request::ajax()) {
-			$binfo = Input::all();
-			$Info  = new BasicInfo;
+			$databinfo = Input::all();
+			$Info      = new BasicInfo;
 
-			$Info->legalname       = $binfo['legalname'];
-			$Info->nickname        = $binfo['nickname'];
-			$Info->dob             = $binfo['dob'];
-			$Info->email           = $binfo['email'];
-			$Info->password        = Hash::make($binfo['password']);
-			$Info->referred        = $binfo['referred'];
-			$Info->address1        = $binfo['address1'];
-			$Info->address2        = $binfo['address2'];
-			$Info->city            = $binfo['city'];
-			$Info->state           = $binfo['state'];
-			$Info->zip             = $binfo['zip'];
-			$Info->phone           = $binfo['phone'];
-			$Info->shipadress1     = $binfo['shipadress1'];
-			$Info->shipadress2     = $binfo['shipadress2'];
-			$Info->shipcity        = $binfo['shipcity'];
-			$Info->shipstate       = $binfo['shipstate'];
-			$Info->shipzip         = $binfo['shipzip'];
-			$Info->emrgncyfullname = $binfo['emrgncyfullname'];
-			$Info->emrgncyrelation = $binfo['emrgncyrelation'];
-			$Info->emrgncyadress1  = $binfo['emrgncyadress1'];
-			$Info->emrgncyadress2  = $binfo['emrgncyadress2'];
-			$Info->emrgncycity     = $binfo['emrgncycity'];
-			$Info->emrgncystate    = $binfo['emrgncystate'];
-			$Info->emrgncyzip      = $binfo['emrgncyzip'];
-			$Info->emrgncyphone    = $binfo['emrgncyphone'];
-			$Info->emrgncyinfo     = $binfo['emrgncyinfo'];
+			$Info->legalname       = $databinfo['legalname'];
+			$Info->nickname        = $databinfo['nickname'];
+			$Info->dob             = $databinfo['dob'];
+			$Info->email           = $databinfo['email'];
+			$Info->password        = Hash::make($databinfo['password']);
+			$Info->referred        = $databinfo['referred'];
+			$Info->address1        = $databinfo['address1'];
+			$Info->address2        = $databinfo['address2'];
+			$Info->city            = $databinfo['city'];
+			$Info->state           = $databinfo['state'];
+			$Info->zip             = $databinfo['zip'];
+			$Info->phone           = $databinfo['phone'];
+			$Info->shipadress1     = $databinfo['shipadress1'];
+			$Info->shipadress2     = $databinfo['shipadress2'];
+			$Info->shipcity        = $databinfo['shipcity'];
+			$Info->shipstate       = $databinfo['shipstate'];
+			$Info->shipzip         = $databinfo['shipzip'];
+			$Info->emrgncyfullname = $databinfo['emrgncyfullname'];
+			$Info->emrgncyrelation = $databinfo['emrgncyrelation'];
+			$Info->emrgncyadress1  = $databinfo['emrgncyadress1'];
+			$Info->emrgncyadress2  = $databinfo['emrgncyadress2'];
+			$Info->emrgncycity     = $databinfo['emrgncycity'];
+			$Info->emrgncystate    = $databinfo['emrgncystate'];
+			$Info->emrgncyzip      = $databinfo['emrgncyzip'];
+			$Info->emrgncyphone    = $databinfo['emrgncyphone'];
+			$Info->emrgncyinfo     = $databinfo['emrgncyinfo'];
 
 			$Info->save();
 		}
 
-		return "successfully added ".$binfo['nickname']." :D ";
+		return "successfully added ".$databinfo['nickname']." :D ";
 	}
-	public function uploadfile() {
-		return "Loaded!!";
+
+	public function profile() {
+		if (Request::ajax()) {
+			$dataprofile = Input::all();
+			$profile     = new Profile;
+
+			$profile->save();
+		}
+
+		return "";
+	}
+	public function experience() {
+		if (Request::ajax()) {
+			$dataexperience = Input::all();
+			$experience     = new Experience;
+
+			$experience->save();
+		}
+
+		return "";
+	}
+	public function availability() {
+		if (Request::ajax()) {
+			$dataavailability = Input::all();
+			$availability     = new Availability;
+
+			$availability->save();
+		}
+
+		return "";
+	}
+
+	public function uploadfile(Request $request) {
+		$image = $request->file('file');
+
+		return "Loaded!! ".$image->getClientOriginalName();
 	}
 }

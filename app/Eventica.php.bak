@@ -1,0 +1,7 @@
+<?php
+/*Helper Functions dev. by Cesni*/
+function existPhoto($photo)
+{
+    return File::exists(public_path().'\uploads\\'.$photo);
+}
+?>

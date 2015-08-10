@@ -150,11 +150,11 @@
       dictCancelUploadConfirmation: "Are you sure you want to cancel this upload?",
       dictRemoveFile: "Remove photo",
       dictRemoveFileConfirmation: null,
-      dictMaxFilesExceeded: "You can not upload any more files.",
+      dictMaxFilesExceeded: "You can not upload any more photos.",
       accept: function(file, done) {
         //alert('subido exitosamente '+file.name+' '+done);
         $('.top-left').notify({
-                message: { text: 'subido exitosamente '+file.name },
+                message: { text: 'successfully uploaded '+file.name },
                 type:'blackgloss'
               }).show();
         return done();
@@ -314,8 +314,17 @@
             type: 'POST',
             data: {'_token': $('#token').val(),'filename':file.name},
             dataType: 'JSON',
+            success: function (data) {
+                $('.top-right').notify({
+                message: { text: data.responseText },
+                type:'bangTidy'
+              }).show();
+            },
             error: function (data) {
-                alert('Exito: '+data.responseText);
+                $('.top-right').notify({
+                message: { text: data.responseText },
+                type:'bangTidy'
+              }).show();
             }
         });
 

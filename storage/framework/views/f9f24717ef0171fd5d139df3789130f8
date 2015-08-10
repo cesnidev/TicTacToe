@@ -84,15 +84,15 @@
 					<div class="large-6 columns">
 						<div class="row">
 											 
-						 <div class="large-6 columns">
+						 <div class="large-4 columns">
 						   <input type="text" id="tca_border_text" placeholder="First Name" name="first_name" required pattern="[a-zA-Z]+"/>
 						   <small class="error">first name is required and must be a real name.</small>
 						 </div>
-						 <!--<div class="large-4 columns">
+						 <div class="large-4 columns">
 						   <input type="text" id="tca_border_text" placeholder="Middle Initial" name="midinit_name" required pattern="[a-zA-Z]+"/>
 						   <small class="error">Middle Initial is required.</small>
-						</div>-->
-						<div class="large-6 columns">
+						</div>
+						<div class="large-4 columns">
 						   <input type="text" id="tca_border_text" placeholder="Last Name" name="last_name" required pattern="[a-zA-Z]+"/>
 						   <small class="error">last name is required.</small>
 						</div>
@@ -203,7 +203,8 @@
 										<div class="large-3 columns">
 											<label>
     								<select name="state" required>
-                                    	<option selected="selected" value="AL">AL</option>
+    									<option value="" disabled selected>State</option>
+                                    	<option value="AL">AL</option>
                                     	<option value="AK">AK</option>
                                     	<option value="AZ">AZ</option>
                                     	<option value="AR">AR</option>
@@ -284,7 +285,7 @@
 									<label class="inline"><font size="-1">Phone:</font></label>
 								</div>
 								<div class="large-3 columns">
-									<input type="text" placeholder="(000)-000 0000" id="tca_border_text" name="phone" required pattern="number">
+									<input type="text" placeholder="(000) 000-0000" id="phoneme" name="phone" required pattern="phonenumber" >
 									
 									<small class="error">Phone Number is required and must be numbers .</small>
 								</div>
@@ -333,7 +334,7 @@
 										<div class="large-3 columns">
 											<label>
     								<select name="shipstate" required>
-    								    <option selected="selected">State</option>
+    								    <option value="" disabled selected>State</option>
                                     	<option value="AL">AL</option>
                                     	<option value="AK">AK</option>
                                     	<option value="AZ">AZ</option>
@@ -437,17 +438,18 @@
 										
 										<div class="large-6 columns">
 											<label>
-			    								<select name="emrgncyrelation">
-			    								    <option >Relation</option>
-			                                    	<option value="AL" selected="selected">AL</option>
-			                                    	<option value="AK">AK</option>
-			                                    	<option value="AZ">AZ</option>
-			                                    	<option value="AR">AR</option>
-			                                    	<option value="CA">CA</option>
-			                                    	
-			                                    	<option value="CO">CO</option>
-			                                    	<option value="CT">CT</option>
-			                                    	<option value="DE">DE</option>
+			    								<select placeholder="relation" name="emrgncyrelation">
+													<option value="" disabled selected>Relation</option>
+			                                    	<option value="Mother" >Mother</option>
+			                                    	<option value="Father">Father</option>
+			                                    	<option value="Grand Parent">Grand Parent</option>
+			                                    	<option value="Brother">Brother</option>
+			                                    	<option value="Sister">Sister</option>
+			                                    	<option value="Child">Child</option>
+			                                    	<option value="Friend">Friend</option>
+			                                    	<option value="Aunt">Aunt</option>
+			                                    	<option value="Uncle">Uncle</option>
+			                                    	<option value="Partner">Partner</option>
 			    								  
 			    								</select>
 			    							</label>
@@ -486,7 +488,8 @@
 										<div class="large-3 columns">
 											<label>
     								<select name="emrgncystate" required>
-                                    	<option value="AL" selected="selected">AL</option>
+    									<option value="" disabled selected>State</option>
+                                    	<option value="AL" >AL</option>
                                     	<option value="AK">AK</option>
                                     	<option value="AZ">AZ</option>
                                     	<option value="AR">AR</option>
@@ -566,7 +569,7 @@
 									<label class="inline"><font size="-1">Phone:</font></label>
 								</div>
 								<div class="large-3 columns">
-									<input type="text" placeholder="(000)-000 0000" id="tca_border_text" name="emrgncyphone" required pattern="number">
+									<input type="text" placeholder="(000) 000-0000" id="emrgncyphone" name="emrgncyphone" required pattern="phonenumber">
 									
 									<small class="error">Phone Number is required and must be numbers .</small>
 								</div>
@@ -618,14 +621,40 @@
         									<label class="left">Height</label>
 									        <div class="small-12 columns">
 									          		<label>
-    								<select name="state" required>
-    								    <option selected="selected">--</option>
-                                    	<option value="AL">AL</option>
-                                    	<option value="AK">AK</option>
-                                    	 
+    								<select name="height" required>
+    									<option selected="selected" disabled>--</option>
+                                    	<option value="4'10">4'10</option>
+                                    	<option value="4'11">4'11</option>
+                                    	<option value="4'12">4'12</option>
+                                    	<option value="5'0">5'0</option>
+                                    	<option value="5'1">5'1</option>
+                                    	<option value="5'2">5'2</option>
+                                    	<option value="5'3">5'3</option>
+                                    	<option value="5'4">5'4</option>
+                                    	<option value="5'5">5'5</option>
+                                    	<option value="5'6">5'6</option>
+                                    	<option value="5'7">5'7</option>
+                                    	<option value="5'8">5'8</option>
+                                    	<option value="5'9">5'9</option>
+                                    	<option value="5'10">5'10</option>
+                                    	<option value="5'11">5'11</option>
+                                    	<option value="5'12">5'12</option>
+                                    	<option value="6'0">6'0</option>
+                                    	<option value="6'1">6'1</option>
+                                    	<option value="6,2">6,2</option>
+                                    	<option value="6'3">6'3</option>
+                                    	<option value="6'4">6'4</option>
+                                    	<option value="6'5">6'5</option>
+                                    	<option value="6'6">6'6</option>
+                                    	<option value="6'7">6'7</option>
+                                    	<option value="6'8">6'8</option>
+                                    	<option value="6'9">6'9</option>
+                                    	<option value="6'10">6'10</option>
+                                    	<option value="6'11">6'11</option>
+                                    	<option value="6'12">6'12</option>
     								  
     								</select>
-									<small class="error">State is required.</small>
+									<small class="error">Height is required.</small>
     							</label>
 									        </div>
 									      </div>
@@ -634,7 +663,7 @@
 											<div class="row collapse">
         									<label>Weight</label>
 									        <div class="small-9 columns">
-									          <input type="text" name="weight" />
+									          <input type="text" name="weight" required/><small class="error">weight is required.</small>
 									        </div>
 									        <div class="small-3 columns">
 									          <span class="postfix">Lbs</span>
@@ -654,14 +683,15 @@
         									<label class="left">Eye Color</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
-				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+				    								<select name="eyecolor" required>
+				    								    <option selected="selected" disabled>--</option>
+				                                    	<option value="Blue">Blue</option>
+				                                    	<option value="Brown">Brown</option>
+				                                    	<option value="Green">Green</option>
+				                                    	<option value="Hazel">Hazel</option>
+				                                    	<option value="Gray">Gray</option>
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">eyecolor is required.</small>
 				    							</label>
 											</div>
 									      </div>
@@ -671,14 +701,15 @@
         									<label class="left">Hair Color</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
-				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+				    								<select name="haircolor" required>
+				    								    <option selected="selected" disabled>--</option>
+				                                    	<option value="Auburn">Auburn</option>
+				                                    	<option value="Black">Black</option>
+				                                    	<option value="Blonde">Blonde</option>
+				                                    	<option value="Brunette">Brunette</option>
+				                                    	<option value="Other">Other</option>
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">hair color is required.</small>
 				    							</label>
 											</div>
 									      </div>
@@ -688,14 +719,15 @@
         									<label class="left">Hair Length</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
-				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
+				    								<select name="hairlength" required>
+				    								    <option selected="selected" disabled>--</option>
+				                                    	<option value="Short">Short</option>
+				                                    	<option value="Medium">Medium</option>
+				                                    	<option value="Long">Long</option>
+				                                    	<option value="Bald">Bald</option>
 				    								  
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">hair length is required.</small>
 				    							</label>
 											</div>
 									      </div>
@@ -712,14 +744,16 @@
         									<label class="left">T-Shirt Size</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
-				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+				    								<select name="tshirt" required>
+				    								    <option selected="selected" disabled>--</option>
+				                                    	<option value="XS">XS</option>
+				                                    	<option value="S">S</option>
+				                                    	<option value="M">M</option>
+				                                    	<option value="L">L</option>
+				                                    	<option value="XL">XL</option>
+				                                    	<option value="XXL+">XXL+</option>
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">T-shirt size is required.</small>
 				    							</label>
 											</div>
 									      </div>
@@ -729,14 +763,16 @@
         									<label class="left">Pants Shorts Size</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
-				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+				    								<select name="pantsize" required>
+				    								    <option selected="selected" disabled>--</option>
+				                                    	<option value="XS">XS</option>
+				                                    	<option value="S">S</option>
+				                                    	<option value="M">M</option>
+				                                    	<option value="L">L</option>
+				                                    	<option value="XL">XL</option>
+				                                    	<option value="XXL+">XXL+</option>
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">Pants Shorts size is required.</small>
 				    							</label>
 											</div>
 									      </div>
@@ -746,14 +782,17 @@
         									<label class="left">Shoe Size</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
-				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
+				    								<select name="shoesize" required>
+				    								    <option selected="selected" disabled>--</option>
+				                                    	<option value="5">5</option>
+				                                    	<option value="5.5">5.5</option>
+				                                    	<option value="6">6</option>
+				                                    	<option value="6.5">6.5</option>
+				                                    	<option value=">>">>></option>
+				                                    	<option value="14+">14+</option>	 
 				    								  
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">Shoe size is required.</small>
 				    							</label>
 											</div>
 									      </div>
@@ -768,53 +807,65 @@
 				<div class="row">
 								<div class="large-9 columns">
 									<div class="row">
-										<div class="large-4 columns">
+										<div class="large-3 columns">
 											<div class="row collapse">
         									<label class="left">Chest</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
-				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+				    								<select name="chest" required>
+				    								    <option selected="selected" disabled>--</option>
+				                                    	<option value="36">36</option>
+				                                    	<option value="38">38</option>
+				                                    	<option value="40">40</option>
+				                                    	<option value="42">42</option>
+				                                    	<option value="44">44</option>
+				                                    	<option value="46">46</option>
+				                                    	<option value="48">48</option>
+				                                    	<option value="50">50</option>
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">Chest is required.</small>
 				    							</label>
 											</div>
 									      </div>
 										</div>
-										<div class="large-4 columns">
+										<div class="large-3 columns">
 											<div class="row collapse">
         									<label class="left">Jacket Size</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
-				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+				    								<select name="jacketsize" required>
+				    								    <option selected="selected" disabled>--</option>
+				                                    	<option value="36">36</option>
+				                                    	<option value="38">38</option>
+				                                    	<option value="40">40</option>
+				                                    	<option value="42">42</option>
+				                                    	<option value="44">44</option>
+				                                    	<option value="46">46</option>
+				                                    	<option value="48">48</option>
+				                                    	<option value="50">50</option>
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">Jacket size is required.</small>
 				    							</label>
 											</div>
 									      </div>
 										</div>
-										<div class="large-4 columns">
+										<div class="large-3 columns">
 											<div class="row collapse">
         									<label class="left">Waist</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
-				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+				    								<select name="waist" required>
+				    								    <option selected="selected" disabled>--</option>
+				                                    	<option value="28">28</option>
+				                                    	<option value="30">30</option>
+				                                    	<option value="32">32</option>
+				                                    	<option value="34">34</option>
+				                                    	<option value="36">36</option>
+				                                    	<option value="38">38</option>
+				                                    	<option value="40">40</option>
+				                                    	<option value="42">42</option>
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">Waist is required.</small>
 				    							</label>
 											</div>
 									      </div>
@@ -835,14 +886,21 @@
         									<label class="left">Waist</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
+				    								<select name="waistfemale" required>
 				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+				                                    	<option value="24">24</option>
+				                                    	<option value="25">25</option>
+				                                    	<option value="26">26</option>
+				                                    	<option value="27">27</option>
+				                                    	<option value="28">28</option>
+				                                    	<option value="29">29</option>
+				                                    	<option value="30">30</option>
+				                                    	<option value="31">31</option>
+				                                    	<option value="32">32</option>
+				                                    	<option value="33">33</option>
+				                                    	<option value="34+">34+</option>
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">Waist is required.</small>
 				    							</label>
 											</div>
 									      </div>
@@ -852,14 +910,22 @@
         									<label class="left">Hips</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
-				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+				    								<select name="hips" required>
+				    								    <option selected="selected" disabled>--</option>
+				                                    	<option value="33">33</option>
+				                                    	<option value="34">34</option>
+				                                    	<option value="35">35</option>
+				                                    	<option value="36">36</option>
+				                                    	<option value="37">37</option>
+				                                    	<option value="38">38</option>
+				                                    	<option value="39">39</option>
+				                                    	<option value="40">40</option>
+				                                    	<option value="41">41</option>
+				                                    	<option value="42">42</option>
+				                                    	<option value="43">43</option>
+				                                    	<option value="44+">44+</option>
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">Hips is required.</small>
 				    							</label>
 											</div>
 									      </div>
@@ -869,14 +935,17 @@
         									<label class="left">Dress Size</label>
 									        <div class="small-12 columns">
 									          	<label>
-				    								<select name="state" required>
+				    								<select name="dressize" required>
 				    								    <option selected="selected">--</option>
-				                                    	<option value="AL">AL</option>
-				                                    	<option value="AK">AK</option>
-				                                    	 
-				    								  
+				                                    	<option value="0">0</option>
+				                                    	<option value="2">2</option>
+				                                    	<option value="4">4</option>
+				                                    	<option value="6">6</option>
+				                                    	<option value="8">8</option>
+				                                    	<option value="10">10</option>
+				                                    	<option value="12+">12+</option>
 				    								</select>
-													<small class="error">State is required.</small>
+													<small class="error">Dress size is required.</small>
 				    							</label>
 											</div>
 									      </div>
@@ -897,16 +966,18 @@
 										</div>
 										<div class="large-6 columns">
 											<label>
-    								<select name="state" required>
-    								    <option selected="selected">--</option>
-                                    	<option value="AL">AL</option>
-                                    	<option value="AK">AK</option>
-                                    	
-                                    	
-                                    	<option value="WY">WY</option>
-    								  
+    								<select name="nflanguage" required>
+    								    <option selected="selected" disabled>--</option>
+                                    	<option value="English">English</option>
+                                    	<option value="Spanish">Spanish</option>
+                                    	<option value="French">French</option>
+                                    	<option value="German">German</option>
+                                    	<option value="Italian">Italian</option>
+                                    	<option value="Portuguese">Portuguese</option>
+                                    	<option value="Russian">Russian</option>
+                                    	<option value="Chinese">Chinese</option>
     								</select>
-									<small class="error">State is required.</small>
+									<small class="error">Native/First language is required.</small>
     							</label>
 										</div>
 									</div>
@@ -921,16 +992,17 @@
 										</div>
 										<div class="large-6 columns">
 											<label>
-    								<select name="state" required>
-    								    <option selected="selected">*optional</option>
-                                    	<option value="AL">AL</option>
-                                    	<option value="AK">AK</option>
-                                    	
-                                    	
-                                    	<option value="WY">WY</option>
-    								  
+    								<select name="slanguage" >
+    								    <option selected="selected" disabled>*optional</option>
+                                    	<option value="English">English</option>
+                                    	<option value="Spanish">Spanish</option>
+                                    	<option value="French">French</option>
+                                    	<option value="German">German</option>
+                                    	<option value="Italian">Italian</option>
+                                    	<option value="Portuguese">Portuguese</option>
+                                    	<option value="Russian">Russian</option>
+                                    	<option value="Chinese">Chinese</option>
     								</select>
-									<small class="error">State is required.</small>
     							</label>
 										</div>
 									</div>
@@ -945,7 +1017,7 @@
 										</div>
 										<div class="large-3 columns">
 											<div class="switch">
-											  <input id="englishacent" type="checkbox">
+											  <input id="englishacent" type="checkbox" >
 											  <label for="englishacent"></label>
 											</div>
 										</div>
@@ -1007,13 +1079,28 @@
 				<br><hr>
 				<h2 class="fs-title">Photos</h2>
 				
-					<div action="<?php echo e(route('subir')); ?>" class="dropzone showx" >
-						<input type="hidden" id="token" name="_token" value="<?php echo csrf_token(); ?>">
-					</div>
-
-				<input type="button" name="next" class="nextprofile action-button" value="Next" />
+					
 			</form>
+
+  				<div class="row" class="dropzone" style="border:5px solid #F50508;border-color:#F50508;background: white;border-style:dashed;">
+					<ul class="pricing-table">
+					  <li class="description">Pictures Requirements.</li>
+					  <li class="bullet-item">-Two Head Shots and Two Body Shots. </li>
+					  <li class="bullet-item">-Pictures must be taken by someone else (No selfies).</li>
+					  <li class="bullet-item">-No blurry, too dark or too bright pictures.</li>
+					  <li class="bullet-item">-For Headshots only, face should be looking straight at the camera.</li>
+					  <li class="bullet-item">-No more than one person in the picture.</li>
+					  <li class="bullet-item">-No props, no pets in the picture.</li>
+					  <li class="bullet-item">-No hats or sunglasses.</li>
+					  <li class="bullet-item">-<font color="red">At least 3 photos and maximum 5 photos.</font></li>
+					</ul>
+				</div>
+			<form action="<?php echo e(route('subir')); ?>" class="dropzone" >
+				<input type="hidden" id="token" name="_token" value="<?php echo csrf_token(); ?>">
+			</form><br>
+			<form ><input type="button" name="next" class="nextprofile action-button" value="Next" /></form>
 			</fieldset>
+			
 			<fieldset>
 			<form id="experience" data-abide="ajax">
 				<div class="row">
@@ -1140,16 +1227,13 @@
 										</div>
 										<div class="large-6 columns">
 											<label>
-    								<select name="state" required>
-    								    <option selected="selected">--</option>
-                                    	<option value="AL">AL</option>
-                                    	<option value="AK">AK</option>
-                                    	
-                                    	
-                                    	<option value="WY">WY</option>
-    								  
+    								<select name="hmevents" required>
+                                    	<option value="0" selected>0</option>
+                                    	<option value="10-25">10-25</option>
+                                    	<option value="25-50">25-50</option>
+                                    	<option value="50-100">50-100</option>
+                                    	<option value="100+">100+</option>
     								</select>
-									<small class="error">State is required.</small>
     							</label>
 										</div>
 									</div>
@@ -1164,16 +1248,13 @@
 										</div>
 										<div class="large-6 columns">
 											<label>
-    								<select name="state" required>
-    								    <option selected="selected">--</option>
-                                    	<option value="AL">AL</option>
-                                    	<option value="AK">AK</option>
-                                    	
-                                    	
-                                    	<option value="WY">WY</option>
-    								  
+    								<select name="hlevents" required>
+                                    	<option value="Just Getting Started" selected>Just Getting Started</option>
+                                    	<option value="Less than a year">Less than a year</option>
+                                    	<option value="1-3 years">1-3 years</option>
+                                    	<option value="3-5 years">3-5 years</option>
+                                    	<option value="5 years or more">5 years or more</option>
     								</select>
-									<small class="error">State is required.</small>
     							</label>
 										</div>
 									</div>
@@ -1188,16 +1269,32 @@
 										</div>
 										<div class="large-6 columns">
 											<label>
-    								<select name="state" required>
-    								    <option selected="selected">--</option>
-                                    	<option value="AL">AL</option>
-                                    	<option value="AK">AK</option>
-                                    	
-                                    	
-                                    	<option value="WY">WY</option>
-    								  
+    								<select name="hmactivated" required>
+                                    	<option value="0" selected>0</option>
+                                    	<option value="1-5">1-5</option>
+                                    	<option value="6-10">6-10</option>
+                                    	<option value="More than 10">More than 10</option>
     								</select>
-									<small class="error">State is required.</small>
+    							</label>
+										</div>
+									</div>
+								</div>
+								<div class="large-3 columns"></div>
+				</div>
+				<div class="row">
+								<div class="large-7 large-offset-1 columns">
+									<div class="row">
+										<div class="large-6 columns">
+											<label class="inline"><font size="-1">How many different brands do you work with on a regular basis?</font></label>
+										</div>
+										<div class="large-6 columns">
+											<label>
+    								<select name="hmbrands" required>
+                                    	<option value="0" selected>0</option>
+                                    	<option value="1-5">1-5</option>
+                                    	<option value="6-10">6-10</option>
+                                    	<option value="More than 10">More than 10</option>
+    								</select>
     							</label>
 										</div>
 									</div>
@@ -1230,6 +1327,7 @@
 										<div class="large-5 columns">
 											<button id="upload_tabc" class="button radius" style="background-color:gray;" disabled>Upload image</button>
 										</div>
+										<!--<form><input type="text" placeholder="input"></form>-->
 									</div>
 								</div>
 								<div class="large-3 columns"></div>
@@ -1308,12 +1406,14 @@
 									        <div class="small-6 columns">
 									          		<label>
     								<select name="state" required>
-    								    <option selected="selected">--</option>
-                                    	<option value="AL">AL</option>
-                                    	<option value="AK">AK</option>
-                                    	 
-    								  
-    								</select>
+    									<option value="" selected disabled>select one</option>
+                                    	<option value="High School" selected>High School</option>
+                                    	<option value="Associate Degree">Associate Degree</option>
+                                    	<option value="Bachelors Degree">Bachelors Degree</option>
+                                    	<option value="Masters Degree">Masters Degree</option>
+                                    	<option value="Ph. D.">Ph. D.</option>
+                                    	<option value="Other">Other</option>
+                                    </select>
 									<small class="error">State is required.</small>
     							</label>
 									        </div>
@@ -1333,157 +1433,157 @@
 							<div class="large-7 columns">
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="emodeling" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Event Modeling</label>
+										<label for="emodeling">Event Modeling</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="flashmg" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Flash Mob/Guerilla</label>
+										<label for="flashmg">Flash Mob/Guerilla</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="tradeshow" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Tradeshow</label>
+										<label for="tradeshow">Tradeshow</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="sampling" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Sampling</label>
+										<label for="sampling">Sampling</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="indoor" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Indoor</label>
+										<label for="indoor">Indoor</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="driving" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Driving</label>
+										<label for="driving">Driving</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="hostess" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Host/Hostess</label>
+										<label for="hostess">Host/Hostess</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="promos" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Promotions on Social Media Sites</label>
+										<label for="promos">Promotions on Social Media Sites</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="techp" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Tech Product Specialist</label>
+										<label for="techp">Tech Product Specialist</label>
 									</div>
 								</div>
 							</div>
 							<div class="large-5 columns">
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="streeteam" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Street Team</label>
+										<label for="streeteam">Street Team</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="demostore" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">In-Store Demostration</label>
+										<label for="demostore">In-Store Demostration</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="natours" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">National Tours</label>
+										<label for="natours">National Tours</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="liquor" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Liquor</label>
+										<label for="liquor">Liquor</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="outdoor" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Outdoor</label>
+										<label for="outdoor">Outdoor</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="costume" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Costume</label>
+										<label for="costume">Costume</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="setbd" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Set Up/Break-down</label>
+										<label for="setbd">Set Up/Break-down</label>
 									</div>
 								</div>
 								<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="retailsales" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Retail Sales</label>
+										<label for="retailsales">Retail Sales</label>
 									</div>
 								</div>
 							</div>
@@ -1495,49 +1595,49 @@
 						<div class="large-6 columns">
 							<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="bambass" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Brand Ambassador</label>
+										<label for="bambass">Brand Ambassador</label>
 									</div>
 							</div>
 							<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="teaml" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Team Lead</label>
+										<label for="teaml">Team Lead</label>
 									</div>
 							</div>
 							<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="emcee" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Emcee</label>
+										<label for="emcee">Emcee</label>
 									</div>
 							</div>
 						</div>
 						<div class="large-6 columns">
 							<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="model" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Model</label>
+										<label for="model">Model</label>
 									</div>
 							</div>
 							<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="driver" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Driver</label>
+										<label for="driver">Driver</label>
 									</div>
 							</div>
 						</div>
@@ -1612,29 +1712,29 @@
 					<div class="large-4 columns">
 						<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="days" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">One-off/One-day</label>
+										<label for="days">One-off/One-day</label>
 									</div>
 						</div>
 						<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="cmdays" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Consecutive/Multiple Days</label>
+										<label for="cmdays">Consecutive/Multiple Days</label>
 									</div>
 						</div>
 						<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="cmmonths" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Consecutive/Multiple Months</label>
+										<label for="cmmonths">Consecutive/Multiple Months</label>
 									</div>
 						</div>
 						
@@ -1642,67 +1742,67 @@
 					<div class="large-4 columns">
 						<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="sshift" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Short Shift(4 hours or less)</label>
+										<label for="sshift">Short Shift(4 hours or less)</label>
 									</div>
 						</div>
 						<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="lshift" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Long Shift(8 hours or more)</label>
+										<label for="lshift">Long Shift(8 hours or more)</label>
 									</div>
 						</div>
 						<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="mshift" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Morning Shift</label>
+										<label for="mshift">Morning Shift</label>
 									</div>
 						</div>
 						<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="ashift" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Afternoon Shift</label>
+										<label for="ashift">Afternoon Shift</label>
 									</div>
 						</div>
 					</div>
 					<div class="large-4 columns">
 						<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="lmshift" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Last-minute Shifts(24 Hours or less)</label>
+										<label for="lmshift">Last-minute Shifts(24 Hours or less)</label>
 									</div>
 						</div>
 						<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="hshift" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Holiday Shifts</label>
+										<label for="hshift">Holiday Shifts</label>
 									</div>
 						</div>
 						<div class="row">
 									<div class="large-2 columns">
-										<input id="checkbox1" type="checkbox" />
+										<input id="bshift" type="checkbox" />
 										
 									</div>
 									<div class="large-10 columns left" >
-										<label for="checkbox1">Backup Shifts</label>
+										<label for="bshift">Backup Shifts</label>
 									</div>
 						</div>
 					</div>
@@ -1722,8 +1822,8 @@
 								</div>
 								<div class="large-2 columns" style="margin-top:10px;">
 									<div class="switch round large">
-									  <input id="bad" type="checkbox">
-									  <label for="bad"></label>
+									  <input id="answ1" type="checkbox">
+									  <label for="answ1"></label>
 									</div>
 								</div>
 				</div>
@@ -1733,8 +1833,8 @@
 								</div>
 								<div class="large-2 columns" style="margin-top:10px;">
 									<div class="switch round large">
-									  <input id="ar" type="checkbox">
-									  <label for="ar"></label>
+									  <input id="answ2" type="checkbox">
+									  <label for="answ2"></label>
 									</div>
 								</div>
 							</div>
@@ -1758,7 +1858,7 @@
 								          <!--<span class="prefix"><i class="step .fi-lock size-18"></i></span>-->
 								        </div>
 								        <div class="small-9 columns">
-								          <input type="text" placeholder="9999-9999-9999">
+								          <input type="text" name="ssn" placeholder="999-99-9999">
 								        </div>
 								     </div>
 								     <div class="row">
@@ -1787,7 +1887,7 @@
 							</div>
 							
 							<div class="row">
-								<input id="checkbox1" type="checkbox"><label for="checkbox1">Agree Terms of Service and Privacy Policies</label>
+								<input id="termsofs" type="checkbox"><label for="termsofs">Agree Terms of Service and Privacy Policies</label>
 							</div>
 							
 							<br><br>
@@ -1809,11 +1909,32 @@
 
 		<?php echo Html::script("js/foundation.min.js"); ?>
 
+		<?php echo Html::script("js/format/format.js"); ?>
+
 		<script src="js/foundation-datepicker.min.js"></script>
 		
 	    <script>
-	      $(document).foundation();
+	      $(document).foundation({
+			  abide : {
+			    patterns : {
+			      alpha: /^[a-zA-Z]+$/,
+			      alpha_numeric : /^[a-zA-Z0-9]+$/,
+			      integer: /^[-+]?\d+$/,
+			      phonenumber:/^[(]?\b[0-9]{3}[)][ ]?\b[0-9]{3}-[0-9]{4}\b$/,
+
+			      card : /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/,
+			      cvv : /^([0-9]){3,4}$/
+			    }
+			  }
+			});
 	    </script>
+	    <script type="text/javascript">
+			jQuery(function($) {
+			      $('#phoneme').mask('(999) 999-9999',{placeholder:" "});
+			      $('#emrgncyphone').mask('(999) 999-9999',{placeholder:" "});
+			      $('input[name=ssn]').mask('999-99-9999',{placeholder:" "});
+			   });
+		</script>
 	    
 
     </body>

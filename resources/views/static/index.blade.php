@@ -7,26 +7,26 @@
 	
 	<div class="row nav-collapse collapse">
 		<nav id="eventica_menu_nav" class="menu" data-topbar role="navigation" data-options="is_hover: false">
-			<ul>
+			<ul style="margin-left:-30px;">
 				<li>
-					<a onClick="close_nav();" style="margin-top:10px;" href="#services">Services</a>
+					<a onClick="close_nav();" href="#services">Services</a>
 				</li>
-				<li class="hide-for-small">
-					<a onClick="close_nav();" style="margin-top:10px;" href="#events">Events</a>
+				<li class="hide-for-small" >
+					<a onClick="close_nav();" href="#events">Events</a>
 				</li>
-				<li class="show-for-medium-only">
-					<a onClick="close_nav();" style="margin-top:10px;" href="contact.php">Contact</a>
+				<li class="show-for-medium-only" style="margin-top:-10px;">
+					<a onClick="close_nav();" href="contact.php">Contact</a>
 				</li>
 				
-				<li class="show-for-small-only">
-					<a onClick="close_nav();" style="margin-top:10px;" href="#events_mobile">Events</a>
+				<li class="show-for-small-only" style="margin-top:-10px;">
+					<a onClick="close_nav();"  href="#events_mobile">Events</a>
 				</li>
-				<li class="show-for-small-only">
-					<a onClick="close_nav();" style="margin-top:10px;" href="contact.php">Contact</a>
+				<li class="show-for-small-only" style="margin-top:-10px;">
+					<!--<a onClick="close_nav();" style="margin-top:10px;" href="contact.php">Contact</a>-->
 					{!! Html::link('contact','Contact',array('onClick'=>'close_nav();')) !!}
 				</li>
-				<li>{!! Html::link('home','Login',array('class' => 'button white radius')) !!}</li>
-				<li>{!! Html::link('signup','Sign Up',array('class' => 'button red radius')) !!}</li>
+				<li style="margin-top:-10px;">{!! Html::link('home','Login',array('class' => 'button white radius')) !!}</li>
+				<li style="margin-top:-10px;">{!! Html::link('signup','Sign Up',array('class' => 'button red radius')) !!}</li>
 			</ul>
 		</nav>
 		<div class="logo">
@@ -139,8 +139,8 @@
 </section>
 <section id="events" class="events_e show-for-small-only">
 	<img src="img/Slide/EventValuesMobile.png">  
-	<div class="boton">
-		<a class="button read_more radius" href="uc.php">Go!</a> 
+	<div class="boton" align="center">
+		<a class="button read_more radius" href="uc.php">Gallery</a> 
 	</div>
 </section>
 <section style="background-color:#dc222b;">
@@ -166,7 +166,7 @@
 <section style="background-color:#fff;width:100%;">
 	<div class="row"  style="background-color:#fff;">   
 		
-		<div class="large-8 columns">
+		<div class="large-8 columns visible-for-xlarge hide-for-medium hide-for-small">
 			
 			<ul class="tca-orbit_2" style="height:400px;" data-orbit data-options="bullets: false; animation:fade; animation_speed: 800; pause_on_hover: false; bullets: false; timer_speed: 3000;">
 				<li>
@@ -181,8 +181,13 @@
 			</ul>
 			
 		</div>
-		<div class="large-4 columns hide-for-small" align="left" style="margin-top:-10px;">          
-			<br><div class="large-12 columns " >
+		<div class="hide-for-large hide-for-xlarge" align="center">
+			<h2 style="font-family:Century gothic;color:gray;">Call Us: (333) 333-3333</h2>
+		</div>
+		
+		<div class="large-4 columns hide-for-small hide-for-medium" align="left" style="margin-top:-10px;">          
+			<br>
+			<div class="large-12 columns" >
 				<a href="#" target="_blank">
 					<img onMouseOver="this.src='img/social/twitter.png'" onMouseOut="this.src='img/social/twitter2.png'" src="img/social/twitter2.png" id="tca_social">
 				</a>
@@ -197,27 +202,29 @@
 				</a>
 			</div>
 		</div>
-		<div class="large-4 columns show-for-small-only" align="left" style="margin-top:-100px;">          
-			<br><br>
-			<div class="row" align="center">
-				<a href="#" target="_blank">
-					<img onMouseOver="this.src='img/social/twitter.png'" onMouseOut="this.src='img/social/twitter2.png'" src="img/social/twitter2.png" id="tca_social_mobile">
-				</a>
-			</div>
-			<div class="row" align="center">
-				<a href="#"  target="_blank">
-					<img onMouseOver="this.src='img/social/facebook.png'" onMouseOut="this.src='img/social/facebook3.png'" src="img/social/facebook3.png" id="tca_social_mobile">
-				</a>
-			</div>
-			<div class="row" align="center">
-				<a  href="#"  target="_blank">
-					<img onMouseOver="this.src='img/social/youtube.png'" onMouseOut="this.src='img/social/youtube2.png'" src="img/social/youtube2.png" id="tca_social_mobile">
-				</a>
-			</div>
-			<div class="row" align="center">
-				<a  href="#"  target="_blank">
-					<img onMouseOver="this.src='img/social/linkedin.png'" onMouseOut="this.src='img/social/linkedin2.png'" src="img/social/linkedin2.png" id="tca_social_mobile">
-				</a>
+		<div class="small-12 medium-12 columns hide-for-large-up hide-for-xlarge-up" align="left" style="margin-bottom:20px;margin-top:-20px;" >          
+			
+			<div class="row">
+				<div class="small-3 medium-3 columns" align="right">
+					<a href="#" target="_blank">
+						<img onMouseOver="this.src='img/social/twitter.png'" onMouseOut="this.src='img/social/twitter2.png'" src="img/social/twitter2.png" id="tca_social_mobile">
+					</a>
+				</div>
+				<div class="small-3 medium-3 columns" align="center">
+					<a href="#"  target="_blank">
+						<img onMouseOver="this.src='img/social/facebook.png'" onMouseOut="this.src='img/social/facebook3.png'" src="img/social/facebook3.png" id="tca_social_mobile">
+					</a>
+				</div>
+				<div class="small-3 medium-3 columns" align="center">
+					<a  href="#"  target="_blank">
+						<img onMouseOver="this.src='img/social/youtube.png'" onMouseOut="this.src='img/social/youtube2.png'" src="img/social/youtube2.png" id="tca_social_mobile">
+					</a>
+				</div>
+				<div class="small-3 medium-3 columns" align="left">
+					<a  href="#"  target="_blank">
+						<img onMouseOver="this.src='img/social/linkedin.png'" onMouseOut="this.src='img/social/linkedin2.png'" src="img/social/linkedin2.png" id="tca_social_mobile">
+					</a>
+				</div>
 			</div>
 		</div>
 		
@@ -242,7 +249,7 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="large-3 columns" style="color:white;margin-top:25px;text-align:center;"  align="right">
+			<div class="large-3 columns" style="color:white;margin-top:25px;text-align:center;margin-bottom:15px;"  align="right">
 				{!! Html::link('terms','Terms',array('style'=>'color:white;')) !!}
 				|
 				 {!! HTML::Link('privacy','Privacy',array('style'=>'color:white;')) !!}

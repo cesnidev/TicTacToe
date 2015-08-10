@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBasicInfosTable extends Migration {
+class CreateBasicinfosTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,14 +12,14 @@ class CreateBasicInfosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('BasicInfos', function(Blueprint $table)
+		Schema::create('basicinfos', function(Blueprint $table)
 		{
-			 $table->increments('id');
+			$table->increments('id');
 			$table->string('legalname');
 			$table->string('nickname');
-			$table->date('dob');
-			$table->string('email');
-			$table->string('password')->unique();
+			$table->string('dob');
+			$table->string('email')->unique();
+			$table->string('password');
 			$table->rememberToken();
 			$table->string('referred');
 			$table->string('address1');
@@ -56,7 +56,8 @@ class CreateBasicInfosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('BasicInfos');
+		Schema::drop('basicinfos');
+
 	}
 
 }

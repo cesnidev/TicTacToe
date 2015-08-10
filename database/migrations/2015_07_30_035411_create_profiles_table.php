@@ -3,17 +3,18 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProfilesTable extends Migration
-{
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('Profiles', function (Blueprint $table) {
-            $table->increments('id');
+class CreateProfilesTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('profiles', function(Blueprint $table)
+		{
+			$table->increments('id');
             $table->enum('gender', ['male', 'female','other']);
             $table->integer('height');
             $table->integer('weight');
@@ -42,16 +43,17 @@ class CreateProfilesTable extends Migration
 			$table->integer('basicinfo_id')->unsigned();
 			$table->foreign('basicinfo_id')->references('id')->on('basicinfos')->onDelete('cascade');	
 			$table->timestamps();
-        });
-    }
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::drop('Profiles');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('profiles');
+	}
+
 }

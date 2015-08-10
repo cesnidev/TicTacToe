@@ -11,13 +11,17 @@ use Response;
 use Crypt;
 use Hash;
 use App\BasicInfo;
+use App\CompleteForms;
+use File;
 class UtilController extends Controller
 {
-
 public function basicinfo(){
   if(Request::ajax()) {
       $databinfo = Input::all();
+
       $Info = new BasicInfo;
+
+      $complete = CompleteForms::where('id','1')->first();
 
       $Info->legalname=$databinfo['legalname'];
       $Info->nickname=$databinfo['nickname'];
@@ -49,7 +53,8 @@ public function basicinfo(){
       $Info->save();
     }
     
-  return "successfully added ".$databinfo['nickname']." :D ";
+  //return "successfully added ".$databinfo['nickname']." :D ";
+    return "successfully added ".$Info->id." :D ";
 }
 
 public function profile()
@@ -86,12 +91,25 @@ public function availability()
   return "";
 }
 
-public function uploadfile(Request $request)
+public function UploadPhotos()
 {
-  $image = $request->file('file');
-
+  $image = Request::file('file');
+  $destinationPath = 'uploads';
+  $filename = $image->getClientOriginalName(); 
+  $upload_success = Request::file('file')->move($destinationPath, $filename);
   
 
   return "Loaded!! ".$image->getClientOriginalName();
+}
+public function DeletePhoto(){
+
+  if(Request::ajax()) {
+      $data = Input::all();
+    }
+    if(existPhoto($data['filename'])){
+      \File::delete('uploads/'.$data['filename']);
+    }
+    
+  return $data['filename']." deleted.";
 }
 }

@@ -64,7 +64,7 @@ $(function() {
 
         $(".nextbasic").click(function() {
             
-            if(pass){
+            //if(pass){
                 pass=false;
             if (animating) return false;
 
@@ -97,11 +97,11 @@ $(function() {
                 'zip':$('input[name=zip]').val(),
                 'phone':$('input[name=phone]').val(),
 
-                /*'shipadress1':$('input[name=shipadress1]').val(),
+                'shipadress1':$('input[name=shipadress1]').val(),
                 'shipadress2':$('input[name=shipadress2]').val(),
                 'shipcity':$('input[name=shipcity]').val(),
                 'shipstate':$('select[name=shipstate]').val(),
-                'shipzip':$('input[name=shipzip]').val(),*/
+                'shipzip':$('input[name=shipzip]').val(),
 
                 'emrgncyfullname':$('input[name=emrgncyfirst_name]').val()+' '+$('input[name=emrgncylast_name]').val(),
                 'emrgncyrelation':$('select[name=emrgncyrelation]').val(),
@@ -120,7 +120,6 @@ $(function() {
             data: datos,
             dataType: 'JSON',
             error: function (data) {
-                console.log(data.responseText);
                 $('.top-left').notify({
                 message: { text: data.responseText },
                 type:'blackgloss'
@@ -155,7 +154,7 @@ $(function() {
                 },
                 easing: 'easeInOutBack'
             });
-        }
+        //}
         });
         
         $('#tabcertified').click(function(){
@@ -196,6 +195,14 @@ $(function() {
                 $('select[name*=ship]').prop('disabled',false);
             }
         });
+        /*$('#gender').click(function(){
+            if($("#gender").is(':checked'))
+            {
+            }
+            else
+            {
+            }
+        });*/
 
         $(".nextprofile").click(function() {
 
@@ -386,16 +393,3 @@ $(function () {
         disableDblClickSelection: true
     });
 });
-
-/*$.ajax({
-            url: 'DBAdd',
-            type: 'POST',
-            data: {'_token': $('input[name*=_token]').val()},
-            dataType: 'JSON',
-            error: function (data) {
-                console.log('Exito: '+data.responseText);
-                $('.top-left').notify({
-                message: { text: data.responseText }
-              }).show();
-            }
-            });*/

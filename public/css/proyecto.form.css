@@ -145,3 +145,8 @@
 	background: #dc222b;
 	color: white;
 }
+#progressbar li.cactive:before, #progressbar li.cactive:after
+{
+	background-color:#E3E3E3;
+	color: white;
+}

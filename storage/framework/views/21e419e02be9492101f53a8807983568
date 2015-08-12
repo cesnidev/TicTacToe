@@ -35,7 +35,7 @@
         <div class="container">
             <div class="header row" style="border-bottom: 3px solid #dc222b;" >
                 <div class="large-4 columns">
-                    <?php echo Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:30%;margin-top:10px;')))); ?>
+                    <?php echo Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:15%;margin-top:10px;')))); ?>
 
                 </div>
                 <div class="tel-skype large-8 columns">
@@ -49,6 +49,10 @@
 
 			<ul id="progressbar">
 				<li class="active">Basic Info</li>
+				<li class="cactive">Profile</li>
+				<li class="cactive">Experience</li>
+				<li class="cactive">Availability</li>
+				<li class="cactive">Legal</li>
 			</ul>
 
 			<!-- fieldsets -->
@@ -588,7 +592,8 @@
 
 		<?php echo Html::script("js/format/format.js"); ?>
 
-		<script src="js/foundation-datepicker.min.js"></script>
+		<?php echo Html::script('js/foundation-datepicker.min.js'); ?>
+
 		
 	    <script>
 	      $(document).foundation({

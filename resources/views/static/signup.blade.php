@@ -5,7 +5,7 @@
 
         <meta charset="utf-8">
         <title>VIM - Project</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -35,7 +35,7 @@
         <div class="container">
             <div class="header row" style="border-bottom: 3px solid #dc222b;" >
                 <div class="large-4 columns">
-                    {!! Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:30%;margin-top:10px;')))) !!}
+                    {!! Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:10%;margin-top:10px;')))) !!}
                 </div>
                 <div class="tel-skype large-8 columns">
                     <p><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679 </p>
@@ -75,15 +75,15 @@
 						<div class="row">
 											 
 						 <div class="large-4 columns">
-						   <input type="text" id="tca_border_text" placeholder="First Name" name="first_name" required pattern="[a-zA-Z]+"/>
+						   <input type="text" id="tca_border_text" placeholder="First Name" name="first_name" required pattern="alpha"/>
 						   <small class="error">first name is required and must be a real name.</small>
 						 </div>
 						 <div class="large-4 columns">
-						   <input type="text" id="tca_border_text" placeholder="Middle Initial" name="midinit_name" required pattern="[a-zA-Z]+"/>
+						   <input type="text" id="tca_border_text" placeholder="Middle Initial" name="midinit_name" required pattern="alpha"/>
 						   <small class="error">Middle Initial is required.</small>
 						</div>
 						<div class="large-4 columns">
-						   <input type="text" id="tca_border_text" placeholder="Last Name" name="last_name" required pattern="[a-zA-Z]+"/>
+						   <input type="text" id="tca_border_text" placeholder="Last Name" name="last_name" required pattern="alpha"/>
 						   <small class="error">last name is required.</small>
 						</div>
 											
@@ -97,7 +97,7 @@
 									<label class="inline"><font size="-1">Nickname:</font></label>
 								</div>
 								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" name="nickname" required pattern="[a-zA-Z]+"/>
+									<input type="text" id="tca_border_text" name="nickname" required pattern="alpha"/>
 									<small class="error">nickname is required.</small>
 								</div>
 								<div class="large-4 columns"></div>
@@ -136,7 +136,7 @@
 								</div>
 								<div class="large-6 columns">
 									<div class="password-field">
-									      <input type="password" placeholder="Password" id="password" required pattern="[a-zA-Z]+">
+									      <input type="password" placeholder="Password" id="password" required pattern="alpha">
 									      <small class="error">Your password must match the requirements</small>
 									  </div>
 								</div>
@@ -145,7 +145,7 @@
 				<div class="row">
 								<div class="large-6 large-offset-2 columns">
 									  <div class="password-confirmation-field">
-									      <input type="password" placeholder="Confirm password" required pattern="[a-zA-Z]+" data-equalto="password">
+									      <input type="password" placeholder="Confirm password" required pattern="alpha" data-equalto="password">
 									      <small class="error">The password did not match</small>
 									  </div>
 								</div>
@@ -156,7 +156,7 @@
 									<label class="inline"><font size="-1">Referred By:</font></label>
 								</div>
 								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" name="referred" required pattern="[a-zA-Z]+"/>
+									<input type="text" id="tca_border_text" name="referred" required pattern="alpha"/>
 									<small class="error">referred is required.</small>
 								</div>
 								<div class="large-4 columns"></div>
@@ -169,7 +169,7 @@
 									<label class="inline"><font size="-1">Address Line 1:</font></label>
 								</div>
 								<div class="large-6 columns"> 
-									<input type="text" id="tca_border_text" name="address1" placeholder="Number, street" required pattern="[a-zA-Z]+"/>
+									<input type="text" id="tca_border_text" name="address1" placeholder="Number, street" required pattern="alpha"/>
 									<small class="error">address is required.</small>
 								</div>
 								<div class="large-4 columns"></div>
@@ -179,7 +179,7 @@
 									<label class="inline"><font size="-1">Address Line 2:</font></label>
 								</div>
 								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" name="address2" placeholder="Apt#,Suite, etc.. " pattern="[a-zA-Z]+"/>
+									<input type="text" id="tca_border_text" name="address2" placeholder="Apt#,Suite, etc.. " pattern="alpha"/>
 								</div>
 								<div class="large-4 columns"></div>
 				</div>
@@ -187,7 +187,7 @@
 								<div class="large-6 large-offset-2 columns">
 									<div class="row">
 										<div class="large-6 columns">
-			    							<input type="text" placeholder="City" id="tca_border_text" name="city" required pattern="[a-zA-Z]+"/>
+			    							<input type="text" placeholder="City" id="tca_border_text" name="city" required pattern="alpha"/>
 											   <small class="error">City is required.</small>
 										 </div>
 										<div class="large-3 columns">
@@ -299,7 +299,7 @@
 									<label class="inline"><font size="-1">Address Line 1:</font></label>
 								</div>
 								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" placeholder="Number , Street " name="shipadress1" required pattern="[a-zA-Z]+"/>
+									<input type="text" id="tca_border_text" placeholder="Number , Street " name="shipadress1" required pattern="alpha"/>
 									<small class="error">address is required.</small>
 								</div>
 								<div class="large-4 columns"></div>
@@ -309,7 +309,7 @@
 									<label class="inline"><font size="-1">Address Line 2:</font></label>
 								</div>
 								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" placeholder="Apt#,Suite, etc. " name="shipadress2" pattern="[a-zA-Z]+"/>
+									<input type="text" id="tca_border_text" placeholder="Apt#,Suite, etc. " name="shipadress2" pattern="alpha"/>
 								</div>
 								<div class="large-4 columns"></div>
 				</div>
@@ -318,7 +318,7 @@
 								<div class="large-6 large-offset-2 columns">
 									<div class="row">
 										<div class="large-6 columns">
-			    							<input type="text" placeholder="City" id="tca_border_text" name="shipcity" required pattern="[a-zA-Z]+"/>
+			    							<input type="text" placeholder="City" id="tca_border_text" name="shipcity" required pattern="alpha"/>
 											   <small class="error">City is required.</small>
 										 </div>
 										<div class="large-3 columns">
@@ -411,11 +411,11 @@
 						<div class="row">
 											 
 											 <div class="large-6 columns">
-											   <input type="text" id="tca_border_text" placeholder="First Name" name="emrgncyfirst_name" required pattern="[a-zA-Z]+"/>
+											   <input type="text" id="tca_border_text" placeholder="First Name" name="emrgncyfirst_name" required pattern="alpha"/>
 											   <small class="error">first name is required and must be a real name.</small>
 											 </div>
 											 <div class="large-6 columns">
-											   <input type="text" id="tca_border_text" placeholder="Last Name" name="emrgncylast_name" required pattern="[a-zA-Z]+"/>
+											   <input type="text" id="tca_border_text" placeholder="Last Name" name="emrgncylast_name" required pattern="alpha"/>
 											   <small class="error">last name is required.</small>
 											</div>
 						</div>
@@ -454,7 +454,7 @@
 									<label class="inline"><font size="-1">Address Line 1:</font></label>
 								</div>
 								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" placeholder="Number , Street " name="emrgncyadress1" required pattern="[a-zA-Z]+"/>
+									<input type="text" id="tca_border_text" placeholder="Number , Street " name="emrgncyadress1" required pattern="alpha"/>
 								</div>
 								<div class="large-4 columns"></div>
 				</div>
@@ -463,7 +463,7 @@
 									<label class="inline"><font size="-1">Address Line 2:</font></label>
 								</div>
 								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" placeholder="Apt#, Suite, etc." name="emrgncyadress2" pattern="[a-zA-Z]+"/>
+									<input type="text" id="tca_border_text" placeholder="Apt#, Suite, etc." name="emrgncyadress2" pattern="alpha"/>
 								</div>
 								<div class="large-4 columns"></div>
 				</div>
@@ -472,7 +472,7 @@
 								<div class="large-6 large-offset-2 columns">
 									<div class="row">
 										<div class="large-6 columns">
-			    							<input type="text" placeholder="City" id="tca_border_text" name="emrgncycity" required pattern="[a-zA-Z]+"/>
+			    							<input type="text" placeholder="City" id="tca_border_text" name="emrgncycity" required pattern="alpha"/>
 											   <small class="error">City is required.</small>
 										 </div>
 										<div class="large-3 columns">
@@ -1889,13 +1889,15 @@
  </section>
 
 		@include('assets.notify_footer')
+		{!! Html::script("js/foundation_datepicker.js")!!}
 		{!! Html::script("js/fileup/dropzone.js")!!}
 		{!! Html::script("js/proyecto.form.js")!!}
 		{!! Html::script("js/jquery.backstretch.min.js")!!}
 		{!! Html::script('js/jquery.easing.1.3.js')!!}
 		{!! Html::script("js/foundation.min.js")!!}
 		{!! Html::script("js/format/format.js")!!}
-		<script src="js/foundation-datepicker.min.js"></script>
+		{!! Html::script('js/date/datepicker.js')!!}
+
 		
 	    <script>
 	      $(document).foundation({

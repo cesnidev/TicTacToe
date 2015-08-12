@@ -57,7 +57,6 @@
 							</ul>
 						</div>
 		@endif
-
 				{!! Form::open(array(
 					'url' => '/auth/login',
 					'method' => 'post',
@@ -75,9 +74,6 @@
 											<label class="columns large-3 control-label" data-sb="fadeInRight">Email</label>
 											<div class="columns large-9">
 												{!! Form::email('email',null,['data-sb'=>'fadeInLeft','class'=>'form-control','data-validation-required'=>'#manager_first_name_error_required','placeholder'=>'eventica@email.com','value'=>'{{old("email")}}']); !!}
-												<!--<input type="email" class="form-control" name="email" value="{{ old('email') }}">-->
-
-
 												<div class="clearfix"></div>
 												<div id="manager_first_name_error_required" class="alert-box warning warning-danger">
 												Email is required
@@ -92,20 +88,24 @@
 												<div id="manager_last_name_error_required" class="alert-box warning warning-danger">
 												Password is required
 												</div>
-												<!--<input type="password" class="form-control" name="password">-->
-											</div>
 											</div>
 										</div>
-										{!! Form::checkbox('remember',null,false,['id'=>'rememberMe','style'=>'margin-left:10px;','name'=>'remember']); !!}
-										<label for="rememberMe"><div style="color:#fff;">Remember me</div></label>
-										{!! Form::button('Log in',array('class'=>'button send_form radius','type'=>'submit','data-sb'=>'bounceInLeft','data-step-finish')) !!}
+									</div>
+										<div class="row">
+											<div class="large-3 columns"></div>
+											<div class="large-9 columns" align="center">
+												{!! Form::button('Log in',array('class'=>'button send_form radius','type'=>'submit','data-sb'=>'bounceInLeft','data-step-finish','disabled')) !!}
+											</div>
+
+										</div>
+
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
 						</div>
 					</div>
-					<div class="clear"></div>-->
+					<div class="clear"></div>
 
 				{!! Form::close() !!}
 

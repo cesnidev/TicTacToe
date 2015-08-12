@@ -40,6 +40,13 @@ meta.foundation-mq-small {
 	
 	/*font-weight: bold;*/
 }
+
+.inspire{
+    font-family:Century gothic;
+    color:white;
+    font-weight:bold;
+}
+
 .notebook-img{
     background: url(../img/notebook.jpg) no-repeat center center ;
     -webkit-background-size: 100% 100%;
@@ -20895,8 +20902,6 @@ footer a:hover {
 
 .events_e div a{
         postion:absolute;
-        margin-left: 40%;
-        margin-right: auto;
         left: 0;
         top: -300px;
 
@@ -20938,8 +20943,6 @@ footer a:hover {
 
 .events_e div a{
         postion:absolute;
-        margin-left: 40%;
-        margin-right: auto;
         left: 0;
         top: -300px;
 
@@ -20981,8 +20984,6 @@ footer a:hover {
 
 .events_e div a{
         postion:absolute;
-        margin-left: 40%;
-        margin-right: auto;
         left: 0;
         top: -300px;
 
@@ -21010,6 +21011,7 @@ footer a:hover {
  height:600px;  
  width:100%; 
  margin-top:-100px;
+ background-color:#1a1e38;
 
 }
 .events_e img{
@@ -21023,8 +21025,6 @@ footer a:hover {
 
 .events_e div a{
         postion:absolute;
-        margin-left: 35%;
-        margin-right: auto;
         left: 0;
         top: -320px;
 
@@ -21066,11 +21066,15 @@ footer a:hover {
 
 .events_e div a{
         postion:absolute;
-        margin-left: 30%;
-        margin-right: auto;
         left: 0;
         top: -320px;
 
+}
+.events_e div a{
+    margin-top: 20px;
+}
+.inspire{
+    font-size:40px;
 }
 }
 
@@ -21085,9 +21089,10 @@ footer a:hover {
     /*margin-top:25px;*/
 }
 .events_e{
- height:600px;  
+ margin-top:150px;
+ height:300px;  
  width:100%; 
-
+ background-color:#1a1e38;
  margin-top:-100px;
 
 }
@@ -21097,16 +21102,14 @@ footer a:hover {
 }
 .events_e div{
         width:100%;
-
+        height:100px;
+    
 }
-
 .events_e div a{
-        postion:absolute;
-        margin-left: 40%;
-        margin-right: auto;
-        left: 0;
-        top: -320px;
-
+    margin-top: 20px;
+}
+.inspire{
+    font-size:40px;
 }
 }
 
@@ -21121,9 +21124,10 @@ footer a:hover {
     /*margin-top:25px;*/
 }
 .events_e{
- height:400px;  
+ margin-top:150px;
+ height:300px;  
  width:100%; 
-
+ background-color:#1a1e38;
  margin-top:-100px;
 
 }
@@ -21133,16 +21137,14 @@ footer a:hover {
 }
 .events_e div{
         width:100%;
-
+        height:100px;
+    
 }
-
 .events_e div a{
-        postion:absolute;
-        margin-left: 35%;
-        margin-right: auto;
-        left: 0;
-        top: -220px;
-
+    margin-top: 20px;
+}
+.inspire{
+    font-size:40px;
 }
 }
 
@@ -21161,9 +21163,10 @@ footer a:hover {
     height:100px;
 }
 .events_e{
+ margin-top:150px;
  height:300px;  
  width:100%; 
-
+ background-color:#1a1e38;
  margin-top:-100px;
 
 }
@@ -21173,17 +21176,14 @@ footer a:hover {
 }
 .events_e div{
         width:100%;
-
+        height:100px;
+    
 }
-
 .events_e div a{
-        postion:absolute;
-        margin-left: 30%;
-        margin-right: auto;
-        left: 0;
-        top: -180px;
-
+    margin-top: 20px;
 }
-
+.inspire{
+    font-size:40px;
+}
 
 }

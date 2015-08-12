@@ -18,11 +18,10 @@ class UtilController extends Controller
 public function basicinfo(){
   if(Request::ajax()) {
       $databinfo = Input::all();
-
       $Info = new BasicInfo;
-
-      $complete = CompleteForms::where('id','1')->first();
-
+      /*$complete = CompleteForms::where('id',Info->id)->first();
+      $complete->basic_complete=1;
+      $complete->save();*/
       $Info->legalname=$databinfo['legalname'];
       $Info->nickname=$databinfo['nickname'];
       $Info->dob=$databinfo['dob'];
@@ -53,8 +52,7 @@ public function basicinfo(){
       $Info->save();
     }
     
-  //return "successfully added ".$databinfo['nickname']." :D ";
-    return "successfully added ".$Info->id." :D ";
+  return "successfully added ".$databinfo['nickname']." :D ";
 }
 
 public function profile()

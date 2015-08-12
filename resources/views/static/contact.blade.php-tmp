@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +25,7 @@
 
 		<style>
 			.notebook-img{
-			    background: url(img/contact/Book.png) no-repeat center center ;				
+			    background: url(img/contact/Book.png) no-repeat center center ;
 			    -webkit-background-size: 100% 100%;
 			    -moz-background-size: 100% 100%;
 			    -o-background-size: 100% 100%;
@@ -36,7 +35,7 @@
     </head>
 
     <body style="border-top: 3px solid #fff;">
-	
+
         <!-- Header -->
         <div class="container">
             <div class="header row" style="border-bottom: 3px solid #dc222b;" >
@@ -56,7 +55,7 @@
 		</div>
 		<div class="row">
 			<form name="staff_form" method="post" action="" data-abide>
-                        
+
 						<div class="row collapse">
 								<div class="row">
 										 <div class="large-5 large-offset-1 columns">
@@ -95,63 +94,63 @@
 				                                    	<option value="AZ">AZ</option>
 				                                    	<option value="AR">AR</option>
 				                                    	<option value="CA">CA</option>
-				                                    	
+
 				                                    	<option value="CO">CO</option>
 				                                    	<option value="CT">CT</option>
 				                                    	<option value="DE">DE</option>
 				                                    	<option value="DC">DC</option>
 				                                    	<option value="FL">FL</option>
-				                                    	
+
 				                                    	<option value="GA">GA</option>
 				                                    	<option value="HI">HI</option>
 				                                    	<option value="ID">ID</option>
 				                                    	<option value="IL">IL</option>
 				                                    	<option value="IN">IN</option>
-				                                    	
+
 				                                    	<option value="IA">IA</option>
 				                                    	<option value="KS">KS</option>
 				                                    	<option value="KY">KY</option>
 				                                    	<option value="LA">LA</option>
 				                                    	<option value="ME">ME</option>
-				                                    	
+
 				                                    	<option value="MD">MD</option>
 				                                    	<option value="MA">MA</option>
 				                                    	<option value="MI">MI</option>
 				                                    	<option value="MN">MN</option>
 				                                    	<option value="MS">MS</option>
-				                                    	
+
 				                                    	<option value="MO">MO</option>
 				                                    	<option value="MT">MT</option>
 				                                    	<option value="NE">NE</option>
 				                                    	<option value="NV">NV</option>
 				                                    	<option value="NH">NH</option>
-				                                    	
+
 				                                    	<option value="NJ">NJ</option>
 				                                    	<option value="NM">NM</option>
 				                                    	<option value="NY">NY</option>
 				                                    	<option value="NC">NC</option>
 				                                    	<option value="ND">ND</option>
-				                                    	
+
 				                                    	<option value="OH">OH</option>
 				                                    	<option value="OK">OK</option>
 				                                    	<option value="OR">OR</option>
 				                                    	<option value="PA">PA</option>
 				                                    	<option value="RI">RI</option>
-				                                    	
+
 				                                    	<option value="SC">SC</option>
 				                                    	<option value="SD">SD</option>
 				                                    	<option value="TN">TN</option>
 				                                    	<option value="TX">TX</option>
 				                                    	<option value="UT">UT</option>
-				                                    	
+
 				                                    	<option value="VT">VT</option>
 				                                    	<option value="VA">VA</option>
 				                                    	<option value="WA">WA</option>
 				                                    	<option value="WV">WV</option>
 				                                    	<option value="WI">WI</option>
-				                                    	
+
 				                                    	<option value="WY">WY</option>
-				    								  
+
 				    								</select>
 												</div>
 												<div class="large-4 columns">
@@ -160,7 +159,7 @@
 												</div>
 											</div>
 
-										   
+
 										 </div>
 										 <div class="large-2 columns">&nbsp;</div>
 								</div>
@@ -198,7 +197,7 @@
 		</div>
 		<div class="row">
 			<form name="quote_form" method="post" action="" data-abide>
-                        
+
 						<div class="row collapse">
 								<div class="row">
 										 <div class="large-7 large-offset-1 columns">
@@ -242,63 +241,63 @@
 				                                    	<option value="AZ">AZ</option>
 				                                    	<option value="AR">AR</option>
 				                                    	<option value="CA">CA</option>
-				                                    	
+
 				                                    	<option value="CO">CO</option>
 				                                    	<option value="CT">CT</option>
 				                                    	<option value="DE">DE</option>
 				                                    	<option value="DC">DC</option>
 				                                    	<option value="FL">FL</option>
-				                                    	
+
 				                                    	<option value="GA">GA</option>
 				                                    	<option value="HI">HI</option>
 				                                    	<option value="ID">ID</option>
 				                                    	<option value="IL">IL</option>
 				                                    	<option value="IN">IN</option>
-				                                    	
+
 				                                    	<option value="IA">IA</option>
 				                                    	<option value="KS">KS</option>
 				                                    	<option value="KY">KY</option>
 				                                    	<option value="LA">LA</option>
 				                                    	<option value="ME">ME</option>
-				                                    	
+
 				                                    	<option value="MD">MD</option>
 				                                    	<option value="MA">MA</option>
 				                                    	<option value="MI">MI</option>
 				                                    	<option value="MN">MN</option>
 				                                    	<option value="MS">MS</option>
-				                                    	
+
 				                                    	<option value="MO">MO</option>
 				                                    	<option value="MT">MT</option>
 				                                    	<option value="NE">NE</option>
 				                                    	<option value="NV">NV</option>
 				                                    	<option value="NH">NH</option>
-				                                    	
+
 				                                    	<option value="NJ">NJ</option>
 				                                    	<option value="NM">NM</option>
 				                                    	<option value="NY">NY</option>
 				                                    	<option value="NC">NC</option>
 				                                    	<option value="ND">ND</option>
-				                                    	
+
 				                                    	<option value="OH">OH</option>
 				                                    	<option value="OK">OK</option>
 				                                    	<option value="OR">OR</option>
 				                                    	<option value="PA">PA</option>
 				                                    	<option value="RI">RI</option>
-				                                    	
+
 				                                    	<option value="SC">SC</option>
 				                                    	<option value="SD">SD</option>
 				                                    	<option value="TN">TN</option>
 				                                    	<option value="TX">TX</option>
 				                                    	<option value="UT">UT</option>
-				                                    	
+
 				                                    	<option value="VT">VT</option>
 				                                    	<option value="VA">VA</option>
 				                                    	<option value="WA">WA</option>
 				                                    	<option value="WV">WV</option>
 				                                    	<option value="WI">WI</option>
-				                                    	
+
 				                                    	<option value="WY">WY</option>
-				    								  
+
 				    								</select>
 												</div>
 												<div class="large-4 columns">
@@ -307,7 +306,7 @@
 												</div>
 											</div>
 
-										   
+
 										 </div>
 										 <div class="large-1 columns">&nbsp;</div>
 								</div>
@@ -326,8 +325,8 @@
 					</form>
 		</div>
 	</div>
-	
-</div>  
+
+</div>
 <div class="row hide-for-large hide-for-xlarge">
 <br><br><br>
 	<div class="large-6 columns margin-top-l">
@@ -336,14 +335,14 @@
 		</div>
 		<div class="row">
 			<form name="staff_form" method="post" action="" data-abide>
-                        
+
 						<div class="row collapse">
 								<div class="row">
 										 <div class="large-10 large-offset-1 columns">
 										 <div class="row">
 										   <input type="text" style="border-radius:5px;" placeholder="First Name" name="first_name_1" required pattern="[a-zA-Z]+"/>
 										   <small class="error">First Name is required and must be a real name.</small>
-										 
+
 										   <input type="text" style="border-radius:5px;" id="tca_border_text" placeholder="Last Name" name="last_name_1" required pattern="[a-zA-Z]+" />
 										   <small class="error">Last Name is required and must be a real.</small>
 										 </div></div>
@@ -373,63 +372,63 @@
 				                                    	<option value="AZ">AZ</option>
 				                                    	<option value="AR">AR</option>
 				                                    	<option value="CA">CA</option>
-				                                    	
+
 				                                    	<option value="CO">CO</option>
 				                                    	<option value="CT">CT</option>
 				                                    	<option value="DE">DE</option>
 				                                    	<option value="DC">DC</option>
 				                                    	<option value="FL">FL</option>
-				                                    	
+
 				                                    	<option value="GA">GA</option>
 				                                    	<option value="HI">HI</option>
 				                                    	<option value="ID">ID</option>
 				                                    	<option value="IL">IL</option>
 				                                    	<option value="IN">IN</option>
-				                                    	
+
 				                                    	<option value="IA">IA</option>
 				                                    	<option value="KS">KS</option>
 				                                    	<option value="KY">KY</option>
 				                                    	<option value="LA">LA</option>
 				                                    	<option value="ME">ME</option>
-				                                    	
+
 				                                    	<option value="MD">MD</option>
 				                                    	<option value="MA">MA</option>
 				                                    	<option value="MI">MI</option>
 				                                    	<option value="MN">MN</option>
 				                                    	<option value="MS">MS</option>
-				                                    	
+
 				                                    	<option value="MO">MO</option>
 				                                    	<option value="MT">MT</option>
 				                                    	<option value="NE">NE</option>
 				                                    	<option value="NV">NV</option>
 				                                    	<option value="NH">NH</option>
-				                                    	
+
 				                                    	<option value="NJ">NJ</option>
 				                                    	<option value="NM">NM</option>
 				                                    	<option value="NY">NY</option>
 				                                    	<option value="NC">NC</option>
 				                                    	<option value="ND">ND</option>
-				                                    	
+
 				                                    	<option value="OH">OH</option>
 				                                    	<option value="OK">OK</option>
 				                                    	<option value="OR">OR</option>
 				                                    	<option value="PA">PA</option>
 				                                    	<option value="RI">RI</option>
-				                                    	
+
 				                                    	<option value="SC">SC</option>
 				                                    	<option value="SD">SD</option>
 				                                    	<option value="TN">TN</option>
 				                                    	<option value="TX">TX</option>
 				                                    	<option value="UT">UT</option>
-				                                    	
+
 				                                    	<option value="VT">VT</option>
 				                                    	<option value="VA">VA</option>
 				                                    	<option value="WA">WA</option>
 				                                    	<option value="WV">WV</option>
 				                                    	<option value="WI">WI</option>
-				                                    	
+
 				                                    	<option value="WY">WY</option>
-				    								  
+
 				    								</select>
 												</div>
 												<div class="row">
@@ -438,7 +437,7 @@
 												</div>
 											</div>
 
-										   
+
 										 </div>
 								</div>
 						</div>
@@ -473,7 +472,7 @@
 		</div>
 		<div class="row">
 			<form name="quote_form" method="post" action="" data-abide>
-                        
+
 						<div class="row collapse">
 								<div class="row">
 										 <div class="large-7 large-offset-1 columns">
@@ -514,63 +513,63 @@
 				                                    	<option value="AZ">AZ</option>
 				                                    	<option value="AR">AR</option>
 				                                    	<option value="CA">CA</option>
-				                                    	
+
 				                                    	<option value="CO">CO</option>
 				                                    	<option value="CT">CT</option>
 				                                    	<option value="DE">DE</option>
 				                                    	<option value="DC">DC</option>
 				                                    	<option value="FL">FL</option>
-				                                    	
+
 				                                    	<option value="GA">GA</option>
 				                                    	<option value="HI">HI</option>
 				                                    	<option value="ID">ID</option>
 				                                    	<option value="IL">IL</option>
 				                                    	<option value="IN">IN</option>
-				                                    	
+
 				                                    	<option value="IA">IA</option>
 				                                    	<option value="KS">KS</option>
 				                                    	<option value="KY">KY</option>
 				                                    	<option value="LA">LA</option>
 				                                    	<option value="ME">ME</option>
-				                                    	
+
 				                                    	<option value="MD">MD</option>
 				                                    	<option value="MA">MA</option>
 				                                    	<option value="MI">MI</option>
 				                                    	<option value="MN">MN</option>
 				                                    	<option value="MS">MS</option>
-				                                    	
+
 				                                    	<option value="MO">MO</option>
 				                                    	<option value="MT">MT</option>
 				                                    	<option value="NE">NE</option>
 				                                    	<option value="NV">NV</option>
 				                                    	<option value="NH">NH</option>
-				                                    	
+
 				                                    	<option value="NJ">NJ</option>
 				                                    	<option value="NM">NM</option>
 				                                    	<option value="NY">NY</option>
 				                                    	<option value="NC">NC</option>
 				                                    	<option value="ND">ND</option>
-				                                    	
+
 				                                    	<option value="OH">OH</option>
 				                                    	<option value="OK">OK</option>
 				                                    	<option value="OR">OR</option>
 				                                    	<option value="PA">PA</option>
 				                                    	<option value="RI">RI</option>
-				                                    	
+
 				                                    	<option value="SC">SC</option>
 				                                    	<option value="SD">SD</option>
 				                                    	<option value="TN">TN</option>
 				                                    	<option value="TX">TX</option>
 				                                    	<option value="UT">UT</option>
-				                                    	
+
 				                                    	<option value="VT">VT</option>
 				                                    	<option value="VA">VA</option>
 				                                    	<option value="WA">WA</option>
 				                                    	<option value="WV">WV</option>
 				                                    	<option value="WI">WI</option>
-				                                    	
+
 				                                    	<option value="WY">WY</option>
-				    								  
+
 				    								</select>
 												</div>
 												<div class="row">
@@ -579,7 +578,7 @@
 												</div>
 											</div>
 
-										   
+
 										 </div>
 										 <div class="large-1 columns">&nbsp;</div>
 								</div>
@@ -597,11 +596,11 @@
 					</form>
 		</div>
 	</div>
-	
-</div>  
+
+</div>
 
 <footer style="background-color:#293440;">
-        
+
 <section style="background-color:#181e25;">
       <div class="row" style="background-color:#181e25;">
     	<div class="large-4 columns" style="color:white;margin-top:25px;" align="center">
@@ -631,7 +630,7 @@
 		{!! Html::script('js/jquery.js') !!}
 		{!! Html::script('js/foundation.min.js') !!}
 
-        
+
 
     </body>
 

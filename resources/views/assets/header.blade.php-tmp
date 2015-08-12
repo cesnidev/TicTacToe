@@ -2,8 +2,7 @@
 <html itemscope itemtype="http://schema.org/Organization" lang="en-CA">
   <head >
     <meta name="charset" content="UTF-8">
-    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
-
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
     <meta itemprop="name" content="proyecto">
     <meta itemprop="brand" content="proyecto">
     <meta itemprop="description" content="descr del proyecto">

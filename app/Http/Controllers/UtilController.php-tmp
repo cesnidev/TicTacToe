@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\BasicInfo;
-use App\CompleteForms;
+
 use App\Http\Controllers\Controller;
 
 use File;
@@ -15,11 +15,10 @@ class UtilController extends Controller {
 	public function basicinfo() {
 		if (Request::ajax()) {
 			$databinfo = Input::all();
-
-			$Info = new BasicInfo;
-
-			$complete = CompleteForms::where('id', '1')->first();
-
+			$Info      = new BasicInfo;
+			/*$complete = CompleteForms::where('id',Info->id)->first();
+			$complete->basic_complete=1;
+			$complete->save();*/
 			$Info->legalname       = $databinfo['legalname'];
 			$Info->nickname        = $databinfo['nickname'];
 			$Info->dob             = $databinfo['dob'];
@@ -50,8 +49,7 @@ class UtilController extends Controller {
 			$Info->save();
 		}
 
-		//return "successfully added ".$databinfo['nickname']." :D ";
-		return "successfully added ".$Info->id." :D ";
+		return "successfully added ".$databinfo['nickname']." :D ";
 	}
 
 	public function profile() {

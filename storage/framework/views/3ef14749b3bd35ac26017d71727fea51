@@ -50,7 +50,7 @@
 	<div class="hero-wrapper wrapper">
 		<div class="hero">
 			<h1 class="tagline"><br> <span class="nowrap"></span></h1>
-			<?php echo Html::link('signin','Start Now!!',array('class' => 'button white radius')); ?>
+			<?php echo Html::link('home','Start Now!!',array('class' => 'button white radius')); ?>
 
 		</div>
 	</div>
@@ -59,7 +59,7 @@
 	<img class="poster_eventica" src="img/video/poster.png" />
 </div>
 </div>
-<section id="services" class="row" style="margin-top:-100px;">
+<section id="services" class="row" style="margin-top:-100px;margin-bottom:100px;">
 	<div class="small-12 large-4 columns service">
 		<div class="row">
 			<section class="main">
@@ -80,7 +80,7 @@
 				</ul>
 			</section>
 		</div>
-		<div class="row">
+		<div class="row" style="margin-top:-40px;">
 			<p style="font-family:'Century Gothic'; font-size:22px;">Our Brand Ambassadors & Sampling Demonstrators are energetic, personable,<font color="red"> reliable and experienced </font>in high volume retail accounts. They educate and inform consumers by sharing key messages and creating memorable <font color="red">brand experiences.</font></p>
 		</div>
 	</div>
@@ -95,7 +95,7 @@
 								<div class="ch-item managment">
 									<div class="ch-info"><br>
 										<h3>Staff Management</h3>
-										<p><a href="privacy.php">Right Reserved</a></p>
+										<p><a href="privacy">Right Reserved</a></p>
 									</div>
 								</div>
 							</li>
@@ -104,7 +104,7 @@
 				</ul>
 			</section>
 		</div>
-		<div class="row">
+		<div class="row" style="margin-top:-40px;">
 			<p style="font-family:'Century Gothic'; font-size:22px;">We are all in one shop!!!<br>From Labor Staff needed for Setting up & Breaking down <font color="red">large scale events</font> to <i>Go Go dancers, Photographers, and Emcees;</i> we provide<font color="red"> the best talent </font>  to meet our clients needs.</p>
 		</div>
 	</div>
@@ -119,7 +119,7 @@
 								<div class="ch-item trainning">
 									<div class="ch-info"><br>
 										<h3>Staff Training</h3>
-										<p><a href="privacy.php">Right Reserved</a></p>
+										<p><a href="privacy">Right Reserved</a></p>
 									</div>
 								</div>
 							</li>
@@ -128,22 +128,28 @@
 				</ul>
 			</section>
 		</div>
-		<div class="row">
+		<div class="row" style="margin-top:-40px;">
 			<p style="font-family:'Century Gothic'; font-size:22px;">At Eventica, we ensure that every member of the team receives the <font color="red"> proper training </font>required to execute an effective activation. Our staff mantains <font color="red">working knowledge</font> of all client's products to represent each brand appropriately.</p>
 		</div>
 	</div>
 </section>
 <section id="events" class="events_e hide-for-small">
 	<img src="img/Slide/EventValues.png">  
-	<div class="boton">
-		<a class="button read_more radius" href="uc.php">Eventica in Action</a>  
+	<div class="boton" align="center">
+		<a class="button read_more radius" href="uc">Eventica in Action</a>  
 	</div>
 	
 </section>
-<section id="events" class="events_e show-for-small-only">
-	<img src="img/Slide/EventValuesMobile.png">  
+
+<section id="events_mobile" class="events_e show-for-small-only">
+	<div class="row" align="center">
+		<h1 class="inspire">Excellence</h1>
+	</div>
 	<div class="boton" align="center">
-		<a class="button read_more radius" href="uc.php">Gallery</a> 
+		<a class="button read_more radius" href="uc">Gallery</a> 
+	</div>
+	<div class="row" align="center">
+		<h1 class="inspire">Commitment</h1>
 	</div>
 </section>
 <section style="background-color:#dc222b;">
@@ -262,5 +268,13 @@
 		</div>
 	</section>
 </footer>
+
+<script>
+    function close_nav()
+    {
+      document.getElementById('eventica_menu_button').className="menu-toggle radius hide-for-large-up";
+      document.getElementById('eventica_menu_nav').style.display="none";
+    }
+    </script>
 <?php echo $__env->make('assets.scripts', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 

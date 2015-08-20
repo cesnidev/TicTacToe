@@ -1,3 +1,12 @@
+@if (isset($_POST["email"]))
+    <script type="text/javascript">
+			console.log('POST');
+	</script>
+@else
+	<script type="text/javascript">
+			console.log('POST');
+	</script>
+@endif
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -94,7 +103,8 @@
 										<div class="row">
 											<div class="large-3 columns"></div>
 											<div class="large-9 columns" align="center">
-												{!! Form::button('Log in',array('class'=>'button send_form radius','type'=>'submit','data-sb'=>'bounceInLeft','data-step-finish','disabled')) !!}
+												{!! Form::button('Log in',array('class'=>'button send_form radius','type'=>'submit','data-sb'=>'bounceInLeft','data-step-finish')) !!}
+												{{-- {!! Form::button('Log in',array('class'=>'button send_form radius','type'=>'submit','data-sb'=>'bounceInLeft','data-step-finish','disabled')) !!} --}}
 											</div>
 
 										</div>

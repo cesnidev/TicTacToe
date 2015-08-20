@@ -1889,6 +1889,7 @@
  </section>
 
 		@include('assets.notify_footer')
+		{!! Html::script("js/foundation_datepicker.js")!!}
 		{!! Html::script("js/fileup/dropzone.js")!!}
 		{!! Html::script("js/proyecto.form.js")!!}
 		{!! Html::script("js/jquery.backstretch.min.js")!!}

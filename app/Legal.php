@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model {
-	protected $table = 'profiles';
+class Legal extends Model {
+	protected $table = 'legals';
+	//
+
 }

@@ -7,7 +7,7 @@ $(function() {
         var current_fs, next_fs, previous_fs; 
         var left, opacity, scale; 
         var animating,pass=false; 
-
+	
         $('#basicuser')
           .on('invalid.fndtn.abide', function () {
             pass=false;
@@ -18,15 +18,42 @@ $(function() {
             pass=true;
             $(".nextbasic").click();
           });
-
         $(".nextbasic").click(function() {
-            if(pass){
+			var duplicated =false;
+			$.ajax({
+            url: 'DCheck',
+            type: 'POST',
+            data: {'_token': $('input[name=_token]').val(),'email':$('input[name=email]').val()},
+            dataType: 'JSON',
+            dataFilter: function (data, type){return data.replace(",", "");if (type === 'json'){var parsed_data = JSON.parse(data);}},
+            error: function (data) {
+				console.log(data.responseText);
+                details = JSON.parse(data.responseText);
+                $('.top-left').notify({
+                message: { text: details.message },
+                type:'blackgloss'
+              }).show();
+			  if(details.errorcode=='1062')
+				duplicated = true;
+			  else
+				duplicated = false;
+			  animateBasicInfo(duplicated);
+            }
+            });
+        });
+		
+		function animateBasicInfo(animate)
+		{
+			if(animate==false)
+			{
+            //if(pass){
                 pass=false;
             if (animating) return false;
 
             animating = true;
-            current_fs = $(this).parent().parent();
-            next_fs = $(this).parent().parent().next();
+            current_fs = $(".nextbasic").parent().parent();
+            next_fs = $(".nextbasic").parent().parent().next();
+			
 
             var same;
             if($('#same_as_home_mailing').is(':checked'))
@@ -38,8 +65,11 @@ $(function() {
                 $('input[name=shipzip]').val($('input[name=zip]').val());
             }
             
-            var datos = {
-                '_token': $('input[name*=_token]').val(),
+            var datos1 = {
+                '_token': $('input[name=_token]').val(),
+                'firstname':$('input[name=first_name]').val(),
+                'lastname':$('input[name=last_name]').val(),
+                'mininitial':$('input[name=midinit_name]').val(),
                 'legalname':$('input[name=first_name]').val()+' '+$('input[name=last_name]').val(),
                 'nickname':$('input[name=nickname]').val(),
                 'dob':$('input[name=date]').val(),
@@ -73,45 +103,23 @@ $(function() {
             $.ajax({
             url: 'BIAdd',
             type: 'POST',
-            data: datos,
+            data: datos1,
             dataType: 'JSON',
+            dataFilter: function (data, type){return data.replace(",", "");if (type === 'json'){var parsed_data = JSON.parse(data);}},
             error: function (data) {
-                /*$('.top-left').notify({
-                message: { text: data.responseText },
+                details = JSON.parse(data.responseText);
+                $('.top-left').notify({
+                message: { text: details.message },
                 type:'blackgloss'
-              }).show();*/
+              }).show();
             }
             });
-            $( location ).attr("href", "/home");
+
             $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-            next_fs.show();
-            current_fs.animate({
-                opacity: 0
-            }, {
-
-                step: function(now, mx) {
-                    scale = 1 - (1 - now) * 0.2;
-                    left = (now * 50) + "%";
-                    opacity = 1 - now;
-                    current_fs.css({
-                        'transform': 'scale(' + scale + ')'
-                    });
-
-                    next_fs.css({
-                        'left': left,
-                        'opacity': opacity
-                    });
-
-                },
-                duration: 800,
-                complete: function() {
-                    current_fs.hide();
-                    animating = false;
-                },
-                easing: 'easeInOutBack'
-            });
-        }
-        });
+			$( "input" ).val( '' );$( "select" ).val( 'State' );
+			$(location).attr('href','/home');
+		}
+		}
 
         
         $('#same_as_home_mailing').click(function(){

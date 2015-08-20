@@ -25,10 +25,6 @@ public function basicinfo(){
   if(Request::ajax()) {
       $databinfo = Input::all();
       $Info = new BasicInfo;
-
-      $Info->firstname=$databinfo['firstname'];
-      $Info->lastname=$databinfo['lastname'];
-      $Info->minitial=$databinfo['mininitial'];
       $Info->legalname=$databinfo['legalname'];
       $Info->nickname=$databinfo['nickname'];
       $Info->dob=$databinfo['dob'];
@@ -103,6 +99,7 @@ public function profile()
       $profile->tattos =$dataprofile['tatoos'];
       $profile->piercings =$dataprofile['piercings'];
       $profile->userid = Auth::user()->id;
+      
       /*$profile->pic1 =$dataprofile[' '];
       $profile->pic2 =$dataprofile[' '];
       $profile->pic3 =$dataprofile[' '];
@@ -173,8 +170,8 @@ public function experience()
       $complete->save();
     }
     
-  return EventicaMsg("Experience Complete",200);
-    //return redirect('home');
+  //return EventicaMsg("Experience Complete",200);
+    return redirect('home');
 }
 public function availability()
 {
@@ -202,8 +199,8 @@ public function availability()
       $complete->save();
     }
     
-  return EventicaMsg("Availability Complete",200);
-  //return redirect('home');
+  //return EventicaMsg("Availability Complete",200);
+  return redirect('home');
 }
 public function legal()
 {
@@ -224,7 +221,8 @@ public function legal()
       $complete->legal_complete=1;
       $complete->save();
     }
-    return EventicaMsg("Legal Complete",200);
+    
+  return redirect('home');
 }
 
 public function UploadPhotos()

@@ -13,16 +13,24 @@
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        @include('assets.notify_header')
-        <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
-		{!! Html::style('css/foundation-datepicker.min.css') !!}
-		{!! Html::style('css/fileup/dropzone.css') !!}
-		{!! Html::style('http://fonts.googleapis.com/css?family=PT+Sans:400,700') !!}
-		{!! Html::style('css/foundation.css') !!}
-		{!! Html::style('css/proyecto.form.css') !!}
-		{!! Html::style('css/test/coming-soon-style.css') !!}
-		{!! Html::style('css/foundation-icons.css') !!}
-		{!! Html::script('js/modernizr.custom.34978.js') !!}
+        <?php echo $__env->make('assets.notify_header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <link rel="shortcut icon" href="<?php echo e(asset('img/favicon.ico')); ?>">
+		<?php echo Html::style('css/foundation-datepicker.min.css'); ?>
+
+		<?php echo Html::style('css/fileup/dropzone.css'); ?>
+
+		<?php echo Html::style('http://fonts.googleapis.com/css?family=PT+Sans:400,700'); ?>
+
+		<?php echo Html::style('css/foundation.css'); ?>
+
+		<?php echo Html::style('css/proyecto.form.css'); ?>
+
+		<?php echo Html::style('css/test/coming-soon-style.css'); ?>
+
+		<?php echo Html::style('css/foundation-icons.css'); ?>
+
+		<?php echo Html::script('js/modernizr.custom.34978.js'); ?>
+
     </head>
 
     <body style="border-top: 3px solid #fff;">
@@ -35,7 +43,8 @@
         <div class="container">
             <div class="header row" style="border-bottom: 3px solid #dc222b;" >
                 <div class="large-4 columns">
-                    {!! Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:10%;margin-top:10px;')))) !!}
+                    <?php echo Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:10%;margin-top:10px;')))); ?>
+
                 </div>
                 <div class="tel-skype large-8 columns">
                     <p><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679 </p>
@@ -61,7 +70,8 @@
 			<fieldset>
 
 			<form id="basicuser" data-abide="ajax">
-				{!! Form::token() !!}
+				<?php echo Form::token(); ?>
+
 				<h2 class="fs-title">Sign Up / Basic Information</h2>
 
 				<div class="row" style="height:200px; border:1px solid #404040;border-radius:8px;">
@@ -1085,7 +1095,7 @@
 					  <li class="bullet-item">-<font color="red">At least 3 photos and maximum 5 photos.</font></li>
 					</ul>
 				</div>
-			<form action="{{ route('subir')}}" class="dropzone" >
+			<form action="<?php echo e(route('subir')); ?>" class="dropzone" >
 				<input type="hidden" id="token" name="_token" value="<?php echo csrf_token(); ?>">
 			</form><br>
 			<form ><input type="button" name="next" class="nextprofile action-button" value="Next" /></form>
@@ -1888,14 +1898,21 @@
 		</div>
  </section>
 
-		@include('assets.notify_footer')
-		{!! Html::script("js/fileup/dropzone.js")!!}
-		{!! Html::script("js/proyecto.form.js")!!}
-		{!! Html::script("js/jquery.backstretch.min.js")!!}
-		{!! Html::script('js/jquery.easing.1.3.js')!!}
-		{!! Html::script("js/foundation.min.js")!!}
-		{!! Html::script("js/format/format.js")!!}
-		{!! Html::script('js/date/datepicker.js')!!}
+		<?php echo $__env->make('assets.notify_footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<?php echo Html::script("js/fileup/dropzone.js"); ?>
+
+		<?php echo Html::script("js/proyecto.form.js"); ?>
+
+		<?php echo Html::script("js/jquery.backstretch.min.js"); ?>
+
+		<?php echo Html::script('js/jquery.easing.1.3.js'); ?>
+
+		<?php echo Html::script("js/foundation.min.js"); ?>
+
+		<?php echo Html::script("js/format/format.js"); ?>
+
+		<?php echo Html::script('js/date/datepicker.js'); ?>
+
 
 		
 	    <script>

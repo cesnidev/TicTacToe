@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-
     <head>
-
         <meta charset="utf-8">
         <title>VIM - Project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,8 +71,7 @@
 						   <small class="error">first name is required and must be a real name.</small>
 						 </div>
 						 <div class="large-4 columns">
-						   <input type="text" id="tca_border_text" placeholder="Middle Initial" name="midinit_name" required pattern="[a-zA-Z]+"/>
-						   <small class="error">Middle Initial is required.</small>
+						   <input type="text" id="tca_border_text" placeholder="Middle Initial" name="midinit_name" pattern="[a-zA-Z]+"/>
 						</div>
 						<div class="large-4 columns">
 						   <input type="text" id="tca_border_text" placeholder="Last Name" name="last_name" required pattern="[a-zA-Z]+"/>
@@ -91,8 +88,7 @@
 									<label class="inline"><font size="-1">Nickname:</font></label>
 								</div>
 								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" name="nickname" required pattern="[a-zA-Z]+"/>
-									<small class="error">nickname is required.</small>
+									<input type="text" id="tca_border_text" name="nickname" pattern="[a-zA-Z]+"/>
 								</div>
 								<div class="large-4 columns"></div>
 				</div>
@@ -117,9 +113,9 @@
     						  </div>
     						  <div class="large-6 columns">
 							   <div class="email-field">
-								  <input name="email" id="tca_border_text" placeholder="email@tcaprep.com" type="email" required>
+								  <input name="email" id="email" placeholder="email@domain.com" type="email" required>
 								</label>
-								<small class="error">Email is required and must be like someone@somedomain.com .</small>
+								<small class="error" id="email_reg">Email is required and must be like someone@somedomain.com .</small>
 							  </div>
 
     						  </div><div class="large-4 columns"></div>
@@ -592,9 +588,7 @@
 			      alpha_numeric : /^[a-zA-Z0-9]+$/,
 			      integer: /^[-+]?\d+$/,
 			      phonenumber:/^[(]?\b[0-9]{3}[)][ ]?\b[0-9]{3}-[0-9]{4}\b$/,
-
-			      card : /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/,
-			      cvv : /^([0-9]){3,4}$/
+				  email : /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@(yahoo|hotmail|gmail)\.com*$/,
 			    }
 			  }
 			});
@@ -604,6 +598,14 @@
 			      $('#phoneme').mask('(999) 999-9999',{placeholder:" "});
 			      $('#emrgncyphone').mask('(999) 999-9999',{placeholder:" "});
 			   });
+		</script>
+		<script>
+		jQuery(document).ready(function($) {
+			/*invocando error del input*/
+			/*$("#email").attr('data-invalid','');
+			$("#email").attr("aria-invalid", "true");
+			$("#email").parent().addClass(' error');*/
+		});
 		</script>
 	    
 

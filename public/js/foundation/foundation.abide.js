@@ -1,6 +1,5 @@
 ;(function ($, window, document, undefined) {
   'use strict';
-
   Foundation.libs.abide = {
     name : 'abide',
 

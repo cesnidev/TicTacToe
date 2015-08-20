@@ -37,551 +37,33 @@
                 <div class="large-4 columns">
                     {!! Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:10%;margin-top:10px;')))) !!}
                 </div>
-                <div class="tel-skype large-8 columns">
-                    <p><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679 </p>
+                <div class="tel-skype large-8 columns" align="right">
+                    <p style="text-align:right;">Welcome: {{Auth::user()->legalname}}</p>
                 </div>
             </div>
         </div>
 <section>
-        	
+<div class="row" align="center">
+	<h3 style="color:red;font-weight:bold;">You must complete your register.</h3>
+</div>     	
 <div id="eventicaforms">
-
+			{!! Form::token() !!}
 			<ul id="progressbar">
-
 				<li class="active">Basic Info</li>
-				<li class="">Profile</li>
-				<li class="">Experience</li>
-				<li class="">Availability</li>
-				<li class="">Legal</li>
-
+				@if(!$complete->profile_complete) 
+					<li class="active">Profile</li><li class="">Experience</li><li class="">Availability</li><li class="">Legal</li>
+				@elseif(!$complete->experience_complete) 
+					<li class="active">Profile</li><li class="active">Experience</li><li class="">Availability</li><li class="">Legal</li>
+				@elseif(!$complete->availability_complete) 
+					<li class="active">Profile</li><li class="active">Experience</li><li class="active">Availability</li><li class="">Legal</li>
+				@else
+					<li class="active">Profile</li><li class="active">Experience</li><li class="active">Availability</li><li class="active">Legal</li>
+				@endif
 			</ul>
-
-			<!-- fieldsets -->
-
-			<fieldset>
-
-			<form id="basicuser" data-abide="ajax">
-				{!! Form::token() !!}
-				<h2 class="fs-title">Sign Up / Basic Information</h2>
-
-				<div class="row" style="height:200px; border:1px solid #404040;border-radius:8px;">
-				</div><br>
-
-				<div class="row">
-					<div class="large-2 columns">
-											   <label class="inline"><font size="-1">Full Name:</font></label>
-					</div>
-					<div class="large-6 columns">
-						<div class="row">
-											 
-						 <div class="large-4 columns">
-						   <input type="text" id="tca_border_text" placeholder="First Name" name="first_name" required pattern="alpha"/>
-						   <small class="error">first name is required and must be a real name.</small>
-						 </div>
-						 <div class="large-4 columns">
-						   <input type="text" id="tca_border_text" placeholder="Middle Initial" name="midinit_name" required pattern="alpha"/>
-						   <small class="error">Middle Initial is required.</small>
-						</div>
-						<div class="large-4 columns">
-						   <input type="text" id="tca_border_text" placeholder="Last Name" name="last_name" required pattern="alpha"/>
-						   <small class="error">last name is required.</small>
-						</div>
-											
-						</div>
-										
-					</div> <div class="large-4 columns"></div>
-				</div>
-
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Nickname:</font></label>
-								</div>
-								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" name="nickname" required pattern="alpha"/>
-									<small class="error">nickname is required.</small>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Date:</font></label>
-								</div>
-								<div class="large-6 columns">
-									<div class="row">
-										<div class="large-12 columns">
-											<input type="text" class="span2" required pattern="(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)" data-date-format="mm/dd/yy" id="datepicker" name="date">
-											   <small class="error">valid date is required.</small>
-										</div>
-									
-									</div>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-				<div class="row ">
-							  <div class="large-2 columns">
-							     <label class="inline">Email: </label>
-    						  </div>
-    						  <div class="large-6 columns">
-							   <div class="email-field">
-								  <input name="email" id="tca_border_text" placeholder="email@tcaprep.com" type="email" required>
-								</label>
-								<small class="error">Email is required and must be like someone@somedomain.com .</small>
-							  </div>
-
-    						  </div><div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Password:</font></label>
-								</div>
-								<div class="large-6 columns">
-									<div class="password-field">
-									      <input type="password" placeholder="Password" id="password" required pattern="alpha">
-									      <small class="error">Your password must match the requirements</small>
-									  </div>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-6 large-offset-2 columns">
-									  <div class="password-confirmation-field">
-									      <input type="password" placeholder="Confirm password" required pattern="alpha" data-equalto="password">
-									      <small class="error">The password did not match</small>
-									  </div>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Referred By:</font></label>
-								</div>
-								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" name="referred" required pattern="alpha"/>
-									<small class="error">referred is required.</small>
-								</div>
-								<div class="large-4 columns"></div>
-				</div><br>
-
-				<h2 class="fs-title">Contact Information</h2>
-
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Address Line 1:</font></label>
-								</div>
-								<div class="large-6 columns"> 
-									<input type="text" id="tca_border_text" name="address1" placeholder="Number, street" required pattern="alpha"/>
-									<small class="error">address is required.</small>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Address Line 2:</font></label>
-								</div>
-								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" name="address2" placeholder="Apt#,Suite, etc.. " pattern="alpha"/>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-6 large-offset-2 columns">
-									<div class="row">
-										<div class="large-6 columns">
-			    							<input type="text" placeholder="City" id="tca_border_text" name="city" required pattern="alpha"/>
-											   <small class="error">City is required.</small>
-										 </div>
-										<div class="large-3 columns">
-											<label>
-    								<select name="state" required>
-    									<option value="" disabled selected>State</option>
-                                    	<option value="AL">AL</option>
-                                    	<option value="AK">AK</option>
-                                    	<option value="AZ">AZ</option>
-                                    	<option value="AR">AR</option>
-                                    	<option value="CA">CA</option>
-                                    	
-                                    	<option value="CO">CO</option>
-                                    	<option value="CT">CT</option>
-                                    	<option value="DE">DE</option>
-                                    	<option value="DC">DC</option>
-                                    	<option value="FL">FL</option>
-                                    	
-                                    	<option value="GA">GA</option>
-                                    	<option value="HI">HI</option>
-                                    	<option value="ID">ID</option>
-                                    	<option value="IL">IL</option>
-                                    	<option value="IN">IN</option>
-                                    	
-                                    	<option value="IA">IA</option>
-                                    	<option value="KS">KS</option>
-                                    	<option value="KY">KY</option>
-                                    	<option value="LA">LA</option>
-                                    	<option value="ME">ME</option>
-                                    	
-                                    	<option value="MD">MD</option>
-                                    	<option value="MA">MA</option>
-                                    	<option value="MI">MI</option>
-                                    	<option value="MN">MN</option>
-                                    	<option value="MS">MS</option>
-                                    	
-                                    	<option value="MO">MO</option>
-                                    	<option value="MT">MT</option>
-                                    	<option value="NE">NE</option>
-                                    	<option value="NV">NV</option>
-                                    	<option value="NH">NH</option>
-                                    	
-                                    	<option value="NJ">NJ</option>
-                                    	<option value="NM">NM</option>
-                                    	<option value="NY">NY</option>
-                                    	<option value="NC">NC</option>
-                                    	<option value="ND">ND</option>
-                                    	
-                                    	<option value="OH">OH</option>
-                                    	<option value="OK">OK</option>
-                                    	<option value="OR">OR</option>
-                                    	<option value="PA">PA</option>
-                                    	<option value="RI">RI</option>
-                                    	
-                                    	<option value="SC">SC</option>
-                                    	<option value="SD">SD</option>
-                                    	<option value="TN">TN</option>
-                                    	<option value="TX">TX</option>
-                                    	<option value="UT">UT</option>
-                                    	
-                                    	<option value="VT">VT</option>
-                                    	<option value="VA">VA</option>
-                                    	<option value="WA">WA</option>
-                                    	<option value="WV">WV</option>
-                                    	<option value="WI">WI</option>
-                                    	
-                                    	<option value="WY">WY</option>
-    								  
-    								</select>
-									<small class="error">State is required.</small>
-    							</label>
-										</div>
-										<div class="large-3 columns">
-												  <input type="text" placeholder="Zip" id="tca_border_text" name="zip" required pattern="number"/>
-											<small class="error">Zip Code is required.</small>
-										</div>
-									
-									</div>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Phone:</font></label>
-								</div>
-								<div class="large-3 columns">
-									<input type="text" placeholder="(000) 000-0000" id="phoneme" name="phone" required pattern="phonenumber" >
-									
-									<small class="error">Phone Number is required and must be numbers .</small>
-								</div>
-								<div class="large-7 columns"></div>
-				</div>
-
-
-				<h2 class="fs-title">Mailing Address</h2>
-
-				<div class="row">
-								<div class="large-2 large-offset-2 columns">
-									<input id="same_as_home_mailing" type="checkbox" />
-									
-								</div>
-								<div class="large-8 columns left" style="text-align:left;">
-									<label for="same_as_home_mailing">Same as Home Address</label>
-								</div>
-				</div>
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Address Line 1:</font></label>
-								</div>
-								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" placeholder="Number , Street " name="shipadress1" required pattern="alpha"/>
-									<small class="error">address is required.</small>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Address Line 2:</font></label>
-								</div>
-								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" placeholder="Apt#,Suite, etc. " name="shipadress2" pattern="alpha"/>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-
-				<div class="row">
-								<div class="large-6 large-offset-2 columns">
-									<div class="row">
-										<div class="large-6 columns">
-			    							<input type="text" placeholder="City" id="tca_border_text" name="shipcity" required pattern="alpha"/>
-											   <small class="error">City is required.</small>
-										 </div>
-										<div class="large-3 columns">
-											<label>
-    								<select name="shipstate" required>
-    								    <option value="" disabled selected>State</option>
-                                    	<option value="AL">AL</option>
-                                    	<option value="AK">AK</option>
-                                    	<option value="AZ">AZ</option>
-                                    	<option value="AR">AR</option>
-                                    	<option value="CA">CA</option>
-                                    	
-                                    	<option value="CO">CO</option>
-                                    	<option value="CT">CT</option>
-                                    	<option value="DE">DE</option>
-                                    	<option value="DC">DC</option>
-                                    	<option value="FL">FL</option>
-                                    	
-                                    	<option value="GA">GA</option>
-                                    	<option value="HI">HI</option>
-                                    	<option value="ID">ID</option>
-                                    	<option value="IL">IL</option>
-                                    	<option value="IN">IN</option>
-                                    	
-                                    	<option value="IA">IA</option>
-                                    	<option value="KS">KS</option>
-                                    	<option value="KY">KY</option>
-                                    	<option value="LA">LA</option>
-                                    	<option value="ME">ME</option>
-                                    	
-                                    	<option value="MD">MD</option>
-                                    	<option value="MA">MA</option>
-                                    	<option value="MI">MI</option>
-                                    	<option value="MN">MN</option>
-                                    	<option value="MS">MS</option>
-                                    	
-                                    	<option value="MO">MO</option>
-                                    	<option value="MT">MT</option>
-                                    	<option value="NE">NE</option>
-                                    	<option value="NV">NV</option>
-                                    	<option value="NH">NH</option>
-                                    	
-                                    	<option value="NJ">NJ</option>
-                                    	<option value="NM">NM</option>
-                                    	<option value="NY">NY</option>
-                                    	<option value="NC">NC</option>
-                                    	<option value="ND">ND</option>
-                                    	
-                                    	<option value="OH">OH</option>
-                                    	<option value="OK">OK</option>
-                                    	<option value="OR">OR</option>
-                                    	<option value="PA">PA</option>
-                                    	<option value="RI">RI</option>
-                                    	
-                                    	<option value="SC">SC</option>
-                                    	<option value="SD">SD</option>
-                                    	<option value="TN">TN</option>
-                                    	<option value="TX">TX</option>
-                                    	<option value="UT">UT</option>
-                                    	
-                                    	<option value="VT">VT</option>
-                                    	<option value="VA">VA</option>
-                                    	<option value="WA">WA</option>
-                                    	<option value="WV">WV</option>
-                                    	<option value="WI">WI</option>
-                                    	
-                                    	<option value="WY">WY</option>
-    								  
-    								</select>
-									<small class="error">State is required.</small>
-    							</label>
-										</div>
-										<div class="large-3 columns">
-												  <input type="text" placeholder="Zip" id="tca_border_text" name="shipzip" required pattern="number"/>
-											<small class="error">Zip Code is required.</small>
-										</div>
-									
-									</div>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-
-				<h2 class="fs-title">Emergency Contact Information</h2>
-
-				<div class="row">
-					<div class="large-2 columns">
-											   <label class="inline"><font size="-1">Full Name:</font></label>
-					</div>
-					<div class="large-6 columns">
-						<div class="row">
-											 
-											 <div class="large-6 columns">
-											   <input type="text" id="tca_border_text" placeholder="First Name" name="emrgncyfirst_name" required pattern="alpha"/>
-											   <small class="error">first name is required and must be a real name.</small>
-											 </div>
-											 <div class="large-6 columns">
-											   <input type="text" id="tca_border_text" placeholder="Last Name" name="emrgncylast_name" required pattern="alpha"/>
-											   <small class="error">last name is required.</small>
-											</div>
-						</div>
-										
-					</div> <div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-6 large-offset-2 columns">
-									<div class="row">
-										
-										<div class="large-6 columns">
-											<label>
-			    								<select placeholder="relation" name="emrgncyrelation">
-													<option value="" disabled selected>Relation</option>
-			                                    	<option value="Mother" >Mother</option>
-			                                    	<option value="Father">Father</option>
-			                                    	<option value="Grand Parent">Grand Parent</option>
-			                                    	<option value="Brother">Brother</option>
-			                                    	<option value="Sister">Sister</option>
-			                                    	<option value="Child">Child</option>
-			                                    	<option value="Friend">Friend</option>
-			                                    	<option value="Aunt">Aunt</option>
-			                                    	<option value="Uncle">Uncle</option>
-			                                    	<option value="Partner">Partner</option>
-			    								  
-			    								</select>
-			    							</label>
-										</div><div class="large-6 columns"></div>
-									
-									</div>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Address Line 1:</font></label>
-								</div>
-								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" placeholder="Number , Street " name="emrgncyadress1" required pattern="alpha"/>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Address Line 2:</font></label>
-								</div>
-								<div class="large-6 columns">
-									<input type="text" id="tca_border_text" placeholder="Apt#, Suite, etc." name="emrgncyadress2" pattern="alpha"/>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-
-				<div class="row">
-								<div class="large-6 large-offset-2 columns">
-									<div class="row">
-										<div class="large-6 columns">
-			    							<input type="text" placeholder="City" id="tca_border_text" name="emrgncycity" required pattern="alpha"/>
-											   <small class="error">City is required.</small>
-										 </div>
-										<div class="large-3 columns">
-											<label>
-    								<select name="emrgncystate" required>
-    									<option value="" disabled selected>State</option>
-                                    	<option value="AL" >AL</option>
-                                    	<option value="AK">AK</option>
-                                    	<option value="AZ">AZ</option>
-                                    	<option value="AR">AR</option>
-                                    	<option value="CA">CA</option>
-                                    	
-                                    	<option value="CO">CO</option>
-                                    	<option value="CT">CT</option>
-                                    	<option value="DE">DE</option>
-                                    	<option value="DC">DC</option>
-                                    	<option value="FL">FL</option>
-                                    	
-                                    	<option value="GA">GA</option>
-                                    	<option value="HI">HI</option>
-                                    	<option value="ID">ID</option>
-                                    	<option value="IL">IL</option>
-                                    	<option value="IN">IN</option>
-                                    	
-                                    	<option value="IA">IA</option>
-                                    	<option value="KS">KS</option>
-                                    	<option value="KY">KY</option>
-                                    	<option value="LA">LA</option>
-                                    	<option value="ME">ME</option>
-                                    	
-                                    	<option value="MD">MD</option>
-                                    	<option value="MA">MA</option>
-                                    	<option value="MI">MI</option>
-                                    	<option value="MN">MN</option>
-                                    	<option value="MS">MS</option>
-                                    	
-                                    	<option value="MO">MO</option>
-                                    	<option value="MT">MT</option>
-                                    	<option value="NE">NE</option>
-                                    	<option value="NV">NV</option>
-                                    	<option value="NH">NH</option>
-                                    	
-                                    	<option value="NJ">NJ</option>
-                                    	<option value="NM">NM</option>
-                                    	<option value="NY">NY</option>
-                                    	<option value="NC">NC</option>
-                                    	<option value="ND">ND</option>
-                                    	
-                                    	<option value="OH">OH</option>
-                                    	<option value="OK">OK</option>
-                                    	<option value="OR">OR</option>
-                                    	<option value="PA">PA</option>
-                                    	<option value="RI">RI</option>
-                                    	
-                                    	<option value="SC">SC</option>
-                                    	<option value="SD">SD</option>
-                                    	<option value="TN">TN</option>
-                                    	<option value="TX">TX</option>
-                                    	<option value="UT">UT</option>
-                                    	
-                                    	<option value="VT">VT</option>
-                                    	<option value="VA">VA</option>
-                                    	<option value="WA">WA</option>
-                                    	<option value="WV">WV</option>
-                                    	<option value="WI">WI</option>
-                                    	
-                                    	<option value="WY">WY</option>
-    								  
-    								</select>
-									<small class="error">State is required.</small>
-    							</label>
-										</div>
-										<div class="large-3 columns">
-												  <input type="text" placeholder="Zip" id="tca_border_text" name="emrgncyzip" required pattern="number"/>
-											<small class="error">Zip Code is required.</small>
-										</div>
-									
-									</div>
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Phone:</font></label>
-								</div>
-								<div class="large-3 columns">
-									<input type="text" placeholder="(000) 000-0000" id="emrgncyphone" name="emrgncyphone" required pattern="phonenumber">
-									
-									<small class="error">Phone Number is required and must be numbers .</small>
-								</div>
-								<div class="large-7 columns"></div>
-				</div>
-				<div class="row">
-								<div class="large-2 columns">
-									<label class="inline"><font size="-1">Please provide any information we should know in case of an emergency:</font></label>
-								</div>
-								<div class="large-6 columns">
-									<textarea rows="6" type="text"  id="tca_border_text" name="emrgncyinfo"></textarea>
-									
-								</div>
-								<div class="large-4 columns"></div>
-				</div>
-
-
-				<input type="submit"  class="nextbasic action-button" value="Next" />
-			</form>
-			</fieldset>
+			@if(!$complete->profile_complete) 
 			<fieldset>
 			<form id="profile" data-abide="ajax">
+				<h1>Profile</h1>
 				<h2 class="fs-title">Gender</h2>
 				
 				<div class="row">
@@ -1072,27 +554,38 @@
 					
 			</form>
 
-  				<div class="row" class="dropzone" style="border:5px solid #F50508;border-color:#F50508;background: white;border-style:dashed;">
-					<ul class="pricing-table">
-					  <li class="description">Pictures Requirements.</li>
-					  <li class="bullet-item">-Two Head Shots and Two Body Shots. </li>
-					  <li class="bullet-item">-Pictures must be taken by someone else (No selfies).</li>
-					  <li class="bullet-item">-No blurry, too dark or too bright pictures.</li>
-					  <li class="bullet-item">-For Headshots only, face should be looking straight at the camera.</li>
-					  <li class="bullet-item">-No more than one person in the picture.</li>
-					  <li class="bullet-item">-No props, no pets in the picture.</li>
-					  <li class="bullet-item">-No hats or sunglasses.</li>
-					  <li class="bullet-item">-<font color="red">At least 3 photos and maximum 5 photos.</font></li>
+  				<div class="row" class="dropzone" style="">
+  					<div class="row" align="center" style="margin-bottom:10px;">
+  						<h2>Pictures Requirements.</h2>
+  					</div>
+  					<div class="large-6 columns">
+					<ul>
+					  <li style="text-align:left;"> Two Head Shots and Two Body Shots. </li>
+					  <li style="text-align:left;"> Pictures must be taken by someone else (No selfies).</li>
+					  <li style="text-align:left;"> No blurry, too dark or too bright pictures.</li>
+					  <li style="text-align:left;"> For Headshots only, face should be looking straight at the camera.</li>
+					  
 					</ul>
+  					</div>
+  					<div class="large-6 columns">
+  						<ul >
+					  <li style="text-align:left;"> No more than one person in the picture.</li>
+					  <li style="text-align:left;"> No props, no pets in the picture.</li>
+					  <li style="text-align:left;"> No hats or sunglasses.</li>
+					  <li style="text-align:left;"> At least 3 photos and maximum 5 photos.</li>
+					</ul>
+  					</div>
 				</div>
 			<form action="{{ route('subir')}}" class="dropzone" >
 				<input type="hidden" id="token" name="_token" value="<?php echo csrf_token(); ?>">
 			</form><br>
 			<form ><input type="button" name="next" class="nextprofile action-button" value="Next" /></form>
 			</fieldset>
-			
+			@endif 			
+			@if(!$complete->experience_complete) 
 			<fieldset>
 			<form id="experience" data-abide="ajax">
+				<h1>Experience</h1>
 				<div class="row">
 					<div class="large-6 columns">
 						<h2 class="fs-title">Brand Experience</h2><hr>
@@ -1332,7 +825,7 @@
 								</p>
 							</div>
 							<div class="row">
-								<textarea name="" id="" cols="30" rows="4"></textarea>
+								<textarea name="skills" id="skills" cols="30" rows="4"></textarea>
 							</div>
 						</div>
 						<div class="large-3 columns"></div>
@@ -1395,7 +888,7 @@
         									<label class="left">What level of education have you completed?</label>
 									        <div class="small-6 columns">
 									          		<label>
-    								<select name="state" required>
+    								<select name="educationlevel" required>
     									<option value="" selected disabled>select one</option>
                                     	<option value="High School" selected>High School</option>
                                     	<option value="Associate Degree">Associate Degree</option>
@@ -1638,8 +1131,11 @@
 				<input type="button" name="next" class="nextexperience action-button" value="Next" />
 			</form>
 			</fieldset>
+			@endif 			
+			@if(!$complete->availability_complete) 
 			<fieldset>
 			<form id="availability" data-abide="ajax">
+				<h1>Availability</h1>
 				<h2 class="fs-title">Driving</h2><hr>
 				<div class="row">
 					<div class="large-6 columns">
@@ -1801,9 +1297,11 @@
 				<input type="submit" name="next" class="nextavailability action-button" value="Next" />
 			</form>
 			</fieldset>
+			@endif 			
+			@if(!$complete->legal_complete) 
 			<fieldset>
 			<form id="legal" data-abide="ajax">
-				
+				<h1>Legal</h1>
 				<h2 class="fs-title">Legal</h2><hr>
 
 				<div class="row">
@@ -1881,10 +1379,11 @@
 							</div>
 							
 							<br><br>
-					<input type="submit" name="submit" class="nextlegal action-button" value="Submit" />
+					<input type="button" name="submit" class="nextlegal action-button" value="Submit" />
 				
 			</form>
 			</fieldset>
+			@endif 			 
 		</div>
  </section>
 

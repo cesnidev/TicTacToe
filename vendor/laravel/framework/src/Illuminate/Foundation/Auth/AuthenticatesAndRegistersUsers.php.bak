@@ -39,7 +39,7 @@ trait AuthenticatesAndRegistersUsers {
 	public function postRegister(Request $request)
 	{
 		$validator = $this->registrar->validator($request->all());
-
+		//dd($validator);
 		if ($validator->fails())
 		{
 			$this->throwValidationException(
@@ -121,9 +121,8 @@ trait AuthenticatesAndRegistersUsers {
 		{
 			return $this->redirectPath;
 		}
-
+		dd('go to Home view');
 		//return property_exists($this, 'redirectTo') ? $this->redirectTo : '/home';
-		return property_exists($this, 'redirectTo') ? $this->redirectTo : '/login';
 	}
 
 	/**
@@ -133,8 +132,7 @@ trait AuthenticatesAndRegistersUsers {
 	 */
 	public function loginPath()
 	{
-		//return property_exists($this, 'loginPath') ? $this->loginPath : '/auth/login';
-		return property_exists($this, 'loginPath') ? $this->loginPath : '/login';
+		return property_exists($this, 'loginPath') ? $this->loginPath : '/auth/login';
 	}
 
 }

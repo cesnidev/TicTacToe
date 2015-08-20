@@ -24,7 +24,9 @@
 .showx{
 	visibility:visible;
 }
-
+#email{
+    text-transform: lowercase;
+}
 #eventicaforms
 {
 	margin: 50px auto;
@@ -135,6 +137,11 @@
 	top: 9px;
 	width: 100%;
 	z-index: -1;
+}
+#progressbar li:first-child:before
+{
+	background: #dc222b;
+	color: white;
 }
 #progressbar li:first-child:after
 {

@@ -15,10 +15,12 @@ Route::get('uc', function () {return view('static.uc');});
 
 /**Start POST AJAX Forms**/
 Route::post('BIAdd','UtilController@basicinfo');//Basic info
-Route::post('ProAdd','UtilController@basicinfo');//Profile
-Route::post('XpAdd','UtilController@basicinfo');//Experience
-Route::post('AvAdd','UtilController@basicinfo');//Availability
-Route::post('LgAdd','UtilController@basicinfo');//Legal
+Route::post('ProfAdd','UtilController@profile');//Profile
+Route::post('XpAdd','UtilController@experience');//Experience
+Route::post('AvAdd','UtilController@availability');//Availability
+Route::post('LgAdd','UtilController@legal');//Legal
+
+Route::post('DCheck','UtilController@DuplicatedUser');
 /**End POST AJAX Forms**/
 
 /**Start Forms Helpers & Functions**/
@@ -26,3 +28,4 @@ Route::post('api/up',['as'=>'subir','uses'=>'UtilController@UploadPhotos']);
 Route::post('delete','UtilController@DeletePhoto');
 /***End Forms Helpers & Functions**/
 
+Route::get('test','UtilController@test');

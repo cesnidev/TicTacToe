@@ -14,7 +14,8 @@ class CreateExperiencesTable extends Migration
     {
         Schema::create('Experiences', function (Blueprint $table) {
             $table->increments('id');
-			
+            $table->integer('userid')->unsigned();
+            $table->foreign('userid')->references('id')->on('basicinfos')->onDelete('cascade');
 			$table->string('brands1');
 			$table->string('brands2');
 			$table->string('brands3');
@@ -30,12 +31,12 @@ class CreateExperiencesTable extends Migration
 			$table->integer('activatedevents');
 			$table->integer('difbrands');
 			$table->boolean('certtabc');
-			
+			$table->string('certtabc_img');
 			$table->string('skills');
 			$table->boolean('techxp');
 			$table->boolean('capturedevent');
 			$table->boolean('socialmediaxp');
-			$table->enum('educationlevel',['1','2','3','4','5','6']);
+			$table->string('educationlevel');
 			
 			$table->boolean('eventmodeling');
             $table->boolean('streetteam');

@@ -14,6 +14,8 @@ class CreateLegalsTable extends Migration
     {
         Schema::create('Legals', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('userid')->unsigned();
+            $table->foreign('userid')->references('id')->on('basicinfos')->onDelete('cascade');
 			$table->boolean('bailwarranttrial');
 			$table->boolean('legallywork');
 			$table->string('banname');

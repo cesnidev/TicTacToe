@@ -14,7 +14,10 @@ class CreateAvailabilitiesTable extends Migration
     {
         Schema::create('Availabilities', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('userid')->unsigned();
+            $table->foreign('userid')->references('id')->on('basicinfos')->onDelete('cascade');
 			$table->boolean('validlicense');
+            $table->string('validlicense_img');
 			$table->boolean('owncar');
 			$table->boolean('receiveperm');
 			$table->boolean('oneoffday');

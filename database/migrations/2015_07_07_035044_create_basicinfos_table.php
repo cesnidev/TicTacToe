@@ -15,6 +15,9 @@ class CreateBasicinfosTable extends Migration {
 		Schema::create('basicinfos', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->string('firstname');
+			$table->string('lastname');
+			$table->string('minitial');
 			$table->string('legalname');
 			$table->string('nickname');
 			$table->string('dob');
@@ -28,13 +31,11 @@ class CreateBasicinfosTable extends Migration {
 			$table->string('state');
 			$table->integer('zip');
 			$table->integer('phone');
-			
 			$table->string('shipadress1');
 			$table->string('shipadress2');
 			$table->string('shipcity');
 			$table->string('shipstate');
 			$table->integer('shipzip');
-			
 			$table->string('emrgncyfullname');
 			$table->string('emrgncyrelation');
 			$table->string('emrgncyadress1');

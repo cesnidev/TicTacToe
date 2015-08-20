@@ -46,7 +46,7 @@
 								@else
 								<div class="large-6 columns small-4 columns hide-for-small"></div>
 								<div class="large-6 columns small-4 columns">
-									<a href="#" class="button radius" data-dropdown="hover1" data-options="is_hover:true; hover_timeout:5000">{{ Auth::user()->nickname }}</a>
+									<a href="#" class="button radius" data-dropdown="hover1" data-options="is_hover:true; hover_timeout:5000">{{ Auth::user()->firstname }}</a>
 									<ul id="hover1" class="f-dropdown" data-dropdown-content><!-- class="f-dropdown"-->
 										<li><a href="#">Dashboard</a></li>
 										<li><a href="/auth/logout">Logout</a></li>

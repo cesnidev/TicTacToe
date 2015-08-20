@@ -39,18 +39,41 @@
 <div class='notifications top-left'></div>
 <div class='notifications bottom-left'></div>
 	
-        <!-- Header -->
         <div class="container">
-            <div class="header row" style="border-bottom: 3px solid #dc222b;" >
-                <div class="large-4 columns">
-                    <?php echo Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:10%;margin-top:10px;')))); ?>
+			<div class="header row" style="border-bottom: 3px solid #dc222b;" >
+				<div class="large-4 columns">
+					<?php echo Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:30%;margin-top:10px;')))); ?>
 
-                </div>
-                <div class="tel-skype large-8 columns" align="right">
-                    <p style="text-align:right;">Welcome: <?php echo e(Auth::user()->legalname); ?></p>
-                </div>
-            </div>
-        </div>
+				</div>
+				<div class="tel-skype large-8 columns">
+					<div class="row">
+						<p><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679</p>
+					</div>
+					
+					<div class="row">
+						<div class="large-4 columns"></div>
+						<div class="large-8 columns" align="center">
+							<div class="row">
+								
+								<?php if(Auth::guest()): ?>
+								<div class="large-6 columns small-4 columns"><a class="button radius" href="/auth/login">Login</a></div>
+								<div class="large-6 columns small-4 columns"><a class="button radius" href="/signup">Register</a></div>
+								<?php else: ?>
+								<div class="large-6 columns small-4 columns hide-for-small"></div>
+								<div class="large-6 columns small-4 columns">
+									<a href="#" class="button radius" data-dropdown="hover1" data-options="is_hover:true; hover_timeout:5000"><?php echo e(Auth::user()->firstname); ?></a>
+									<ul id="hover1" class="f-dropdown" data-dropdown-content><!-- class="f-dropdown"-->
+										<li><a href="/auth/logout">Logout</a></li>
+									</ul>
+								</div>
+								<?php endif; ?>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
 <section>
 <div class="row" align="center">
 	<h3 style="color:red;font-weight:bold;">You must complete your register.</h3>

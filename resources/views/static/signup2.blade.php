@@ -567,7 +567,7 @@
 				</div>
 
 
-				<input type="submit"  class="nextbasic action-button" value="Next" />
+				<input type="submit"  class="nextbasic action-button" value="Submit" />
 			</form>
 			</fieldset>
 		</div>

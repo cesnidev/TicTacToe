@@ -51,7 +51,7 @@
 								<div class="large-6 columns small-4 columns"><a class="button radius" href="/signup">Register</a></div>
 								@else
 								<div class="large-6 columns small-4 columns hide-for-small"></div>
-								<div class="large-6 columns small-4 columns">
+								<div class="large-6 columns columns">
 									<a href="#" class="button radius" data-dropdown="hover1" data-options="is_hover:true; hover_timeout:5000">{{ Auth::user()->firstname }}</a>
 									<ul id="hover1" class="f-dropdown" data-dropdown-content><!-- class="f-dropdown"-->
 										<li><a href="/auth/logout">Logout</a></li>
@@ -283,9 +283,22 @@
 				                                    	<option value="5.5">5.5</option>
 				                                    	<option value="6">6</option>
 				                                    	<option value="6.5">6.5</option>
-				                                    	<option value=">>">>></option>
+				                                    	<option value="7">7</option>
+				                                    	<option value="7.5">7.5</option>
+				                                    	<option value="8">8</option>
+				                                    	<option value="8.5">8.5</option>
+				                                    	<option value="9">9</option>
+				                                    	<option value="9.5">9.5</option>
+				                                    	<option value="10">10</option>
+				                                    	<option value="10.5">10.5</option>
+				                                    	<option value="11">11</option>
+				                                    	<option value="11.5">11.5</option>
+				                                    	<option value="12">12</option>
+				                                    	<option value="12.5">12.5</option>
+				                                    	<option value="13">13</option>
+				                                    	<option value="13.5">13.5</option>
+														<option value="14">14</option>
 				                                    	<option value="14+">14+</option>	 
-				    								  
 				    								</select>
 													<small class="error">Shoe size is required.</small>
 				    							</label>
@@ -507,14 +520,21 @@
 				<div class="row">
 								<div class="large-7 large-offset-1 columns">
 									<div class="row">
-										<div class="large-9 columns">
+										<div class="large-7 columns">
 											<label class="inline"><font size="-1">Do you speak english with an acent?</font></label>
 										</div>
-										<div class="large-3 columns">
-											<div class="switch">
-											  <input id="englishacent" type="checkbox" >
-											  <label for="englishacent"></label>
+										<div class="large-5 columns" >
+											<div class="row">
+												<div class="large-4 small-4  columns"><p class="checktag englishacent_no right">No</p></div>
+												<div class="large-4 small-4  columns">
+													<div class="switch">
+													  <input id="englishacent" type="checkbox" >
+													  <label for="englishacent"></label>
+													</div>
+												</div>
+												<div class="large-4 small-4  columns"><p class="checktag englishacent_yes left" style="display: none;">Yes</p></div>
 											</div>
+											
 										</div>
 									</div>
 								</div>
@@ -523,14 +543,21 @@
 				<div class="row">
 								<div class="large-7 large-offset-1 columns">
 									<div class="row">
-										<div class="large-9 columns">
+										<div class="large-7 columns">
 											<label class="inline"><font size="-1">Do you speak spanish fuently?</font></label>
 										</div>
-										<div class="large-3 columns">
-											<div class="switch">
-											  <input id="englishfuently" type="checkbox">
-											  <label for="englishfuently"></label>
+										<div class="large-5 small-12 columns" >
+											<div class="row">
+												<div class="large-4 small-4 columns"><p class="checktag englishfuently_no right">No</p></div>
+												<div class="large-4 small-4  columns">
+													<div class="switch">
+													  <input id="englishfuently" type="checkbox" >
+													  <label for="englishfuently"></label>
+													</div>
+												</div>
+												<div class="large-4 small-4  columns"><p class="checktag englishfuently_yes left" style="display: none;">Yes</p></div>
 											</div>
+											
 										</div>
 									</div>
 								</div>
@@ -539,37 +566,53 @@
 
 				<br><hr>
 				<h2 class="fs-title">Piercings/Tattoos</h2>
-
+				
 				<div class="row">
-								<div class="large-6 columns">
+								<div class="large-7 large-offset-1 columns">
 									<div class="row">
-										<div class="large-5 columns">
-											<div class="row collapse">
-        										<label class="left">Do you have Tattoos?</label>
-									        <div class="small-12 columns">
-												<div class="switch">
-												  <input id="tatoos" type="checkbox">
-												  <label for="tatoos"></label>
-												</div>
-									        </div>
-									      </div>
-										</div>
 										<div class="large-7 columns">
-											<div class="row collapse">
-        										<label class="left">Do you have Piercings?</label>
-									        <div class="small-12 columns">
-												<div class="switch">
-												  <input id="piercings" type="checkbox">
-												  <label for="piercings"></label>
+											<label class="inline"><font size="-1">Do you have Tattoos?</font></label>
+										</div>
+										<div class="large-5 small-12 columns" >
+											<div class="row">
+												<div class="large-4 small-4 columns"><p class="checktag tatoos_no right">No</p></div>
+												<div class="large-4 small-4  columns">
+													<div class="switch">
+													  <input id="tatoos" type="checkbox" >
+													  <label for="tatoos"></label>
+													</div>
 												</div>
-									        </div>
-									      </div>
+												<div class="large-4 small-4  columns"><p class="checktag tatoos_yes left" style="display: none;">Yes</p></div>
+											</div>
+											
 										</div>
 									</div>
 								</div>
-								<div class="large-6 columns"></div>
+								<div class="large-3 columns"></div>
 				</div>
-
+				<div class="row">
+								<div class="large-7 large-offset-1 columns">
+									<div class="row">
+										<div class="large-7 columns">
+											<label class="inline"><font size="-1">Do you have Piercings?</font></label>
+										</div>
+										<div class="large-5 small-12 columns" >
+											<div class="row">
+												<div class="large-4 small-4 columns"><p class="checktag piercings_no right">No</p></div>
+												<div class="large-4 small-4  columns">
+													<div class="switch">
+													  <input id="piercings" type="checkbox" >
+													  <label for="piercings"></label>
+													</div>
+												</div>
+												<div class="large-4 small-4  columns"><p class="checktag piercings_yes left" style="display: none;">Yes</p></div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="large-3 columns"></div>
+				</div>
 
 				<br><hr>
 				<h2 class="fs-title">Photos</h2>
@@ -824,7 +867,7 @@
 								</div>
 								<div class="large-3 columns"></div>
 				</div>
-				<div class="row">
+				<div class="row" id="upload_tabc_" style="display:none;">
 								<div class="large-7 large-offset-1 columns">
 									<div class="row">
 										<div class="large-7 columns">

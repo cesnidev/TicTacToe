@@ -381,16 +381,20 @@ $(function() {
         
         //Start Checkbox events
         $('#tabcertified').click(function(){
+
             if($("#tabcertified").is(':checked'))
             {
-                $('#upload_tabc').prop('disabled',false);
-                $('#upload_tabc').css('background-color' ,'');
+                /*$('#upload_tabc').prop('disabled',false);
+                $('#upload_tabc').css('background-color' ,'');*/
+                $('#upload_tabc_').show('slow');
             }
             else
             {
-                $('#upload_tabc').prop('disabled',true);
-                $('#upload_tabc').css('background-color' ,'gray');
+                /*$('#upload_tabc').prop('disabled',true);
+                $('#upload_tabc').css('background-color' ,'gray');*/
+                 $('#upload_tabc_').hide('slow');
             }
+
         });
         
         $('#licensev').click(function(){
@@ -418,6 +422,56 @@ $(function() {
                 $('select[name*=ship]').prop('disabled',false);
             }
         });
+
+        $('#englishacent').click(function() {
+            if($("#englishacent").is(':checked'))
+            {
+                $('.englishacent_yes' ).fadeTo(400, 1);
+                $('.englishacent_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.englishacent_yes' ).fadeTo(400, 0);
+                $('.englishacent_no' ).fadeTo(400, 1);
+            }
+        });
+        $('#englishfuently').click(function() {
+            if($("#englishfuently").is(':checked'))
+            {
+                $('.englishfuently_yes' ).fadeTo(400, 1);
+                $('.englishfuently_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.englishfuently_yes' ).fadeTo(400, 0);
+                $('.englishfuently_no' ).fadeTo(400, 1);
+            }
+        });
+        $('#tatoos').click(function() {
+            if($("#tatoos").is(':checked'))
+            {
+                $('.tatoos_yes' ).fadeTo(400, 1);
+                $('.tatoos_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.tatoos_yes' ).fadeTo(400, 0);
+                $('.tatoos_no' ).fadeTo(400, 1);
+            }
+        });
+        $('#piercings').click(function() {
+            if($("#piercings").is(':checked'))
+            {
+                $('.piercings_yes' ).fadeTo(400, 1);
+                $('.piercings_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.piercings_yes' ).fadeTo(400, 0);
+                $('.piercings_no' ).fadeTo(400, 1);
+            }
+        });
+
         /*$('#gender').click(function(){
             if($("#gender").is(':checked'))
             {

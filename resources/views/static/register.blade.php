@@ -17,6 +17,12 @@
 		{!! Html::style('http://fonts.googleapis.com/css?family=PT+Sans:400,700') !!}
 		{!! Html::style('css/foundation.css') !!}
 		{!! Html::style('css/proyecto.form.css') !!}
+
+		{!! Html::style('css/test/coming-soon-style.css') !!}
+		{!! Html::style('css/foundation-icons.css') !!}
+		{!! Html::script('js/modernizr.custom.34978.js') !!}
+
+
     </head>
 
     <body style="border-top: 3px solid #fff;">
@@ -25,17 +31,16 @@
 <div class='notifications top-left'></div>
 <div class='notifications bottom-left'></div>
 	
-        <!-- Header -->
         <div class="container">
             <div class="header row" style="border-bottom: 3px solid #dc222b;" >
                 <div class="large-4 columns">
-                    {!! Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:15%;margin-top:10px;')))) !!}
+                    <a href="/"><img src="img/logo4.png" style="width:100%;margin-top:10px;"></a>
                 </div>
                 <div class="tel-skype large-8 columns">
-                    <p><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679 </p>
+                    <p><font color="#dc222b"><i class="step fi-telephone size-72"></i></font> Phone: 0039 123 45 679 </p>
                 </div>
             </div>
-        </div>
+        </div><br>
 <section>
         	
 <div id="eventicaforms">

@@ -9,7 +9,7 @@ Route::get('comming', function () {return view('static.comming');});
 Route::get('demos', function () {return view('static.demos');});
 Route::get('privacy', function () {return view('static.privacy');});
 Route::get('terms', function () {return view('static.terms');});
-Route::get('signup', function () {return view('static.signup2');});
+Route::get('signup', function () {return view('static.register');});
 Route::get('uc', function () {return view('static.uc');});
 /**End GET Views**/
 
@@ -28,4 +28,6 @@ Route::post('api/up',['as'=>'subir','uses'=>'UtilController@UploadPhotos']);
 Route::post('delete','UtilController@DeletePhoto');
 /***End Forms Helpers & Functions**/
 
-Route::get('test','UtilController@test');
+Route::get('test',function(){
+	return view('static.test');
+});

@@ -42,12 +42,13 @@
         <div class="container">
 			<div class="header row" style="border-bottom: 3px solid #dc222b;" >
 				<div class="large-4 columns">
-					<?php echo Html::decode(Html::link('/',Html::image('img/logo2.png',null,array('style'=>'width:30%;margin-top:10px;')))); ?>
+					<?php echo Html::decode(Html::link('/',Html::image('img/logo4.png',null,array('style'=>'width:100%;margin-top:10px;')))); ?>
 
 				</div>
 				<div class="tel-skype large-8 columns">
 					<div class="row">
-						<p><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679</p>
+						<?php /*<p><font color="#dc222b"><i class="step fi-telephone size-72"></i></font> Phone: 0039 123 45 679</p>*/ ?>
+						<br>
 					</div>
 					
 					<div class="row">
@@ -863,16 +864,23 @@
 				<div class="row">
 								<div class="large-7 large-offset-1 columns">
 									<div class="row">
+
 										<div class="large-7 columns">
 											<label class="inline"><font size="-1">Are you TABC Certified?</font></label>
 										</div>
-										<div class="large-3 columns">
-											<div class="switch">
-											  <input id="tabcertified" type="checkbox">
-											  <label for="tabcertified"></label>
+										<div class="large-5 columns" >
+											<div class="row">
+												<div class="large-4 small-4  columns"><p class="checktag tabcertified_no right">No</p></div>
+												<div class="large-4 small-4  columns">
+													<div class="switch">
+													  <input id="tabcertified" type="checkbox" >
+													  <label for="tabcertified"></label>
+													</div>
+												</div>
+												<div class="large-4 small-4  columns"><p class="checktag tabcertified_yes left" style="display: none;">Yes</p></div>
 											</div>
+											
 										</div>
-										<div class="large-2 columns"></div>
 									</div>
 								</div>
 								<div class="large-3 columns"></div>
@@ -881,7 +889,7 @@
 								<div class="large-7 large-offset-1 columns">
 									<div class="row">
 										<div class="large-7 columns">
-											<label class="inline" disabled><font size="-1">If yes, please upload license/permit?</font></label>
+											<label class="inline" disabled><font size="-1">Please upload license/permit?</font></label>
 										</div>
 										<div class="large-5 columns">
 											<button id="upload_tabc" class="button radius" style="background-color:gray;" disabled>Upload image</button>
@@ -909,14 +917,21 @@
 					<div class="row">
 								<div class="large-7 large-offset-1 columns">
 									<div class="row">
-										<div class="large-9 columns">
+										<div class="large-7 columns">
 											<label class="inline"><font size="-1">Do you have event technology experience?</font></label>
 										</div>
-										<div class="large-3 columns">
-											<div class="switch">
-											  <input id="xptech" type="checkbox">
-											  <label for="xptech"></label>
+										<div class="large-5 columns" >
+											<div class="row">
+												<div class="large-4 small-4  columns"><p class="checktag xptech_no right">No</p></div>
+												<div class="large-4 small-4  columns">
+													<div class="switch">
+													  <input id="xptech" type="checkbox" >
+													  <label for="xptech"></label>
+													</div>
+												</div>
+												<div class="large-4 small-4  columns"><p class="checktag xptech_yes left" style="display: none;">Yes</p></div>
 											</div>
+											
 										</div>
 									</div>
 								</div>
@@ -925,14 +940,21 @@
 				<div class="row">
 								<div class="large-7 large-offset-1 columns">
 									<div class="row">
-										<div class="large-9 columns">
+										<div class="large-7 columns">
 											<label class="inline"><font size="-1">Have you captured event info on a smartphone, tablet or other device?</font></label>
 										</div>
-										<div class="large-3 columns">
-											<div class="switch">
-											  <input id="cap_info" type="checkbox">
-											  <label for="cap_info"></label>
+										<div class="large-5 columns" >
+											<div class="row">
+												<div class="large-4 small-4  columns"><p class="checktag cap_info_no right">No</p></div>
+												<div class="large-4 small-4  columns">
+													<div class="switch">
+													  <input id="cap_info" type="checkbox" >
+													  <label for="cap_info"></label>
+													</div>
+												</div>
+												<div class="large-4 small-4  columns"><p class="checktag cap_info_yes left" style="display: none;">Yes</p></div>
 											</div>
+											
 										</div>
 									</div>
 								</div>
@@ -941,15 +963,23 @@
 				<div class="row">
 								<div class="large-7 large-offset-1 columns">
 									<div class="row">
-										<div class="large-9 columns">
+										<div class="large-7 columns">
 											<label class="inline"><font size="-1">Do you have experience with social media images, data and content, incluiding Facebook, Twitter and other Social Network?</font></label>
 										</div>
-										<div class="large-3 columns">
-											<div class="switch">
-											  <input id="xpsocial" type="checkbox">
-											  <label for="xpsocial"></label>
+										<div class="large-5 columns" >
+											<div class="row">
+												<div class="large-4 small-4  columns"><p class="checktag xpsocial_no right">No</p></div>
+												<div class="large-4 small-4  columns">
+													<div class="switch">
+													  <input id="xpsocial" type="checkbox" >
+													  <label for="xpsocial"></label>
+													</div>
+												</div>
+												<div class="large-4 small-4  columns"><p class="checktag xpsocial_yes left" style="display: none;">Yes</p></div>
 											</div>
+											
 										</div>
+
 									</div>
 								</div>
 								<div class="large-3 columns"></div>
@@ -959,10 +989,10 @@
 				<div class="row">
 								<div class="large-6 columns">
 									<div class="row">
-										<div class="large-12 columns">
-											<div class="row collapse">
+										<div class="large-12 small-12 columns">
+											<div class="row ">
         									<label class="left">What level of education have you completed?</label>
-									        <div class="small-6 columns">
+									        <div class="small-12 large-6 columns">
 									          		<label>
     								<select name="educationlevel" required>
     									<option value="" selected disabled>select one</option>
@@ -1216,20 +1246,27 @@
 				<div class="row">
 					<div class="large-6 columns">
 						<div class="row">
-										<div class="large-9 columns">
+										<div class="large-7 columns">
 											<label class="inline"><font size="-1">Do you have a valid driver's license?</font></label>
 										</div>
-										<div class="large-3 columns">
-											<div class="switch">
-											  <input id="licensev" type="checkbox">
-											  <label for="licensev"></label>
+										<div class="large-5 columns" >
+											<div class="row">
+												<div class="large-4 small-4  columns"><p class="checktag licensev_no right">No</p></div>
+												<div class="large-4 small-4  columns">
+													<div class="switch">
+													  <input id="licensev" type="checkbox" >
+													  <label for="licensev"></label>
+													</div>
+												</div>
+												<div class="large-4 small-4  columns"><p class="checktag licensev_yes left" style="display: none;">Yes</p></div>
 											</div>
+											
 										</div>
 									
 						</div>
-						<div class="row center">
+						<div class="row center" id="upload_drivlic_" style="display:none;">
 							<div class="row">
-								<p >If yes, please provide an image of your driver's license</p>
+								<p >Please provide an image of your driver's license</p>
 							</div>
 							<div class="row">
 								<button id="upload_drivlic" class="button radius" style="background-color:gray;" disabled>Upload image</button>
@@ -1237,27 +1274,41 @@
 									
 						</div>
 						<div class="row">
-										<div class="large-9 columns">
+										<div class="large-7 columns">
 											<label class="inline"><font size="-1">Do you have your own automobile?</font></label>
 										</div>
-										<div class="large-3 columns">
-											<div class="switch">
-											  <input id="ownmb" type="checkbox">
-											  <label for="ownmb"></label>
+										<div class="large-5 columns" >
+											<div class="row">
+												<div class="large-4 small-4  columns"><p class="checktag ownmb_no right">No</p></div>
+												<div class="large-4 small-4  columns">
+													<div class="switch">
+													  <input id="ownmb" type="checkbox" >
+													  <label for="ownmb"></label>
+													</div>
+												</div>
+												<div class="large-4 small-4  columns"><p class="checktag ownmb_yes left" style="display: none;">Yes</p></div>
 											</div>
+											
 										</div>
 									
 						</div>
 						<div class="row">
-										<div class="large-9 columns">
-											<label class="inline"><font size="-1">Are you willing to receive event items to your home/apartment?</font></label>
+							<div class="large-7 columns">
+								<label class="inline"><font size="-1">Are you willing to receive event items to your home/apartment?</font></label>
+							</div>
+							<div class="large-5 columns" >
+								<div class="row">
+									<div class="large-4 small-4  columns"><p class="checktag apitm_no right">No</p></div>
+									<div class="large-4 small-4  columns">
+										<div class="switch">
+										  <input id="apitm" type="checkbox" >
+										  <label for="apitm"></label>
 										</div>
-										<div class="large-3 columns">
-											<div class="switch">
-											  <input id="apitm" type="checkbox">
-											  <label for="apitm"></label>
-											</div>
-										</div>
+									</div>
+									<div class="large-4 small-4  columns"><p class="checktag apitm_yes left" style="display: none;">Yes</p></div>
+								</div>
+								
+							</div>
 									
 						</div>
 					</div>
@@ -1273,29 +1324,29 @@
 				<div class="row">
 					<div class="large-4 columns">
 						<div class="row">
-									<div class="large-2 columns">
+									<div class="large-2 small-2 columns">
 										<input id="days" type="checkbox" />
 										
 									</div>
-									<div class="large-10 columns left" >
+									<div class="large-10 small-10 columns left" >
 										<label for="days">One-off/One-day</label>
 									</div>
 						</div>
 						<div class="row">
-									<div class="large-2 columns">
+									<div class="large-2 small-2 columns">
 										<input id="cmdays" type="checkbox" />
 										
 									</div>
-									<div class="large-10 columns left" >
+									<div class="large-10 small-10 columns left" >
 										<label for="cmdays">Consecutive/Multiple Days</label>
 									</div>
 						</div>
 						<div class="row">
-									<div class="large-2 columns">
+									<div class="large-2 small-2 columns">
 										<input id="cmmonths" type="checkbox" />
 										
 									</div>
-									<div class="large-10 columns left" >
+									<div class="large-10 small-10 columns left" >
 										<label for="cmmonths">Consecutive/Multiple Months</label>
 									</div>
 						</div>
@@ -1303,67 +1354,67 @@
 					</div>
 					<div class="large-4 columns">
 						<div class="row">
-									<div class="large-2 columns">
+									<div class="large-2 small-2 columns">
 										<input id="sshift" type="checkbox" />
 										
 									</div>
-									<div class="large-10 columns left" >
+									<div class="large-10 small-10 columns left" >
 										<label for="sshift">Short Shift(4 hours or less)</label>
 									</div>
 						</div>
 						<div class="row">
-									<div class="large-2 columns">
+									<div class="large-2 small-2 columns">
 										<input id="lshift" type="checkbox" />
 										
 									</div>
-									<div class="large-10 columns left" >
+									<div class="large-10 small-10 columns left" >
 										<label for="lshift">Long Shift(8 hours or more)</label>
 									</div>
 						</div>
 						<div class="row">
-									<div class="large-2 columns">
+									<div class="large-2 small-2 columns">
 										<input id="mshift" type="checkbox" />
 										
 									</div>
-									<div class="large-10 columns left" >
+									<div class="large-10 small-10 columns left" >
 										<label for="mshift">Morning Shift</label>
 									</div>
 						</div>
 						<div class="row">
-									<div class="large-2 columns">
+									<div class="large-2 small-2 columns">
 										<input id="ashift" type="checkbox" />
 										
 									</div>
-									<div class="large-10 columns left" >
+									<div class="large-10 small-10 columns left" >
 										<label for="ashift">Afternoon Shift</label>
 									</div>
 						</div>
 					</div>
 					<div class="large-4 columns">
 						<div class="row">
-									<div class="large-2 columns">
+									<div class="large-2 small-2 columns">
 										<input id="lmshift" type="checkbox" />
 										
 									</div>
-									<div class="large-10 columns left" >
+									<div class="large-10 small-10 columns left" >
 										<label for="lmshift">Last-minute Shifts(24 Hours or less)</label>
 									</div>
 						</div>
 						<div class="row">
-									<div class="large-2 columns">
+									<div class="large-2 small-2 columns">
 										<input id="hshift" type="checkbox" />
 										
 									</div>
-									<div class="large-10 columns left" >
+									<div class="large-10 small-10 columns left" >
 										<label for="hshift">Holiday Shifts</label>
 									</div>
 						</div>
 						<div class="row">
-									<div class="large-2 columns">
+									<div class="large-2 small-2 columns">
 										<input id="bshift" type="checkbox" />
 										
 									</div>
-									<div class="large-10 columns left" >
+									<div class="large-10 small-10 columns left" >
 										<label for="bshift">Backup Shifts</label>
 									</div>
 						</div>
@@ -1381,38 +1432,61 @@
 				<h2 class="fs-title">Legal</h2><hr>
 
 				<div class="row">
-								<div class="large-10 columns">
-									<p>Have you ever been convicted of a felony, or a misdemeanor involving any violent act, use or possession of a weapon or act of dishonesty for which the record has not been sealed or expunged?</p>
-								</div>
-								<div class="large-2 columns" style="margin-top:10px;">
-									<div class="switch round large">
-									  <input id="answ1" type="checkbox">
-									  <label for="answ1"></label>
+								
+							<div class="large-8 columns">
+								<p>Have you ever been convicted of a felony, or a misdemeanor involving any violent act, use or possession of a weapon or act of dishonesty for which the record has not been sealed or expunged?</p>
+							</div>
+							<div class="large-4 columns" >
+								<div class="row">
+									<div class="large-4 small-4  columns"><p class="checktag answ1_no right">No</p></div>
+									<div class="large-4 small-4  columns">
+										<div class="switch round large">
+										  <input id="answ1" type="checkbox" >
+										  <label for="answ1"></label>
+										</div>
 									</div>
+									<div class="large-4 small-4  columns"><p class="checktag answ1_yes left" style="display: none;">Yes</p></div>
 								</div>
+								
+							</div>
 				</div>
-							<div class="row">
-								<div class="large-10 columns">
-									<p>Are you currently out on bail, the subject of a current warrant for arrest or released on your own recognizance pending trial?</p>
-								</div>
-								<div class="large-2 columns" style="margin-top:10px;">
-									<div class="switch round large">
-									  <input id="answ2" type="checkbox">
-									  <label for="answ2"></label>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="large-10 columns">
-									<p>Are you legally allowed to work in the US?</p>
-								</div>
-								<div class="large-2 columns" style="margin-top:10px;">
-									<div class="switch round large">
-									  <input id="legally" type="checkbox">
-									  <label for="legally"></label>
-									</div>
+				<div class="row">
+					<div class="large-8 columns">
+						<p>Are you currently out on bail, the subject of a current warrant for arrest or released on your own recognizance pending trial?</p>
+					</div>
+					<div class="large-4 columns" >
+						<div class="row">
+							<div class="large-4 small-4  columns"><p class="checktag answ2_no right">No</p></div>
+							<div class="large-4 small-4  columns">
+								<div class="switch round large">
+								  <input id="answ2" type="checkbox" >
+								  <label for="answ2"></label>
 								</div>
 							</div>
+							<div class="large-4 small-4  columns"><p class="checktag answ2_yes left" style="display: none;">Yes</p></div>
+						</div>
+						
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="large-8 columns">
+						<p>Are you legally allowed to work in the US?</p>
+					</div>
+					<div class="large-4 columns" >
+						<div class="row">
+							<div class="large-4 small-4  columns"><p class="checktag legally_no right">No</p></div>
+							<div class="large-4 small-4  columns">
+								<div class="switch round large">
+								  <input id="legally" type="checkbox" >
+								  <label for="legally"></label>
+								</div>
+							</div>
+							<div class="large-4 small-4  columns"><p class="checktag legally_yes left" style="display: none;">Yes</p></div>
+						</div>
+						
+					</div>
+				</div>
 							<h2 class="fs-title">Social Security</h2><hr>
 							<div class="row">
 								<div class="large-4 columns">

@@ -56,7 +56,7 @@
 	<img class="poster_eventica" src="img/video/poster.png" />
 </div>
 </div>
-<section id="services" class="row" style="margin-top:-100px;margin-bottom:100px;">
+<section id="services" class="row" style="margin-top:-100px;margin-bottom:50px;">
 	<div class="small-12 large-4 columns service">
 		<div class="row">
 			<section class="main">
@@ -130,7 +130,7 @@
 		</div>
 	</div>
 </section>
-<section id="events" class="events_e hide-for-small">
+<section id="events" class="events_e hide-for-small" style="margin-top:50px;">
 	<img src="img/Slide/EventValues.png">  
 	<div class="boton" align="center">
 		<a class="button read_more radius" href="uc">Eventica in Action</a>  
@@ -138,7 +138,7 @@
 	
 </section>
 
-<section id="events_mobile" class="events_e show-for-small-only">
+<section id="events_mobile" class="events_e show-for-small-only" style="margin-top:50px;">
 	<div class="row" align="center">
 		<h1 class="inspire">Excellence</h1>
 	</div>
@@ -193,20 +193,26 @@
 		
 		<div class="large-4 columns hide-for-small hide-for-medium" align="left" style="margin-top:-10px;">          
 			<br>
-			<div class="large-12 columns" >
-				<a href="#" target="_blank">
-					<img onMouseOver="this.src='img/social/twitter.png'" onMouseOut="this.src='img/social/twitter2.png'" src="img/social/twitter2.png" id="tca_social">
-				</a>
-				<a href="#"  target="_blank">
-					<img onMouseOver="this.src='img/social/facebook.png'" onMouseOut="this.src='img/social/facebook3.png'" src="img/social/facebook3.png" id="tca_social">
-				</a>
-				<a  href="#"  target="_blank">
-					<img onMouseOver="this.src='img/social/youtube.png'" onMouseOut="this.src='img/social/youtube2.png'" src="img/social/youtube2.png" id="tca_social">
-				</a>
-				<a  href="#"  target="_blank">
-					<img onMouseOver="this.src='img/social/linkedin.png'" onMouseOut="this.src='img/social/linkedin2.png'" src="img/social/linkedin2.png" id="tca_social">
-				</a>
+			<div class="row">
+				<div class="large-12 columns" >
+					<a href="#" target="_blank">
+						<img onMouseOver="this.src='img/social/twitter.png'" onMouseOut="this.src='img/social/twitter2.png'" src="img/social/twitter2.png" id="tca_social">
+					</a>
+					<a href="#"  target="_blank">
+						<img onMouseOver="this.src='img/social/facebook.png'" onMouseOut="this.src='img/social/facebook3.png'" src="img/social/facebook3.png" id="tca_social">
+					</a>
+					<a  href="#"  target="_blank">
+						<img onMouseOver="this.src='img/social/youtube.png'" onMouseOut="this.src='img/social/youtube2.png'" src="img/social/youtube2.png" id="tca_social">
+					</a>
+					<a  href="#"  target="_blank">
+						<img onMouseOver="this.src='img/social/linkedin.png'" onMouseOut="this.src='img/social/linkedin2.png'" src="img/social/linkedin2.png" id="tca_social">
+					</a>
+				</div>
 			</div>
+			<div class="row" align="center">
+				<h1 style="color:#dc222b;">Conect With Us</h1>
+			</div>
+			
 		</div>
 		<div class="small-12 medium-12 columns hide-for-large-up hide-for-xlarge-up" align="left" style="margin-bottom:20px;margin-top:-20px;" >          
 			
@@ -240,8 +246,8 @@
 	<section style="background-color:#293440;">
 		<div class="row" style="background-color:#293440;">
 			<div class="large-4 columns" style="color:white;margin-top:25px;text-align:center;">
-				<span class="nowrap"><b>&copy; 2015</b></span>
-				<span class="nowrap">Eventica.</span>
+				<img class="imgfooter" src="{{asset('img/logo_footer2.png')}}" alt="">
+				{{--<span class="nowrap"><b>&copy; 2015</b></span>--}}
 			</div>
 			<div class="large-5 columns hide-for-small" style="margin-top:5px;text-align:center;">
 				<nav class="menu">
@@ -263,13 +269,5 @@
 		</div>
 	</section>
 </footer>
-
-<script>
-    function close_nav()
-    {
-      document.getElementById('eventica_menu_button').className="menu-toggle radius hide-for-large-up";
-      document.getElementById('eventica_menu_nav').style.display="none";
-    }
-    </script>
 @include('assets.scripts')
 

@@ -1,15 +1,15 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	
+
 	<head>
-		
+
 		<meta charset="utf-8">
 		<title>Eventica Staff Company</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		
+
 		<!-- CSS -->
 		{!! Html::style('http://fonts.googleapis.com/css?family=PT+Sans:400,700') !!}
 		{!! Html::style('css/foundation.css') !!}
@@ -18,14 +18,14 @@
 		{!! Html::style('css/foundation-icons.css') !!}
 		{!! Html::script('js/modernizr.custom.34978.js') !!}
 
-		
+
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link rel="shortcut icon" href="{!! asset('img/favicon.ico') !!}">
 	</head>
-	
+
 	<body style="border-top: 3px solid #fff;">
 
 		<div class="container">
@@ -38,8 +38,8 @@
                 </div>
             </div>
         </div><br>
-		
-		
+
+
 		<div class="row">
 			<div class="container" style="background-color:#fff;">
 				<div class="row" style="background-color:#fff;">
@@ -92,7 +92,7 @@
 							<p align="justify">Ads are a standard part of user experience on the Internet, and Eventica believes that targeted advertising enhances this experience. Eventica may use Cookies (defined below) and other technologies and Personal Information to place ads where they believe interested parties will see them. In addition to banner ads, Eventica may advertise products, companies and events that we think might interest you through the email address you provide.</p>
 
 							<p align="justify">Eventica may analyze Personal Information and Web Navigational Data based on your interests and may use the analysis from this information in a way that does not contain any Personal Information (<b>"Market Research"</b>) in order to market the Eventica Platform and increase the likelihood that a User's experience with the Eventica Platform is relevant to such User's interests. Eventica uses data at the individual level to sell products and services to Users who express an interest in these products and services, through a poll for example, or to Users who can be presumed to have an interest based on results from our Market Research.</p>
-							
+
 							<p align="justify">Eventica may use your cell phone number to call or text you in order to provide the Eventica Platform. If you would like more information about our policy, or to opt out, please review our Terms of Service, available at Eventica.com/terms and email info@Eventica.com; by accepting the Terms of Service you are indicating your consent to be contacted at the phone number you have provided for the purposes described above.</p>
 
 							<h3 style="color:#dc222b;">Information Sharing</h3>
@@ -186,8 +186,8 @@
 		{!! Html::script("js/jquery.backstretch.min.js") !!}
 		{!! Html::script("js/jquery.countdown.js") !!}
 		{!! Html::script("js/col_footer.js") !!}
-	
-	
+
+
 	</body>
-	
+
 	</html>

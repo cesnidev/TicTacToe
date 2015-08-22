@@ -32,7 +32,8 @@
 				</div>
 				<div class="tel-skype large-8 columns">
 					<div class="row">
-						<p><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679</p>
+						{{--<p><font color="#dc222b"><i class="step fi-telephone size-72"></i></font> Phone: 0039 123 45 679</p>--}}
+						<br>
 					</div>
 					
 					<div class="row">

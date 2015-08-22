@@ -20947,7 +20947,10 @@ footer a:hover {
         top: -300px;
 
 }
-
+.imgfooter{
+    width:200px;
+    margin-bottom: 10px;
+}
 
 }
 
@@ -20987,6 +20990,10 @@ footer a:hover {
         left: 0;
         top: -300px;
 
+}
+.imgfooter{
+    width:200px;
+    margin-bottom: 10px;
 }
 }
 
@@ -21028,6 +21035,9 @@ footer a:hover {
         left: 0;
         top: -320px;
 
+}
+.imgfooter{
+    width:250px;
 }
 }
 
@@ -21076,6 +21086,9 @@ footer a:hover {
 .inspire{
     font-size:40px;
 }
+.imgfooter{
+    width:250px;
+}
 }
 
 @media (min-width: 481px) and (max-width: 640px)
@@ -21111,6 +21124,12 @@ footer a:hover {
 .inspire{
     font-size:40px;
 }
+.imgfooter{
+    width:100px;
+}
+.imgfooter{
+    width:200px;
+}
 }
 
 @media (min-width: 321px) and (max-width: 480px)
@@ -21145,6 +21164,9 @@ footer a:hover {
 }
 .inspire{
     font-size:40px;
+}
+.imgfooter{
+    width:200px;
 }
 }
 
@@ -21185,5 +21207,7 @@ footer a:hover {
 .inspire{
     font-size:40px;
 }
-
+.imgfooter{
+    width:150px;
+}
 }

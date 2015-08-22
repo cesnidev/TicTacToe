@@ -51,7 +51,7 @@
                     <a href="index.php"><img src="img/logo4.png" style="width:100%;margin-top:10px;"></a>
                 </div>
                 <div class="tel-skype large-8 columns show-for-large">
-                    <p><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679 </p>
+                    <p><font color="#dc222b"><i class="step fi-telephone size-72"></i></font> Phone: 0039 123 45 679 </p>
                 </div>
             </div>
         </div>

@@ -384,14 +384,20 @@ $(function() {
 
             if($("#tabcertified").is(':checked'))
             {
-                /*$('#upload_tabc').prop('disabled',false);
-                $('#upload_tabc').css('background-color' ,'');*/
+                $('.tabcertified_yes' ).fadeTo(400, 1);
+                $('.tabcertified_no' ).fadeTo(400, 0);
+
+                $('#upload_tabc').prop('disabled',false);
+                $('#upload_tabc').css('background-color' ,'');
                 $('#upload_tabc_').show('slow');
             }
             else
             {
-                /*$('#upload_tabc').prop('disabled',true);
-                $('#upload_tabc').css('background-color' ,'gray');*/
+                $('.tabcertified_yes' ).fadeTo(400, 0);
+                $('.tabcertified_no' ).fadeTo(400, 1);
+
+                $('#upload_tabc').prop('disabled',true);
+                $('#upload_tabc').css('background-color' ,'gray');
                  $('#upload_tabc_').hide('slow');
             }
 
@@ -470,6 +476,129 @@ $(function() {
                 $('.piercings_yes' ).fadeTo(400, 0);
                 $('.piercings_no' ).fadeTo(400, 1);
             }
+        });
+        $('#xptech').click(function() {
+            if($("#xptech").is(':checked'))
+            {
+                $('.xptech_yes' ).fadeTo(400, 1);
+                $('.xptech_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.xptech_yes' ).fadeTo(400, 0);
+                $('.xptech_no' ).fadeTo(400, 1);
+            }
+        });
+        $('#cap_info').click(function() {
+            if($("#cap_info").is(':checked'))
+            {
+                $('.cap_info_yes' ).fadeTo(400, 1);
+                $('.cap_info_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.cap_info_yes' ).fadeTo(400, 0);
+                $('.cap_info_no' ).fadeTo(400, 1);
+            }
+        });
+        $('#xpsocial').click(function() {
+            if($("#xpsocial").is(':checked'))
+            {
+                $('.xpsocial_yes' ).fadeTo(400, 1);
+                $('.xpsocial_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.xpsocial_yes' ).fadeTo(400, 0);
+                $('.xpsocial_no' ).fadeTo(400, 1);
+            }
+        });
+        $('#licensev').click(function(){
+
+            if($("#licensev").is(':checked'))
+            {
+                $('.licensev_yes' ).fadeTo(400, 1);
+                $('.licensev_no' ).fadeTo(400, 0);
+
+                $('#upload_drivlic').prop('disabled',false);
+                $('#upload_drivlic').css('background-color' ,'');
+                $('#upload_drivlic_').show('slow');
+            }
+            else
+            {
+                $('.licensev_yes' ).fadeTo(400, 0);
+                $('.licensev_no' ).fadeTo(400, 1);
+
+                $('#upload_drivlic').prop('disabled',true);
+                $('#upload_drivlic').css('background-color' ,'gray');
+                 $('#upload_drivlic_').hide('slow');
+            }
+
+        });
+        $('#ownmb').click(function() {
+            if($("#ownmb").is(':checked'))
+            {
+                $('.ownmb_yes' ).fadeTo(400, 1);
+                $('.ownmb_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.ownmb_yes' ).fadeTo(400, 0);
+                $('.ownmb_no' ).fadeTo(400, 1);
+            }
+
+        });
+        $('#apitm').click(function() {
+            if($("#apitm").is(':checked'))
+            {
+                $('.apitm_yes' ).fadeTo(400, 1);
+                $('.apitm_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.apitm_yes' ).fadeTo(400, 0);
+                $('.apitm_no' ).fadeTo(400, 1);
+            }
+
+        });
+        $('#legally').click(function() {
+            if($("#legally").is(':checked'))
+            {
+                $('.legally_yes' ).fadeTo(400, 1);
+                $('.legally_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.legally_yes' ).fadeTo(400, 0);
+                $('.legally_no' ).fadeTo(400, 1);
+            }
+
+        });
+         $('#answ2').click(function() {
+            if($("#answ2").is(':checked'))
+            {
+                $('.answ2_yes' ).fadeTo(400, 1);
+                $('.answ2_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.answ2_yes' ).fadeTo(400, 0);
+                $('.answ2_no' ).fadeTo(400, 1);
+            }
+
+        });
+        $('#answ1').click(function() {
+            if($("#answ1").is(':checked'))
+            {
+                $('.answ1_yes' ).fadeTo(400, 1);
+                $('.answ1_no' ).fadeTo(400, 0);
+            }
+            else
+            {
+                $('.answ1_yes' ).fadeTo(400, 0);
+                $('.answ1_no' ).fadeTo(400, 1);
+            }
+
         });
 
         /*$('#gender').click(function(){

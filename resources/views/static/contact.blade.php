@@ -14,6 +14,7 @@
         <!-- CSS -->
 		{!! Html::style('http://fonts.googleapis.com/css?family=PT+Sans:400,700') !!}
 		{!! Html::style('css/foundation.css') !!}
+		{!! Html::style('css/footerfix.css') !!}
 		{!! Html::style('css/test/coming-soon-style.css') !!}
 		{!! Html::style('css/foundation-icons.css') !!}
 		{!! Html::script('js/modernizr.custom.34978.js') !!}
@@ -44,7 +45,7 @@
                     <a href="/"><img src="img/logo4.png" style="width:100%;margin-top:10px;"></a>
                 </div>
                 <div class="tel-skype large-8 columns">
-                    <p><i class="step fi-telephone size-72"></i> Phone: 0039 123 45 679 </p>
+                    <p><font color="#dc222b"><i class="step fi-telephone size-72"></i></font> Phone: 0039 123 45 679 </p>
                 </div>
             </div>
         </div><br>
@@ -56,7 +57,16 @@
 		</div>
 		<div class="row">
 			<form name="staff_form" method="post" action="" data-abide>
-                        
+                        <div class="row collapse">
+								<div class="row">
+										<div class="large-4 columns">&nbsp;</div>
+										 <div class="large-7 columns">
+										   <h1 style="color:#dc222b;">Join Eventica</h1>
+										 </div>
+										 <div class="large-1 columns">&nbsp;</div>
+										 
+								</div>
+						</div><br>
 						<div class="row collapse">
 								<div class="row">
 										 <div class="large-5 large-offset-1 columns">
@@ -198,7 +208,14 @@
 		</div>
 		<div class="row">
 			<form name="quote_form" method="post" action="" data-abide>
-                        
+                        <div class="row collapse">
+								<div class="row">
+										 <div class="large-7 large-offset-1 columns">
+										   <h1 style="color:#dc222b;">Hire Eventica</h1>
+										 </div>
+										 <div class="large-4 columns">&nbsp;</div>
+								</div>
+						</div><br>
 						<div class="row collapse">
 								<div class="row">
 										 <div class="large-7 large-offset-1 columns">
@@ -601,30 +618,30 @@
 </div>  
 
 <footer style="background-color:#293440;">
-        
-<section style="background-color:#181e25;">
-      <div class="row" style="background-color:#181e25;">
-    	<div class="large-4 columns" style="color:white;margin-top:25px;" align="center">
-    		<span class="nowrap"><b>&copy; 2015</b></span>
-        <span class="nowrap">Eventica.</span>
-    	</div>
-    	<div class="large-4 columns" style="margin-top:25px;" align="center">
-    		<nav class="menu">
-        <ul>
-    		<li style="color:white;">|</li>
-          <li><a style="color:white;" href="contact">Contact</a></li>
-          <li><a style="color:white;" href="signup">Sign Up</a></li>
-    	  <li style="color:white;">|</li>
-        </ul>
-      </nav>
-    	</div>
-    	<div class="large-4 columns" style="color:white;margin-top:25px;"  align="center">
-    	<a style="color:#fff;" href="terms">Terms</a>|<a style="color:#fff;" href="privacy">Privacy</a>
-    	</div>
-      </div>
-    </section>
+	<section style="background-color:#293440;">
+		<div class="row" style="background-color:#293440;">
+			<div class="large-4 columns" style="color:white;margin-top:25px;text-align:center;">
+				<img class="imgfooter" src="{{asset('img/logo_footer2.png')}}" alt="">
+				{{--<span class="nowrap"><b>&copy; 2015</b></span>--}}
+			</div>
+			<div class="large-5 columns hide-for-small" style="margin-top:25px;text-align:center;">
+				<nav class="menu">
+					<ul>
+						<li style="color:white;">|</li>
+						<li>{!! Html::link('contact','Contact',array('style'=>'color:white;'))!!}</li>
+						<li>{!! Html::link('signup','Sign Up',array('style'=>'color:white;'))!!}</li>
+						<li style="color:white;">|</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="large-3 columns" style="color:white;margin-top:25px;text-align:center;margin-bottom:15px;"  align="right">
+				{!! Html::link('terms','Terms',array('style'=>'color:white;')) !!}
+				|
+				 {!! HTML::Link('privacy','Privacy',array('style'=>'color:white;')) !!}
+			</div>
+		</div>
+	</section>
 </footer>
-
 
         <!-- Javascript -->
 		<!--<script src="js/proyecto.js"></script>-->

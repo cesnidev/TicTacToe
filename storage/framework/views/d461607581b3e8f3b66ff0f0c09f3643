@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>INSERTAR DATOS</title>
+<meta charset="utf-8">
+</head>
+<body> 
+<div id="contenido" style="width:400px; height:300px; background-color:‪#‎00FF00‬;" >
+<a href="#" onclick="funcion_capa1()">INSERTAR</a>
+<div id="capa1" >
+<td>Clave: </td><td><input type="text" name="txtClave"></td></tr>
+<td>Nombre:</td> <td><input type="text" name="txtNombre"></td>
+<tr><td>Sexo:</td>
+</div>
+<a href="#" onclick="funcion_capa2()">ELIMINAR</h2>
+<div id="capa2" >
+<tr><td>Clave:</td><td> <input type="text" name="txtClave"></td></tr>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+	$("#capa1").hide('fast');
+	$("#capa2").hide('fast');
+});
+function funcion_capa1(){
+$("#capa2").hide("fast");
+$("#capa1").show("slow");
+}
+function funcion_capa2(){
+$("#capa1").hide("fast");
+$("#capa2").show("slow");
+}
+</script>
+</body>
+</html>
